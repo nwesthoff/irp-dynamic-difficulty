@@ -14,7 +14,7 @@ const NameLink = styled.a`
 `;
 
 const IndexPage = () => (
-  <Layout title="Introduction | RA Experience Design">
+  <Layout title="Dynamic Difficulty">
     <PageWrapper>
       <PageIntroduction>
         <h1 style={{ marginBottom: "1.2rem" }}>Dynamic Difficulty</h1>

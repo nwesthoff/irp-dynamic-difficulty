@@ -4,6 +4,7 @@ import { Parallax } from "react-scroll-parallax";
 import Link from "next/link";
 import { Fragment, ReactNode, useState, useEffect } from "react";
 import { darken } from "polished";
+import Image from "next/image";
 
 const ReadChapterButton = styled.a`
   text-decoration: none;
@@ -110,10 +111,6 @@ const ChapterTitle = styled.h1`
   }
 `;
 
-const ChapterImage = styled.img`
-  width: 100%;
-`;
-
 interface Props {
   title: string;
   children?: ReactNode;
@@ -129,22 +126,10 @@ const ChapterBlock = ({
   title,
   disableImage,
 }: Props) => {
-  const [parallaxEnabled, setParallaxEnabled] = useState(true);
-
-  useEffect(() => {
-    if (window?.innerWidth < theme.breakpoints.tablet) {
-      setParallaxEnabled(false);
-    }
-  }, []);
-
   return (
     <ChapterContainer reverse={reverse}>
       <ChapterTextContainer>
-        <ChapterIndex>
-          <Parallax y={[10, -10]} tagOuter="div" disabled={!parallaxEnabled}>
-            {index}
-          </Parallax>
-        </ChapterIndex>
+        <ChapterIndex>{index}</ChapterIndex>
 
         <ChapterTitle>
           <Link href={`/chapters/${index}-${title.toLowerCase()}`}>
@@ -163,19 +148,12 @@ const ChapterBlock = ({
         <Fragment>
           <Spacer />
           <ChapterImageContainer>
-            <div>
-              <Parallax
-                y={[25, -25]}
-                tagOuter="div"
-                disabled={!parallaxEnabled}
-              >
-                <ChapterImage
-                  src={`img/${title.toLowerCase()}@2x.png`}
-                  srcSet={`img/${title.toLowerCase()}.svg`}
-                  loading="lazy"
-                />
-              </Parallax>
-            </div>
+            <Image
+              layout="responsive"
+              height={250}
+              width={350}
+              src={`/img/${title.toLowerCase()}.jpg`}
+            />
           </ChapterImageContainer>
         </Fragment>
       )}
