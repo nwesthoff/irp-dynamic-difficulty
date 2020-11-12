@@ -13,7 +13,7 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <ThemeProvider theme={theme}>
-        <NextThemeProvider>
+        <NextThemeProvider defaultTheme="system">
           <ReferenceProvider references={myReferences}>
             <ParallaxProvider>
               <Component {...pageProps} />

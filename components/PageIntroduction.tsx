@@ -14,7 +14,7 @@ const PageIntroduction = styled.div`
     border-left: 1px solid #979797;
     padding-left: 3rem;
     max-width: 630px;
-    color: white;
+    color: var(--color-fg);
   }
 
   @media (max-width: ${theme.breakpoints.tablet}px) {

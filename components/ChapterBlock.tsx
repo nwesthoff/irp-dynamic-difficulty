@@ -9,7 +9,7 @@ const ReadChapterButton = styled.a`
   text-decoration: none;
   font-size: 0.8rem;
   background: ${theme.colors.primary};
-  color: #ffffff;
+  color: white;
   padding: 0.8rem 1.2rem;
   text-transform: uppercase;
   font-weight: bold;
@@ -39,10 +39,10 @@ const ChapterIndex = styled.span`
   font-size: 8rem;
   line-height: 1em;
   color: transparent;
-  color: ${theme.colors.primary};
+  color: var(--color-primary);
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: ${theme.colors.primary};
+  -webkit-text-stroke-color: var(--color-primary);
 
   @media (max-width: ${theme.breakpoints.tablet}px) {
     top: 0.5rem;
@@ -97,11 +97,11 @@ const ChapterTitle = styled.h1`
   line-height: 1em;
 
   a {
-    color: white;
+    color: var(--color-fg);
     text-decoration: none;
 
     &:hover {
-      color: #ddd;
+      color: var(--color-text-muted);
     }
   }
 

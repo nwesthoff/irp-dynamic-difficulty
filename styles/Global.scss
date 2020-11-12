@@ -1,5 +1,8 @@
 :root {
   // Colors
+  --color-bg: white;
+  --color-fg: black;
+  --color-text-muted: #333;
   --color-primary: #ff3f56;
   --color-secondary: #3bc5ff;
   --color-tertiary: #24c1e0;
@@ -11,14 +14,21 @@
   --breakpoint-desktop: 1200;
 }
 
+// Dark Theme Colors
+[data-theme="dark"] {
+  --color-bg: black;
+  --color-fg: white;
+  --color-text-muted: #ccc;
+}
+
 * {
   font-family: "IBM Plex Sans", sans-serif;
   scroll-behavior: smooth;
 }
 
 body {
-  color: white;
-  background-color: #000;
+  color: var(--color-fg);
+  background-color: var(--color-bg);
   margin: 0;
   padding: 0;
   font-size: 1.2rem;
@@ -33,7 +43,7 @@ body {
 p {
   font-size: 1.2rem;
   line-height: 1.6em;
-  color: #ccc;
+  color: var(--color-text-muted);
 
   @media (max-width: var(--breakpoint-phone)px) {
     font-size: 1rem;
@@ -42,7 +52,7 @@ p {
 }
 
 a {
-  color: white;
+  color: var(--color-fg);
 }
 
 blockquote {
@@ -56,7 +66,7 @@ blockquote {
     font-style: italic;
     font-size: 2rem;
     line-height: 1.4em;
-    color: white;
+    color: var(--color-fg);
   }
 
   ul {
@@ -97,7 +107,7 @@ li {
 
 b,
 em {
-  color: white;
+  color: var(--color-fg);
 }
 
 figure {
@@ -138,7 +148,7 @@ h3 {
 h4,
 h5,
 h6 {
-  color: white;
+  color: var(--color-fg);
   font-size: 1rem;
   font-weight: 400;
 }
