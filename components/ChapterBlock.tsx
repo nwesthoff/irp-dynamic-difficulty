@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../config/theme";
-import { Parallax } from "react-scroll-parallax";
 import Link from "next/link";
-import { Fragment, ReactNode, useState, useEffect } from "react";
+import { Fragment, ReactNode } from "react";
 import { darken } from "polished";
 import Image from "next/image";
 
