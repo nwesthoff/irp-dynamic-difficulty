@@ -17,6 +17,6 @@ module.exports = withMdxEnhanced({
       time.words = time.words - 44;
       return { time };
     },
-    phase: process.env.NODE_ENV === "production" ? "loader" : "both",
+    phase: "both",
   },
 })(/* your normal nextjs config */);
