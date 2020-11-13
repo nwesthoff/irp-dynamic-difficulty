@@ -12,6 +12,9 @@
   --breakpoint-phone: 480;
   --breakpoint-tablet: 768;
   --breakpoint-desktop: 1200;
+
+  // Dimensions
+  --border-radius: 6px;
 }
 
 // Dark Theme Colors
@@ -38,6 +41,10 @@ body {
     font-size: 1rem;
     line-height: 1.3em;
   }
+}
+
+img {
+  border-radius: var(--border-radius);
 }
 
 p {
