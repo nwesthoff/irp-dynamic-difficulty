@@ -6,6 +6,8 @@ import { PageWrapper } from "@components/PageWrapper";
 import ContentContainer from "@components/ContentContainer";
 import NextChapter from "@components/Navigation/NextChapter";
 
+import { frontMatter as chapters } from "../pages/chapters/*.mdx";
+
 interface Props {
   frontMatter: FrontMatter;
   children: ReactNode;
@@ -24,7 +26,13 @@ const DefaultLayout = ({ frontMatter, children }: Props) => (
 
       <ContentContainer>{children}</ContentContainer>
     </PageWrapper>
-    <NextChapter title="Discover" index={1} />
+
+    {chapters[frontMatter.index + 1] ? (
+      <NextChapter
+        title={chapters[frontMatter.index + 1].title}
+        index={frontMatter.index + 1}
+      />
+    ) : null}
   </Layout>
 );
 

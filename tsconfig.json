@@ -20,9 +20,10 @@
     "baseUrl": "./",
     "paths": {
       "@components/*": ["components/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"],
+      "@chapters/*": ["pages/chapters/*"]
     }
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx", "**/*.mdx", "**/*.md"]
 }

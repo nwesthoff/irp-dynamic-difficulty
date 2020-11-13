@@ -4,6 +4,10 @@ import PageIntroduction from "../components/PageIntroduction";
 import { PageWrapper } from "../components/PageWrapper";
 import { theme } from "../config/theme";
 import styled from "styled-components";
+
+import { frontMatter as chapters } from "./chapters/*.mdx";
+import { FrontMatter } from "types";
+
 const NameLink = styled.a`
   text-decoration: none;
   color: ${theme.colors.primary};
@@ -35,14 +39,25 @@ const IndexPage = () => (
           </NameLink>{" "}
           <br />
           <span style={{ opacity: 0.5 }}>
-            FEBRUARY 2021 | WORD COUNT: ?????
+            FEBRUARY 2021 | WORD COUNT:{" "}
+            {chapters?.reduce(
+              (chapter: FrontMatter, nextChapter: FrontMatter) =>
+                chapter.time.words + nextChapter.time.words
+            )}
           </span>
         </p>
       </PageIntroduction>
 
-      <ChapterBlock title="Introduction" index={0}>
-        What are escape rooms?
-      </ChapterBlock>
+      {chapters.map((chapter: FrontMatter, i: number) => (
+        <ChapterBlock
+          key={chapter.title}
+          title={chapter.title || ""}
+          index={i}
+          reverse={i % 2 === 1}
+        >
+          {chapter.introduction}
+        </ChapterBlock>
+      ))}
     </PageWrapper>
   </Layout>
 );

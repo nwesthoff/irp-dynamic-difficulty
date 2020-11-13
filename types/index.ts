@@ -6,10 +6,11 @@ export type FrontMatter = {
   title?: string;
   subtitle?: string;
   introduction?: string;
-  time?: {
-    text?: string;
-    minutes?: number;
-    time?: number;
-    words?: number;
+  index: number;
+  time: {
+    text: string;
+    minutes: number;
+    time: number;
+    words: number;
   };
 };

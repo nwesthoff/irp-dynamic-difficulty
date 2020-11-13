@@ -14,7 +14,7 @@ module.exports = withMdxEnhanced({
       // Pretty bad implementation to strip HTML but good enough for this report
       cleanText = mdxContent.replace(/<\/?[^>]+(>|$)/g, "");
       const time = readingTime(cleanText);
-      time.words = time.words - 51;
+      time.words = time.words - 44;
       return { time };
     },
     phase: process.env.NODE_ENV === "production" ? "loader" : "both",

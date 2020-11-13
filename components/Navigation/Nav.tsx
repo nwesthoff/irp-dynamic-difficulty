@@ -4,6 +4,9 @@ import styled from "styled-components";
 import { theme } from "../../config/theme";
 import { MdHome, MdMenu } from "react-icons/md";
 import { darken } from "polished";
+import { FrontMatter } from "types";
+
+import { frontMatter as chapters } from "../../pages/chapters/*.mdx";
 
 const HomeButton = styled.a`
   cursor: pointer;
@@ -112,36 +115,13 @@ export default function Nav() {
                   <a>Home</a>
                 </Link>
               </li>
-              <li>
-                <Link href="/chapters/0-introduction">
-                  <a>Introduction</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/chapters/1-discover">
-                  <a>Discover</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/chapters/2-define">
-                  <a>Define</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/chapters/3-develop">
-                  <a>Develop</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/chapters/4-deliver">
-                  <a>Deliver</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/chapters/5-conclusion">
-                  <a>Conclusion</a>
-                </Link>
-              </li>
+              {chapters.map((chapter: FrontMatter, i: number) => (
+                <li key={chapter.title}>
+                  <Link href={`/chapters/${i}-${chapter.title}`}>
+                    <a>{chapter.title}</a>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </NavCollapse>
         </nav>
