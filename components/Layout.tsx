@@ -42,12 +42,9 @@ const Layout: React.FunctionComponent<Props> = ({
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <meta name="msapplication-TileColor" content="#FF3F56" />
         <meta name="theme-color" content="#FF3F56" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital@1"
+          href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap"
           rel="stylesheet"
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />

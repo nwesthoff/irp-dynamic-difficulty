@@ -3,8 +3,8 @@
   --color-bg: white;
   --color-fg: black;
   --color-text-muted: #333;
-  --color-primary: #ff3f56;
-  --color-secondary: #3bc5ff;
+  --color-primary: #b07902;
+  --color-secondary: #5a1a13;
   --color-tertiary: #24c1e0;
   --color-bg-dark: #222;
 
@@ -22,11 +22,11 @@
 }
 
 * {
-  font-family: "IBM Plex Sans", sans-serif;
   scroll-behavior: smooth;
 }
 
 body {
+  font-family: "Merriweather", serif;
   color: var(--color-fg);
   background-color: var(--color-bg);
   margin: 0;

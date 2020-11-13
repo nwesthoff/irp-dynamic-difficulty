@@ -17,13 +17,18 @@ const IndexPage = () => (
   <Layout title="Dynamic Difficulty">
     <PageWrapper>
       <PageIntroduction>
-        <h1 style={{ marginBottom: "1.2rem" }}>Dynamic Difficulty</h1>
-        <h2 style={{ marginTop: "0" }}>in escape rooms</h2>
+        <h1>Dynamic Difficulty in escape rooms</h1>
         <p>
           This is an Industry Research Project on Dynamic Difficulty in Escape
           Rooms. <i>Work in progress.</i>
         </p>
-        <p style={{ fontSize: ".8em", border: "none" }}>
+        <p
+          style={{
+            fontSize: ".8em",
+            border: "none",
+            fontFamily: "Merriweather Sans",
+          }}
+        >
           BY{" "}
           <NameLink href="https://nilswesthoff.com" target="blank">
             NILS WESTHOFF
