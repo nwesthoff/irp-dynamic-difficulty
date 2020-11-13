@@ -7,6 +7,7 @@ import Image from "next/image";
 
 const ReadChapterButton = styled.a`
   text-decoration: none;
+  display: inline-block;
   font-size: 0.8rem;
   background: ${theme.colors.primary};
   color: white;
@@ -34,7 +35,7 @@ const Spacer = styled.div`
 
 const ChapterIndex = styled.span`
   position: absolute;
-  top: 1rem;
+  top: -2rem;
   left: -2rem;
   font-size: 8rem;
   line-height: 1em;
@@ -95,6 +96,7 @@ const ChapterTitle = styled.h1`
   position: relative;
   font-size: 4rem;
   line-height: 1em;
+  margin-top: 0;
 
   a {
     color: var(--color-fg);

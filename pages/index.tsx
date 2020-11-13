@@ -14,7 +14,7 @@ const HeaderContent = styled.div`
   justify-content: flex-end;
   align-items: flex-start;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
   z-index: 5;
 `;
@@ -28,7 +28,14 @@ const Header = styled.div`
 
   h1 {
     font-size: 6rem;
-    line-height: 1em;
+    line-height: 1.1em;
+  }
+
+  @media (max-width: ${theme.breakpoints.tablet}px) {
+    h1 {
+      font-size: 4rem;
+      line-height: 1em;
+    }
   }
 
   &:after {
