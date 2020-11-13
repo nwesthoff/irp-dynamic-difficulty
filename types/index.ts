@@ -7,7 +7,7 @@ export type FrontMatter = {
   subtitle?: string;
   introduction?: string;
   index: number;
-  time: {
+  time?: {
     text: string;
     minutes: number;
     time: number;

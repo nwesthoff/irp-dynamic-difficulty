@@ -41,8 +41,11 @@ const IndexPage = () => (
           <span style={{ opacity: 0.5 }}>
             FEBRUARY 2021 | WORD COUNT:{" "}
             {chapters?.reduce(
-              (chapter: FrontMatter, nextChapter: FrontMatter) =>
-                chapter.time.words + nextChapter.time.words
+              (chapter: FrontMatter, nextChapter: FrontMatter) => {
+                const accuValue = chapter.time?.words || 0;
+                const currentValue = nextChapter?.time?.words || 0;
+                return accuValue + currentValue;
+              }
             )}
           </span>
         </p>
