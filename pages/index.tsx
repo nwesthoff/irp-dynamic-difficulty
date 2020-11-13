@@ -11,7 +11,7 @@ import Image from "next/image";
 
 const HeaderContent = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-start;
   flex-direction: column;
   width: 100%;
