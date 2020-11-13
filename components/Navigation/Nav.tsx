@@ -67,6 +67,8 @@ const NavCollapse = styled.div`
 
 const NavBar = styled.div`
   margin-bottom: 4rem;
+  position: fixed;
+  z-index: 999;
 `;
 
 const NavToggle = styled.button`

@@ -7,6 +7,49 @@ import styled from "styled-components";
 
 import { frontMatter as chapters } from "./chapters/*.mdx";
 import { FrontMatter } from "types";
+import Image from "next/image";
+
+const HeaderContent = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  z-index: 5;
+`;
+
+const Header = styled.div`
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    font-size: 6rem;
+    line-height: 1em;
+  }
+
+  &:after {
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background: linear-gradient(to top, var(--color-bg), transparent 40%);
+  }
+`;
+
+const HeaderVideo = styled.video`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.7;
+`;
 
 const NameLink = styled.a`
   text-decoration: none;
@@ -19,9 +62,15 @@ const NameLink = styled.a`
 
 const IndexPage = () => (
   <Layout title="Dynamic Difficulty">
+    <Header>
+      <HeaderVideo src={`/video/sherlocked-bg.mp4`} autoPlay muted loop />
+      <HeaderContent>
+        <Image src="/img/sherlocked-logo.png" width={125} height={138} />
+        <h1>Dynamic Difficulty in escape rooms</h1>
+      </HeaderContent>
+    </Header>
     <PageWrapper>
       <PageIntroduction>
-        <h1>Dynamic Difficulty in escape rooms</h1>
         <p>
           This is an Industry Research Project on Dynamic Difficulty in Escape
           Rooms. <i>Work in progress.</i>
