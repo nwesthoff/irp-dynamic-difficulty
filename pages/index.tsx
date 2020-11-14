@@ -67,57 +67,59 @@ const NameLink = styled.a`
   }
 `;
 
-const IndexPage = () => (
-  <Layout title="Dynamic Difficulty">
-    <Header>
-      <HeaderVideo src={`/video/sherlocked-bg.mp4`} autoPlay muted loop />
-      <HeaderContent>
-        <Image src="/img/sherlocked-logo.png" width={125} height={138} />
-        <h1>Dynamic Difficulty in escape rooms</h1>
-      </HeaderContent>
-    </Header>
-    <MainContent>
-      <PageIntroduction>
-        <p>
-          This is an Industry Research Project on Dynamic Difficulty in Escape
-          Rooms. <i>Work in progress.</i>
-        </p>
-        <p
-          style={{
-            fontSize: ".8em",
-            border: "none",
-            fontFamily: "Merriweather Sans",
-          }}
-        >
-          BY{" "}
-          <NameLink href="https://nilswesthoff.com" target="blank">
-            NILS WESTHOFF
-          </NameLink>{" "}
-          <br />
-          <span style={{ opacity: 0.5 }}>
-            FEBRUARY 2021 | WORD COUNT:{" "}
-            {chapters?.reduce(
-              (chapter: FrontMatter, nextChapter: FrontMatter) => {
-                const accuValue = chapter.time?.words || 0;
-                const currentValue = nextChapter?.time?.words || 0;
-                return accuValue + currentValue;
-              }
-            )}
-          </span>
-        </p>
-      </PageIntroduction>
+const IndexPage = () => {
+  const wordCount = chapters
+    .map((chapter) => chapter.time.words || 0)
+    .reduce((words: number, totalWords: number) => {
+      return words + totalWords;
+    });
 
-      {chapters.map((chapter: FrontMatter, i: number) => (
-        <ChapterBlock
-          key={chapter.title}
-          chapter={chapter}
-          reverse={i % 2 === 1}
-        >
-          {chapter.introduction}
-        </ChapterBlock>
-      ))}
-    </MainContent>
-  </Layout>
-);
+  return (
+    <Layout title="Dynamic Difficulty">
+      <Header>
+        <HeaderVideo src={`/video/sherlocked-bg.mp4`} autoPlay muted loop />
+        <HeaderContent>
+          <Image src="/img/sherlocked-logo.png" width={125} height={138} />
+          <h1>Dynamic Difficulty in escape rooms</h1>
+        </HeaderContent>
+      </Header>
+      <MainContent>
+        <PageIntroduction>
+          <p>
+            This is an Industry Research Project on Dynamic Difficulty in Escape
+            Rooms. <i>Work in progress.</i>
+          </p>
+          <p
+            style={{
+              fontSize: ".8em",
+              border: "none",
+              fontFamily: "Merriweather Sans",
+            }}
+          >
+            BY{" "}
+            <NameLink href="https://nilswesthoff.com" target="blank">
+              NILS WESTHOFF
+            </NameLink>{" "}
+            <br />
+            <span style={{ opacity: 0.5 }}>
+              FEBRUARY 2021 | WORD COUNT: {wordCount} | READ TIME:{" "}
+              {(wordCount / 150).toFixed()} MIN
+            </span>
+          </p>
+        </PageIntroduction>
+
+        {chapters.map((chapter: FrontMatter, i: number) => (
+          <ChapterBlock
+            key={chapter.title}
+            chapter={chapter}
+            reverse={i % 2 === 1}
+          >
+            {chapter.introduction}
+          </ChapterBlock>
+        ))}
+      </MainContent>
+    </Layout>
+  );
+};
 
 export default IndexPage;
