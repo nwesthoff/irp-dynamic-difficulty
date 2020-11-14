@@ -17,11 +17,8 @@ const DefaultLayout = ({ frontMatter, children }: Props) => (
   <Layout title={`${frontMatter.title} | Dynamic Difficulty`}>
     <PageWrapper>
       <PageIntroduction>
-        <h1>Introduction</h1>
-        <p>
-          Escape rooms are more so about escaping reality for an hour or two,
-          than to break free from a small claustrophobic room.
-        </p>
+        <h1>{frontMatter.title}</h1>
+        <p>{frontMatter.introduction}</p>
       </PageIntroduction>
 
       <ContentContainer>{children}</ContentContainer>
