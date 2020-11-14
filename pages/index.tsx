@@ -7,7 +7,6 @@ import MainContent from "@components/MainContent";
 import { frontMatter as chapters } from "./chapters/*.mdx";
 import { FrontMatter } from "types";
 import Image from "next/image";
-import Head from "next/head";
 
 const HeaderContent = styled.div`
   display: flex;
@@ -60,7 +59,6 @@ const HeaderVideo = styled.video`
 
 const NameLink = styled.a`
   text-decoration: none;
-  color: ${theme.colors.primary};
 
   &:hover {
     text-decoration: underline;

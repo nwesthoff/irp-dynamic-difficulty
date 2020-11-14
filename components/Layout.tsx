@@ -66,8 +66,8 @@ const Layout: React.FunctionComponent<Props> = ({
           Made by{" "}
           <a href="https://nilswesthoff.com" target="blank">
             Nils
-          </a>{" "}
-          in close collaboration with{" "}
+          </a>
+          , in close collaboration with{" "}
           <a href="https://sherlocked.nl" target="blank">
             Sherlocked
           </a>{" "}

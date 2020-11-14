@@ -109,7 +109,8 @@ blockquote {
 }
 
 li {
-  color: #ccc;
+  color: var(--color-text-muted);
+  line-height: 1.8;
 }
 
 b,
