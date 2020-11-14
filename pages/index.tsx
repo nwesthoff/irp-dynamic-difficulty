@@ -1,7 +1,6 @@
 import Layout from "../components/Layout";
 import ChapterBlock from "../components/ChapterBlock";
 import PageIntroduction from "../components/PageIntroduction";
-import { PageWrapper } from "../components/PageWrapper";
 import { theme } from "../config/theme";
 import styled from "styled-components";
 import MainContent from "@components/MainContent";

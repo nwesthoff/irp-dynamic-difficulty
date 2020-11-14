@@ -3,7 +3,6 @@ import { FrontMatter } from "types/index";
 import Layout from "@components/Layout";
 import PageIntroduction from "@components/PageIntroduction";
 import MainContent from "@components/MainContent";
-import ContentContainer from "@components/ContentContainer";
 import NextChapter from "@components/Navigation/NextChapter";
 
 import { frontMatter as chapters } from "../pages/chapters/*.mdx";

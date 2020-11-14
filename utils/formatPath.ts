@@ -1,4 +1,4 @@
-const formatPath = (p) => {
+const formatPath = (p: string) => {
   return p.replace(/\.mdx$/, "");
 };
 
