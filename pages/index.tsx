@@ -7,6 +7,7 @@ import MainContent from "@components/MainContent";
 import { frontMatter as chapters } from "./chapters/*.mdx";
 import { FrontMatter } from "types";
 import Image from "next/image";
+import AlertBar from "@components/AlertBar";
 
 const HeaderContent = styled.div`
   display: flex;
@@ -74,6 +75,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
+      <AlertBar />
       <Header>
         <HeaderVideo src={`/video/sherlocked-bg.mp4`} autoPlay muted loop />
         <HeaderContent>
