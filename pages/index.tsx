@@ -7,6 +7,7 @@ import MainContent from "@components/MainContent";
 import { frontMatter as chapters } from "./chapters/*.mdx";
 import { FrontMatter } from "types";
 import Image from "next/image";
+import Head from "next/head";
 
 const HeaderContent = styled.div`
   display: flex;
@@ -75,6 +76,15 @@ const IndexPage = () => {
 
   return (
     <Layout title="Dynamic Difficulty">
+      <Head>
+        <meta property="og:title" content="Dynamic Difficulty" />
+        <meta
+          property="og:description"
+          content="This is an Industry Research Project on Dynamic Difficulty in Escape Rooms."
+        />
+        <meta property="og:url" content="https://irp.nilswesthoff.com" />
+        <meta property="og:image" content="/img/og-image.png" />
+      </Head>
       <Header>
         <HeaderVideo src={`/video/sherlocked-bg.mp4`} autoPlay muted loop />
         <HeaderContent>
