@@ -2,9 +2,11 @@ import React, { ReactElement } from "react";
 import ContentContainer from "../ContentContainer";
 import { PageWrapper } from "../PageWrapper";
 import styled from "styled-components";
-import { theme } from "../../config/theme";
+import { theme } from "@config/theme";
 import { darken } from "polished";
 import { MdArrowForward } from "react-icons/md";
+import { FrontMatter } from "types";
+import formatPath from "@utils/formatPath";
 
 const NextLinkTitle = styled.div`
   display: flex;
@@ -47,27 +49,25 @@ const NextLinkWrapper = styled.div`
 `;
 
 interface Props {
-  title: string;
   customHref?: string;
-  index: number;
+  chapter: FrontMatter;
 }
 
 export default function NextChapter({
-  title,
-  index,
   customHref,
+  chapter,
 }: Props): ReactElement {
   return (
     <a
-      href={customHref || `/chapters/${index}-${title.toLowerCase()}`}
+      href={customHref || "/" + formatPath(chapter.__resourcePath)}
       style={{ textDecoration: "none" }}
     >
       <NextLinkWrapper>
         <PageWrapper>
           <ContentContainer wide>
-            <h4>To chapter {index}</h4>
+            <h4>To chapter {chapter.index}</h4>
             <NextLinkTitle>
-              {title}
+              {chapter.title}
               <NextLinkArrow fontSize="inherit" />
             </NextLinkTitle>
           </ContentContainer>

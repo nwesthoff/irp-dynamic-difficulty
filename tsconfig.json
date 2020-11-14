@@ -21,7 +21,9 @@
     "paths": {
       "@components/*": ["components/*"],
       "@styles/*": ["styles/*"],
-      "@chapters/*": ["pages/chapters/*"]
+      "@chapters/*": ["pages/chapters/*"],
+      "@utils/*": ["utils/*"],
+      "@config/*": ["config/*"]
     }
   },
   "exclude": ["node_modules"],

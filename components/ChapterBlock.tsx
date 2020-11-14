@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Fragment, ReactNode } from "react";
 import { darken } from "polished";
 import Image from "next/image";
+import { FrontMatter } from "types";
+import formatPath from "@utils/formatPath";
 
 const ReadChapterButton = styled.a`
   text-decoration: none;
@@ -113,39 +115,31 @@ const ChapterTitle = styled.h1`
 `;
 
 interface Props {
-  title: string;
+  chapter: FrontMatter;
   children?: ReactNode;
-  index: number;
   reverse?: boolean;
-  disableImage?: boolean;
 }
 
-const ChapterBlock = ({
-  reverse,
-  children,
-  index,
-  title,
-  disableImage,
-}: Props) => {
+const ChapterBlock = ({ reverse, children, chapter }: Props) => {
   return (
     <ChapterContainer reverse={reverse}>
       <ChapterTextContainer>
-        <ChapterIndex>{index}</ChapterIndex>
+        <ChapterIndex>{chapter.index}</ChapterIndex>
 
         <ChapterTitle>
-          <Link href={`/chapters/${index}-${title.toLowerCase()}`}>
-            <a>{title}</a>
+          <Link href={formatPath(chapter.__resourcePath)}>
+            <a>{chapter.title}</a>
           </Link>
         </ChapterTitle>
 
         <p>{children}</p>
 
-        <ReadChapterButton href={`/chapters/${index}-${title.toLowerCase()}`}>
+        <ReadChapterButton href={formatPath(chapter.__resourcePath)}>
           Read Chapter
         </ReadChapterButton>
       </ChapterTextContainer>
 
-      {disableImage ? null : (
+      {chapter?.image ? (
         <Fragment>
           <Spacer />
           <ChapterImageContainer>
@@ -153,11 +147,11 @@ const ChapterBlock = ({
               layout="responsive"
               height={250}
               width={350}
-              src={`/img/${title.toLowerCase()}.jpg`}
+              src={chapter.image}
             />
           </ChapterImageContainer>
         </Fragment>
-      )}
+      ) : null}
     </ChapterContainer>
   );
 };

@@ -6,6 +6,8 @@ export type FrontMatter = {
   title?: string;
   subtitle?: string;
   introduction?: string;
+  __resourcePath: string;
+  image?: string;
   index: number;
   time?: {
     text: string;

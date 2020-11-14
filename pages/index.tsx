@@ -4,7 +4,7 @@ import PageIntroduction from "../components/PageIntroduction";
 import { PageWrapper } from "../components/PageWrapper";
 import { theme } from "../config/theme";
 import styled from "styled-components";
-
+import MainContent from "@components/MainContent";
 import { frontMatter as chapters } from "./chapters/*.mdx";
 import { FrontMatter } from "types";
 import Image from "next/image";
@@ -76,7 +76,7 @@ const IndexPage = () => (
         <h1>Dynamic Difficulty in escape rooms</h1>
       </HeaderContent>
     </Header>
-    <PageWrapper>
+    <MainContent>
       <PageIntroduction>
         <p>
           This is an Industry Research Project on Dynamic Difficulty in Escape
@@ -110,14 +110,13 @@ const IndexPage = () => (
       {chapters.map((chapter: FrontMatter, i: number) => (
         <ChapterBlock
           key={chapter.title}
-          title={chapter.title || ""}
-          index={i}
+          chapter={chapter}
           reverse={i % 2 === 1}
         >
           {chapter.introduction}
         </ChapterBlock>
       ))}
-    </PageWrapper>
+    </MainContent>
   </Layout>
 );
 

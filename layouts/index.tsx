@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import { FrontMatter } from "types/index";
 import Layout from "@components/Layout";
 import PageIntroduction from "@components/PageIntroduction";
-import { PageWrapper } from "@components/PageWrapper";
+import MainContent from "@components/MainContent";
 import ContentContainer from "@components/ContentContainer";
 import NextChapter from "@components/Navigation/NextChapter";
 
@@ -15,20 +15,17 @@ interface Props {
 
 const DefaultLayout = ({ frontMatter, children }: Props) => (
   <Layout title={`${frontMatter.title} | Dynamic Difficulty`}>
-    <PageWrapper>
+    <MainContent>
       <PageIntroduction>
         <h1>{frontMatter.title}</h1>
         <p>{frontMatter.introduction}</p>
       </PageIntroduction>
 
-      <ContentContainer>{children}</ContentContainer>
-    </PageWrapper>
+      {children}
+    </MainContent>
 
     {chapters[frontMatter.index + 1] ? (
-      <NextChapter
-        title={chapters[frontMatter.index + 1].title}
-        index={frontMatter.index + 1}
-      />
+      <NextChapter chapter={chapters[frontMatter.index + 1]} />
     ) : null}
   </Layout>
 );
