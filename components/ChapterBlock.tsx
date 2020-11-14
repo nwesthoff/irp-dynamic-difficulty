@@ -45,7 +45,7 @@ const ChapterIndex = styled.span`
   color: var(--color-primary);
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--color-primary);
+  -webkit-text-stroke-color: var(--color-secondary);
 
   @media (max-width: ${theme.breakpoints.tablet}px) {
     top: 0.5rem;

@@ -7,6 +7,7 @@ import { darken } from "polished";
 import { MdArrowForward } from "react-icons/md";
 import { FrontMatter } from "types";
 import formatPath from "@utils/formatPath";
+import Link from "next/link";
 
 const NextLinkTitle = styled.div`
   display: flex;
@@ -25,6 +26,7 @@ const NextLinkArrow = styled(MdArrowForward)`
 
 const NextLinkWrapper = styled.div`
   background-color: ${theme.colors.primary};
+  margin-top: 5.2rem;
 
   h4 {
     margin-bottom: 0;
@@ -58,21 +60,20 @@ export default function NextChapter({
   chapter,
 }: Props): ReactElement {
   return (
-    <a
-      href={customHref || "/" + formatPath(chapter.__resourcePath)}
-      style={{ textDecoration: "none" }}
-    >
-      <NextLinkWrapper>
-        <PageWrapper>
-          <ContentContainer wide>
-            <h4>To chapter {chapter.index}</h4>
-            <NextLinkTitle>
-              {chapter.title}
-              <NextLinkArrow fontSize="inherit" />
-            </NextLinkTitle>
-          </ContentContainer>
-        </PageWrapper>
-      </NextLinkWrapper>
-    </a>
+    <Link href={customHref || "/" + formatPath(chapter.__resourcePath)}>
+      <a style={{ textDecoration: "none" }}>
+        <NextLinkWrapper>
+          <PageWrapper>
+            <ContentContainer wide>
+              <h4>To chapter {chapter.index}</h4>
+              <NextLinkTitle>
+                {chapter.title}
+                <NextLinkArrow fontSize="inherit" />
+              </NextLinkTitle>
+            </ContentContainer>
+          </PageWrapper>
+        </NextLinkWrapper>
+      </a>
+    </Link>
   );
 }

@@ -14,7 +14,7 @@ type Props = {
 
 const Layout: React.FunctionComponent<Props> = ({
   children,
-  title = "RA Experience Design",
+  title = "Dynamic Difficulty in Escape Rooms",
 }) => {
   return (
     <div>
@@ -42,6 +42,16 @@ const Layout: React.FunctionComponent<Props> = ({
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <meta name="msapplication-TileColor" content="#FF3F56" />
         <meta name="theme-color" content="#FF3F56" />
+        <meta property="og:title" content={title} />
+        <meta
+          property="og:description"
+          content="Industry Research Project on Dynamic Difficulty in Escape Rooms."
+        />
+        <meta property="og:url" content="https://irp.nilswesthoff.com" />
+        <meta
+          property="og:image"
+          content="https://irp.nilswesthoff.com/img/og-image.png"
+        />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap"
@@ -59,8 +69,9 @@ const Layout: React.FunctionComponent<Props> = ({
           </a>{" "}
           in close collaboration with{" "}
           <a href="https://sherlocked.nl" target="blank">
-            Sherlocked 🗝
+            Sherlocked
           </a>{" "}
+          🗝
         </StyledFooter>
       </PageWrapper>
     </div>

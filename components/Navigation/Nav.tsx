@@ -54,9 +54,10 @@ const NavCollapse = styled.div`
 
   a {
     text-decoration: none;
+    color: var(--color-fg);
 
     &:hover {
-      color: ${theme.colors.primary};
+      color: var(--color-secondary);
     }
   }
 

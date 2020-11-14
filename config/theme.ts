@@ -1,7 +1,7 @@
 export const theme = {
   colors: {
-    primary: "#B07902",
-    secondary: "#5A1A13",
+    primary: "#6251A2",
+    secondary: "#B07902",
     tertiary: "#24C1E0",
   },
   breakpoints: {

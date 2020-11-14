@@ -3,8 +3,8 @@
   --color-bg: white;
   --color-fg: black;
   --color-text-muted: #333;
-  --color-primary: #b07902;
-  --color-secondary: #5a1a13;
+  --color-primary: #6251a2;
+  --color-secondary: #b07902;
   --color-tertiary: #24c1e0;
   --color-bg-dark: #222;
 
@@ -59,7 +59,7 @@ p {
 }
 
 a {
-  color: var(--color-fg);
+  color: var(--color-secondary);
 }
 
 blockquote {
