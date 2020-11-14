@@ -83,7 +83,10 @@ const IndexPage = () => {
           content="This is an Industry Research Project on Dynamic Difficulty in Escape Rooms."
         />
         <meta property="og:url" content="https://irp.nilswesthoff.com" />
-        <meta property="og:image" content="/img/og-image.png" />
+        <meta
+          property="og:image"
+          content="https://irp.nilswesthoff.com/img/og-image.png"
+        />
       </Head>
       <Header>
         <HeaderVideo src={`/video/sherlocked-bg.mp4`} autoPlay muted loop />
