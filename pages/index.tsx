@@ -77,7 +77,10 @@ const IndexPage = () => {
   return (
     <Layout title="Dynamic Difficulty">
       <Head>
-        <meta property="og:title" content="Dynamic Difficulty" />
+        <meta
+          property="og:title"
+          content="Dynamic Difficulty in Escape Rooms"
+        />
         <meta
           property="og:description"
           content="This is an Industry Research Project on Dynamic Difficulty in Escape Rooms."
@@ -92,7 +95,7 @@ const IndexPage = () => {
         <HeaderVideo src={`/video/sherlocked-bg.mp4`} autoPlay muted loop />
         <HeaderContent>
           <Image src="/img/sherlocked-logo.png" width={125} height={138} />
-          <h1>Dynamic Difficulty in escape rooms</h1>
+          <h1>Dynamic Difficulty in Escape Rooms</h1>
         </HeaderContent>
       </Header>
       <MainContent>
