@@ -106,15 +106,17 @@ const IndexPage = () => {
           </p>
         </PageIntroduction>
 
-        {chapters.map((chapter: FrontMatter, i: number) => (
-          <ChapterBlock
-            key={chapter.title}
-            chapter={chapter}
-            reverse={i % 2 === 1}
-          >
-            {chapter.introduction}
-          </ChapterBlock>
-        ))}
+        <section className="small-width">
+          {chapters.map((chapter: FrontMatter, i: number) => (
+            <ChapterBlock
+              key={chapter.title}
+              chapter={chapter}
+              reverse={i % 2 === 1}
+            >
+              {chapter.introduction}
+            </ChapterBlock>
+          ))}
+        </section>
       </MainContent>
     </Layout>
   );

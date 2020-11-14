@@ -66,7 +66,6 @@ const ChapterContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 900px;
   margin: 8rem 0;
 
   @media (max-width: ${theme.breakpoints.tablet}px) {
@@ -77,8 +76,9 @@ const ChapterContainer = styled.div`
 const ChapterTextContainer = styled.div`
   position: relative;
   color: #0f0f0f;
-  flex-basis: 55%;
+  flex-basis: 50%;
   flex-grow: 1;
+  margin-bottom: 2rem;
 
   p {
     min-width: 200px;
@@ -87,10 +87,10 @@ const ChapterTextContainer = styled.div`
 `;
 
 const ChapterImageContainer = styled.div`
-  flex-basis: 30%;
+  flex-basis: 40%;
   flex-grow: 1;
-  min-width: 200px;
-  max-width: 350px;
+  min-width: 300px;
+  max-width: 540px;
 `;
 
 const ChapterTitle = styled.h1`
@@ -145,8 +145,8 @@ const ChapterBlock = ({ reverse, children, chapter }: Props) => {
           <ChapterImageContainer>
             <Image
               layout="responsive"
-              height={250}
-              width={350}
+              height={200}
+              width={300}
               src={chapter.image}
             />
           </ChapterImageContainer>
