@@ -6,6 +6,7 @@ image: "/img/library.jpg"
 ---
 
 import Citation from "@components/Bibliography/Citation";
+import ImageCarousel from "@components/ImageCarousel";
 
 ::: section small-width
 
@@ -13,21 +14,40 @@ import Citation from "@components/Bibliography/Citation";
 
 These are some hypothetical scenarios of groups reaping the benefits of a dynamically controlled escape room.
 
-## Enthusiasts looking for a challenge
+:::
 
-![/img/Enthusiast-challenge.png](/img/Enthusiast-challenge.png)
+::: section full-width
+
+<ImageCarousel
+  layout="contain"
+  imageArr={[
+    {
+      src: "/img/Enthusiast-challenge.png",
+      desc: "Enthusiasts looking for a challenge",
+    },
+    {
+      src: "/img/Enthusiasts-bad-day.png",
+      desc: "Enthusiasts having a bad day",
+    },
+    {
+      src: "/img/Colleague-team-novices.png",
+      desc: "Team of colleagues, novice escape room players",
+    },
+  ]}
+/>
+:::
+
+::: section small-width
+
+## Enthusiasts looking for a challenge
 
 The main complaint from enthusiasts at The Vault is a lack of challenge. Puzzles are (sometimes) a-logical, and merely an action to do. The experience of the room makes up for it, but Sherlocked wants to offer a bigger challenge to their (most loyal) customers.
 
 ## Enthusiasts having a bad day
 
-![/img/Enthusiasts-bad-day.png](/img/Enthusiasts-bad-day.png)
-
 What if a second group of enthusiasts play the new experience. They start of well but quickly realise they've taken on too much. They might get knocked down from the highest difficulty, all the way down to an easy level. This way even they get to see the finish line, though that does not ensure they escape.
 
 ## Team of colleagues, novice escape room players
-
-![/img/Colleague-team-novices.png](/img/Colleague-team-novices.png)
 
 On the other hand we might see a group of colleagues that know each other well, but have never played an escape room together. They might start of quite anxious, but also are deeply curious and driven to do well. They soon realize they're on a roll and might even think the puzzles start to become boring. The DDA kicks things up a notch and grows with them, they play their final puzzle(s) at the highest level.
 

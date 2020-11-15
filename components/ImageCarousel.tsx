@@ -42,6 +42,7 @@ const ImageCarouselWrapper = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   background: #222;
+  margin: 2rem 0;
 
   a {
     color: white;
@@ -65,9 +66,10 @@ interface CarouselImage {
 
 interface Props {
   imageArr: CarouselImage[];
+  layout?: "cover" | "contain";
 }
 
-const ImageCarousel = ({ imageArr }: Props) => {
+const ImageCarousel = ({ imageArr, layout }: Props) => {
   if (imageArr?.length > 0) {
     return (
       <ImageCarouselWrapper>
@@ -87,7 +89,7 @@ const ImageCarousel = ({ imageArr }: Props) => {
                     style={{
                       width: "100%",
                       height: "100%",
-                      objectFit: "cover",
+                      objectFit: layout || "cover",
                     }}
                   />
                   {image.desc && (
