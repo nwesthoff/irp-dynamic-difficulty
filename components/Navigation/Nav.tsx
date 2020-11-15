@@ -114,7 +114,7 @@ export default function Nav({ alert }: Props) {
                   <a>Home</a>
                 </Link>
               </li>
-              {chapters.map((chapter: FrontMatter, i: number) => (
+              {chapters.map((chapter: FrontMatter) => (
                 <li key={chapter.title}>
                   <Link href={`/${formatPath(chapter.__resourcePath)}`}>
                     <a>{chapter.title}</a>

@@ -1,13 +1,11 @@
 import Layout from "../components/Layout";
 import ChapterBlock from "../components/ChapterBlock";
 import PageIntroduction from "../components/PageIntroduction";
-import { theme } from "../config/theme";
 import styled from "styled-components";
 import MainContent from "@components/MainContent";
 import { frontMatter as chapters } from "./chapters/*.mdx";
 import { FrontMatter } from "types";
 import Image from "next/image";
-import AlertBar from "@components/AlertBar";
 import { Fragment } from "react";
 
 const HeaderContent = styled.div`
