@@ -7,6 +7,7 @@ import { frontMatter as chapters } from "./chapters/*.mdx";
 import { FrontMatter } from "types";
 import Image from "next/image";
 import { Fragment } from "react";
+import { theme } from "@config/theme";
 
 const HeaderContent = styled(MainContent)`
   justify-content: flex-end;
@@ -30,6 +31,10 @@ const Header = styled.div`
     right: 0;
     position: absolute;
     background: linear-gradient(to top, var(--color-bg), transparent 40%);
+  }
+
+  @media (max-width: ${theme.breakpoints.phone}px) {
+    height: 70vh;
   }
 `;
 
