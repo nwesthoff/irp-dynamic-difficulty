@@ -77,7 +77,12 @@ const IndexPage = () => {
       <Header>
         <HeaderVideo src={`/video/sherlocked-bg.mp4`} autoPlay muted loop />
         <HeaderContent>
-          <Image src="/img/sherlocked-logo.png" width={125} height={138} />
+          <Image
+            src="/img/sherlocked-logo.png"
+            priority
+            width={125}
+            height={138}
+          />
           <h1>Dynamic Difficulty in Escape Rooms</h1>
         </HeaderContent>
       </Header>
