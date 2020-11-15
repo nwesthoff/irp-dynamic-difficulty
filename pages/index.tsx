@@ -8,13 +8,10 @@ import { FrontMatter } from "types";
 import Image from "next/image";
 import { Fragment } from "react";
 
-const HeaderContent = styled.div`
-  display: flex;
+const HeaderContent = styled(MainContent)`
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
-  width: 90%;
-  max-width: 1200px;
   z-index: 5;
 `;
 
@@ -75,17 +72,19 @@ const IndexPage = () => {
       <Header>
         <HeaderVideo src={`/video/sherlocked-bg.mp4`} autoPlay muted loop />
         <HeaderContent>
-          <Image
-            src="/img/sherlocked-logo.png"
-            priority
-            width={125}
-            height={138}
-          />
-          <h1>Dynamic Difficulty in Escape Rooms</h1>
+          <div className="wide-width">
+            <Image
+              src="/img/sherlocked-logo.png"
+              priority
+              width={125}
+              height={138}
+            />
+            <h1>Dynamic Difficulty in Escape Rooms</h1>
+          </div>
         </HeaderContent>
       </Header>
       <MainContent>
-        <PageIntroduction>
+        <PageIntroduction className="wide-width">
           <p>
             This is an Industry Research Project on Dynamic Difficulty in Escape
             Rooms. <i>Work in progress.</i>
@@ -110,7 +109,7 @@ const IndexPage = () => {
           </p>
         </PageIntroduction>
 
-        <section className="small-width">
+        <section className="wide-width">
           {chapters.map((chapter: FrontMatter, i: number) => (
             <ChapterBlock
               key={chapter.title}

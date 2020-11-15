@@ -56,16 +56,21 @@ const ChapterContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin: 8rem 0;
-  gap: 5rem;
-
-  @media (max-width: ${theme.breakpoints.tablet}px) {
-    gap: 2rem;
-    margin: 2rem 0;
-  }
+  padding: 8rem 2rem;
 
   @media (max-width: ${theme.breakpoints.phone}px) {
-    gap: none;
+    flex-direction: unset;
+    padding: 5rem 0;
+  }
+`;
+
+const Spacer = styled.div`
+  width: 5rem;
+  @media (max-width: ${theme.breakpoints.tablet}px) {
+    width: 2.4rem;
+  }
+  @media (max-width: ${theme.breakpoints.phone}px) {
+    display: none;
   }
 `;
 
@@ -132,6 +137,7 @@ const ChapterBlock = ({ reverse, children, chapter }: Props) => {
 
       {chapter?.image ? (
         <Fragment>
+          <Spacer />
           <ChapterImageContainer>
             <Image
               layout="responsive"
