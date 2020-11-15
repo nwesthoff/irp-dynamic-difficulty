@@ -4,6 +4,7 @@ import { theme } from "../config/theme";
 const PageIntroduction = styled.div`
   width: 1200px;
   max-width: 100%;
+  margin-bottom: 3rem;
 
   h1 {
     font-size: 6rem;

@@ -7,6 +7,11 @@ import Image from "next/image";
 import { FrontMatter } from "types";
 import formatPath from "@utils/formatPath";
 
+const ChapterExcerpt = styled.p`
+  min-width: 200px;
+  max-width: 540px;
+`;
+
 const ReadChapterButton = styled.a`
   text-decoration: none;
   display: inline-block;
@@ -23,18 +28,6 @@ const ReadChapterButton = styled.a`
   }
 `;
 
-const Spacer = styled.div`
-  width: 5rem;
-
-  @media (max-width: ${theme.breakpoints.tablet}px) {
-    width: 2rem;
-  }
-
-  @media (max-width: ${theme.breakpoints.phone}px) {
-    display: none;
-  }
-`;
-
 const ChapterIndex = styled.span`
   position: absolute;
   top: -2rem;
@@ -48,12 +41,9 @@ const ChapterIndex = styled.span`
   -webkit-text-stroke-color: var(--color-secondary);
 
   @media (max-width: ${theme.breakpoints.tablet}px) {
-    top: 0.5rem;
+    top: -1rem;
     left: -1rem;
     font-size: 4rem;
-  }
-
-  @media (max-width: ${theme.breakpoints.phone}px) {
     -webkit-text-stroke-width: 1px;
   }
 `;
@@ -67,9 +57,15 @@ const ChapterContainer = styled.div`
   align-items: center;
   width: 100%;
   margin: 8rem 0;
+  gap: 5rem;
 
   @media (max-width: ${theme.breakpoints.tablet}px) {
+    gap: 2rem;
     margin: 2rem 0;
+  }
+
+  @media (max-width: ${theme.breakpoints.phone}px) {
+    gap: none;
   }
 `;
 
@@ -79,11 +75,6 @@ const ChapterTextContainer = styled.div`
   flex-basis: 50%;
   flex-grow: 1;
   margin-bottom: 2rem;
-
-  p {
-    min-width: 200px;
-    max-width: 540px;
-  }
 `;
 
 const ChapterImageContainer = styled.div`
@@ -93,11 +84,11 @@ const ChapterImageContainer = styled.div`
   max-width: 540px;
 `;
 
-const ChapterTitle = styled.h1`
+const ChapterTitle = styled.h2`
   z-index: 1;
   position: relative;
-  font-size: 4rem;
-  line-height: 1em;
+  font-size: 3.2rem;
+  line-height: 1.1em;
   margin-top: 0;
 
   a {
@@ -132,7 +123,7 @@ const ChapterBlock = ({ reverse, children, chapter }: Props) => {
           </Link>
         </ChapterTitle>
 
-        <p>{children}</p>
+        <ChapterExcerpt>{children}</ChapterExcerpt>
 
         <ReadChapterButton href={formatPath(chapter.__resourcePath)}>
           Read Chapter
@@ -141,7 +132,6 @@ const ChapterBlock = ({ reverse, children, chapter }: Props) => {
 
       {chapter?.image ? (
         <Fragment>
-          <Spacer />
           <ChapterImageContainer>
             <Image
               layout="responsive"

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { ReactNode } from "react";
 import Head from "next/head";
 import { PageWrapper } from "./PageWrapper";
 import Nav from "./Navigation/Nav";
@@ -10,10 +10,12 @@ const StyledFooter = styled.footer`
 
 type Props = {
   title?: string;
+  alert?: ReactNode | string;
 };
 
 const Layout: React.FunctionComponent<Props> = ({
   children,
+  alert,
   title = "Dynamic Difficulty in Escape Rooms",
 }) => {
   return (
@@ -54,12 +56,12 @@ const Layout: React.FunctionComponent<Props> = ({
         />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Merriweather+Sans,wght@0,300&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap"
           rel="stylesheet"
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Nav />
+      <Nav alert={alert} />
       {children}
       <PageWrapper>
         <StyledFooter>

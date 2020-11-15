@@ -9,14 +9,11 @@ import { FrontMatter } from "types";
 import formatPath from "@utils/formatPath";
 import Link from "next/link";
 
-const NextLinkTitle = styled.div`
+const NextLinkTitle = styled.h2`
   display: flex;
   align-items: center;
-
   color: white;
   margin: 0 0 1.2rem;
-  font-size: 3rem;
-  font-weight: 600;
 `;
 
 const NextLinkArrow = styled(MdArrowForward)`

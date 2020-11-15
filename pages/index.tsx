@@ -8,6 +8,7 @@ import { frontMatter as chapters } from "./chapters/*.mdx";
 import { FrontMatter } from "types";
 import Image from "next/image";
 import AlertBar from "@components/AlertBar";
+import { Fragment } from "react";
 
 const HeaderContent = styled.div`
   display: flex;
@@ -25,18 +26,6 @@ const Header = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-
-  h1 {
-    font-size: 6rem;
-    line-height: 1.1em;
-  }
-
-  @media (max-width: ${theme.breakpoints.tablet}px) {
-    h1 {
-      font-size: 4rem;
-      line-height: 1em;
-    }
-  }
 
   &:after {
     content: "";
@@ -73,9 +62,18 @@ const IndexPage = () => {
       return words + totalWords;
     });
 
+  const alertNode = (
+    <Fragment>
+      Hi! This is a work in progress, I love{" "}
+      <a href="mailto:nils@nilswesthoff.com" style={{ color: "white" }}>
+        feedback
+      </a>{" "}
+      🚧
+    </Fragment>
+  );
+
   return (
-    <Layout>
-      <AlertBar />
+    <Layout alert={alertNode}>
       <Header>
         <HeaderVideo src={`/video/sherlocked-bg.mp4`} autoPlay muted loop />
         <HeaderContent>
@@ -93,7 +91,8 @@ const IndexPage = () => {
             style={{
               fontSize: ".8em",
               border: "none",
-              fontFamily: "Merriweather Sans",
+              fontFamily: "Merriweather Sans, sans-serif",
+              fontWeight: 300,
             }}
           >
             BY{" "}
@@ -101,7 +100,7 @@ const IndexPage = () => {
               NILS WESTHOFF
             </NameLink>{" "}
             <br />
-            <span style={{ opacity: 0.5 }}>
+            <span style={{ opacity: 0.5, fontSize: "0.75em" }}>
               FEBRUARY 2021 | WORD COUNT: {wordCount} | READ TIME:{" "}
               {(wordCount / 150).toFixed()} MIN
             </span>

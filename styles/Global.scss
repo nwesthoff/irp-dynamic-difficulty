@@ -54,9 +54,9 @@ p {
   line-height: 1.6em;
   color: var(--color-text-muted);
 
-  @media (max-width: var(--breakpoint-phone)px) {
+  @media (max-width: 768px) {
     font-size: 1rem;
-    line-height: 1.4em;
+    line-height: 1.5em;
   }
 }
 
@@ -140,10 +140,25 @@ figcaption {
   font-style: italic;
 }
 
+h1 {
+  font-size: 6rem;
+  line-height: 1em;
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+    line-height: 1.1em;
+  }
+}
+
 h2 {
   font-size: 2.5rem;
-  line-height: 1.2;
+  line-height: 1.3em;
   margin: 5rem 0 1.2rem;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    line-height: 1.2em;
+  }
 }
 
 h3 {
@@ -152,7 +167,6 @@ h3 {
   margin: 2rem 0 -0.8rem;
   line-height: 1.2;
   text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 h4,

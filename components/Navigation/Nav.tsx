@@ -1,35 +1,23 @@
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { theme } from "../../config/theme";
-import { MdHome, MdMenu } from "react-icons/md";
+import { MdMenu } from "react-icons/md";
 import { darken } from "polished";
 import { FrontMatter } from "types";
-
 import { frontMatter as chapters } from "../../pages/chapters/*.mdx";
-
-const HomeButton = styled.a`
-  cursor: pointer;
-  margin: 0;
-  text-decoration: none;
-  color: ${theme.colors.primary};
-  text-align: center;
-  line-height: 1;
-  padding: 0.8rem;
-  background: white;
-
-  &:hover {
-    background: #ddd;
-  }
-`;
+import AlertBar from "@components/AlertBar";
+import formatPath from "@utils/formatPath";
 
 const SmallNav = styled.div`
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   z-index: 99;
   display: flex;
-  align-items: stretch;
+  justify-content: flex-end;
+  height: 60px;
+  width: 100%;
 `;
 
 const NavCollapse = styled.div`
@@ -67,8 +55,8 @@ const NavCollapse = styled.div`
 `;
 
 const NavBar = styled.div`
-  margin-bottom: 4rem;
-  position: fixed;
+  position: relative;
+  top: 0;
   z-index: 999;
 `;
 
@@ -85,28 +73,36 @@ const NavToggle = styled.button`
   -webkit-appearance: none;
   -moz-appearance: none;
   padding: 0.8rem;
+  height: 60px;
+  width: 60px;
 
   &:hover {
     background: ${darken(0.05, theme.colors.primary)};
   }
+
+  @media (max-width: ${theme.breakpoints.phone}px) {
+    height: 40px;
+    width: 40px;
+  }
 `;
-export default function Nav() {
+
+interface Props {
+  alert?: ReactNode | string;
+}
+
+export default function Nav({ alert }: Props) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <NavBar>
       <SmallNav>
-        <Link href="/">
-          <HomeButton>
-            <MdHome size={32} />
-          </HomeButton>
-        </Link>
+        {alert ? <AlertBar alertText={alert} /> : null}
         <NavToggle
           onClick={() => {
             setMenuOpen(!menuOpen);
           }}
         >
-          <MdMenu size={32} />
+          <MdMenu size={16} />
         </NavToggle>
       </SmallNav>
       {menuOpen ? (
@@ -120,7 +116,7 @@ export default function Nav() {
               </li>
               {chapters.map((chapter: FrontMatter, i: number) => (
                 <li key={chapter.title}>
-                  <Link href={`/chapters/${i}-${chapter.title}`}>
+                  <Link href={`/${formatPath(chapter.__resourcePath)}`}>
                     <a>{chapter.title}</a>
                   </Link>
                 </li>
