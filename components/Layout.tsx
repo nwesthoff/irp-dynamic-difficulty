@@ -56,7 +56,7 @@ const Layout: React.FunctionComponent<Props> = ({
         />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Merriweather+Sans,wght@0,300&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap"
           rel="stylesheet"
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
