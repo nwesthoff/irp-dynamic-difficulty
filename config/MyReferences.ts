@@ -1,6 +1,6 @@
 const myReferences: AcademicRef[] = [
   {
-    citationKey: "nackeLindley2008",
+    citationKey: "nacke_2008_flow",
     entryType: "ACADEMIC",
     entryTags: {
       author: "Nacke and Lindley",

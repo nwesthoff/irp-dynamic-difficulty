@@ -6,64 +6,78 @@ image: "/img/vault-stone.jpg"
 ---
 
 import Citation from "@components/Bibliography/Citation";
+import ImageCarousel from "@components/ImageCarousel";
 
 ::: section small-width
 
-## Research Question
+## Approach
 
 I have to figure out whether play speed and reaching the end in time is more important than reaching flow within the room. At a macro level we have to guide each player to play at their own pace, while still ensuring they reach the finish line. There are several factors of particular interest in solving these questions.
 
-## Group size and dynamics
+### Group size and dynamics
 
 The Alchemist is an experience for 4 to 8 players. Not only do we need to consider individual players, who might have different levels of intellect and different competencies. We need to consider the group as a whole, and consider different group sizes. If technically possible, it could be interesting to provide each player with an individual score, and use that as a starting point to score the group.
 
-## Assessing players - input
+### Assessing players - input
 
 We need to consider what our input will be. There are several ways to assess player enjoyment, as well as play speed. This will be the input for our system. We might use:
 
 - Camera feeds
 - Puzzle milestones (switches pushed, consider time and reference time)
 
-## Puzzle difficulty
+### Puzzle difficulty
 
 We might adjust the puzzle difficulty on the player who initializes the puzzle, or on the group as a whole.
 
-## Room framework
+### Room framework
 
-This should all boil down to a framework to make the room reactive to players. Ultimately I'd like to create a system that takes one or two inputs, and a single puzzle to
+This should all boil down to a framework to make the room reactive to players.
 
 - Tech - [cogs.show](http://cogs.show)/MEKE (Mystery Environment Kontrol Engine?)
 
-## Research Questions
+## Goal
 
-- What if there's multiple experience levels within the group?
+Ultimately I'd like to create a system that takes one or two inputs, and dynamically adjust the difficulty of a single puzzle to prototype the proposed solution.
 
-  - Do we go for the average, the slowest person?
-  - Could it be possible to adjust only one of the parallel tracks?
-  - Could we offer more opportunities for the business? Replay-ability?
-    - Especially if we want to hide the fact that there exists a dynamic difficulty system
-  - Can physiological measurements ([Nacke & Lindley](https://www.notion.so/Flow-and-Immersion-in-First-Person-Shooters-Measuring-the-player-s-gameplay-experience-ae5fbf18f43e49aa93b3fea3f620abe0)) respond quickly enough, during gameplay?
+## Dynamically Adjusting Game Flow
 
-## What's been done before?
+These are some hypothetical scenarios of groups reaping the benefits of a dynamically controlled escape room.
 
-- Escape rooms
+:::
 
-  - Escapist does some level of dynamics, but it's nothing particularly special
-    [Niels Jonker](https://www.notion.so/Niels-Jonker-61d4ebfefdb443308333ef083caf2273)
-  - _The Sanatorium_ at I Survived The Room NYC gives a report card for your performance
-  - _The Heist_ for GuessHQ by Immersive Tech has a 'pro circuit' ([video](https://www.youtube.com/watch?v=sZekImmBstU))
-  - Tom Knabe
-    > I generally try to stick it to one or two puzzles which I call “governors” that increase or decrease difficulty to buy or lose time getting teams to the final scene before the game ends
-  - Eyal Danon describes what [COGS](http://cogs.show) does based on time or determined by GM:
-    > If at one point a drawer opens giving the players a clue for the next puzzle, if it's too early in the game the drawer next to it opens with tougher clues, or leading them down a tougher path
-  - Lab13 has adaptive difficulty
-  - Gascape has 'expert mode' - multiple levels of difficulty, but you pick before playing
+::: section full-width
 
-- In games:
-  - Resident Evil 4 — dynamic play difficulty (opaque):
-    [What Capcom didn't tell you about Resident Evil 4](https://www.notion.so/What-Capcom-didn-t-tell-you-about-Resident-Evil-4-83cefce077be466d870754d19d177c5b)
-  - Metal Gear Solid 5: Phantom Pain — enemies respond to repetitive tactics
-  - Half Life 2 - more health packs when you're almost dying
-  - Uncharted 4 - while technically not dynamic difficulty, it is interesting: when climbing multiple towers, the first puzzle is always the easiest, regardless of which one is found first. So the flow is always going up.
+<ImageCarousel
+  layout="contain"
+  imageArr={[
+    {
+      src: "/img/Enthusiast-challenge.png",
+      desc: "Enthusiasts looking for a challenge",
+    },
+    {
+      src: "/img/Enthusiasts-bad-day.png",
+      desc: "Enthusiasts having a bad day",
+    },
+    {
+      src: "/img/Colleague-team-novices.png",
+      desc: "Team of colleagues, novice escape room players",
+    },
+  ]}
+/>
+:::
+
+::: section small-width
+
+## Enthusiasts looking for a challenge
+
+The main complaint from enthusiasts at The Vault is a lack of challenge. Puzzles are (sometimes) a-logical, and merely an action to do. The experience of the room makes up for it, but Sherlocked wants to offer a bigger challenge to their (most loyal) customers.
+
+## Enthusiasts having a bad day
+
+What if a second group of enthusiasts play the new experience. They start of well but quickly realise they've taken on too much. They might get knocked down from the highest difficulty, all the way down to an easy level. This way even they get to see the finish line, though that does not ensure they escape.
+
+## Team of colleagues, novice escape room players
+
+On the other hand we might see a group of colleagues that know each other well, but have never played an escape room together. They might start of quite anxious, but also are deeply curious and driven to do well. They soon realize they're on a roll and might even think the puzzles start to become boring. The DDA kicks things up a notch and grows with them, they play their final puzzle(s) at the highest level.
 
 :::
