@@ -4,6 +4,7 @@ import ContentContainer from "../ContentContainer";
 import { ReferenceContext } from "./ReferenceProvider";
 import ReactLinkify from "react-linkify";
 import { theme } from "../../config/theme";
+import { useRouter } from "next/dist/client/router";
 
 const ReferenceWrapper = styled.div`
   display: flex;
@@ -36,6 +37,9 @@ const ReferenceListItem = styled.li`
   -webkit-column-break-inside: avoid;
   /* for Firefox */
   page-break-inside: avoid;
+
+  border: ${(props: { highlight?: boolean }) =>
+    props.highlight ? "2px solid var(--color-primary)" : "none"};
 `;
 
 const ReferenceLink = styled.a`
@@ -55,6 +59,7 @@ const ReferenceLink = styled.a`
 
 export default function References() {
   const references = useContext(ReferenceContext);
+  const router = useRouter();
 
   const sortedReferences = references?.sort((a, b) => {
     return a.entryTags.inBib > b.entryTags.inBib
@@ -86,6 +91,7 @@ export default function References() {
                 <ReferenceListItem
                   id={`ref-${ref.citationKey}`}
                   key={ref.citationKey}
+                  highlight={router.query.ref === ref.citationKey}
                 >
                   <ReactLinkify
                     componentDecorator={(decoratedHref, decoratedText, key) => (
