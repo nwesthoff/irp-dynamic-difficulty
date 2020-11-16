@@ -5,7 +5,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "reference": "npx citation-js -i ./config/bibtexRef.bib -o ./config/MyReferences"
   },
   "dependencies": {
     "@mdx-js/loader": "^1.6.21",
