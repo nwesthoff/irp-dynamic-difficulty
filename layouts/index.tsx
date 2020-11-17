@@ -4,13 +4,19 @@ import Layout from "@components/Layout";
 import PageIntroduction from "@components/PageIntroduction";
 import MainContent from "@components/MainContent";
 import NextChapter from "@components/Navigation/NextChapter";
+import { MDXProvider } from "@mdx-js/react";
 
 import { frontMatter as chapters } from "../pages/chapters/*.mdx";
+import MDXImage from "@components/MDXComponents/MDXImage";
 
 interface Props {
   frontMatter: FrontMatter;
   children: ReactNode;
 }
+
+const components = {
+  img: MDXImage,
+};
 
 const DefaultLayout = ({ frontMatter, children }: Props) => (
   <Layout title={`${frontMatter.title} | Dynamic Difficulty`}>
@@ -20,7 +26,7 @@ const DefaultLayout = ({ frontMatter, children }: Props) => (
         <p>{frontMatter.introduction}</p>
       </PageIntroduction>
 
-      {children}
+      <MDXProvider components={components}>{children}</MDXProvider>
     </MainContent>
 
     {chapters[frontMatter.index + 1] ? (

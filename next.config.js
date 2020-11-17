@@ -4,12 +4,13 @@ const readingTime = require("reading-time");
 const containers = require("remark-containers");
 const slug = require("remark-slug");
 const headings = require("remark-autolink-headings");
+const unwrap = require("remark-unwrap-images");
 
 module.exports = withMdxEnhanced({
   layoutPath: "layouts",
   defaultLayout: true,
   fileExtensions: ["mdx"],
-  remarkPlugins: [containers, slug, headings],
+  remarkPlugins: [containers, slug, headings, unwrap],
   rehypePlugins: [],
   extendFrontMatter: {
     process: (mdxContent, frontMatter) => {
