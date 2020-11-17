@@ -101,7 +101,7 @@ const ChapterTitle = styled.h2`
     text-decoration: none;
 
     &:hover {
-      color: var(--color-text-muted);
+      color: var(--color-text-mute);
     }
   }
 

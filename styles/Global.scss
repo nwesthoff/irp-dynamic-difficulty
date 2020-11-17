@@ -2,12 +2,13 @@
   // Colors
   --color-bg: white;
   --color-fg: black;
-  --color-text-muted: #333;
+  --color-text-mute: #4d4d4d;
   --color-primary: #6251a2;
   --color-secondary: #b07902;
   --color-tertiary: #24c1e0;
   --color-bg-dark: #222;
   --color-primary-dark: #2e264b;
+  --color-primary-transparent: #6251a233;
 
   // Breakpoints
   --breakpoint-phone: 480;
@@ -22,7 +23,7 @@
 [data-theme="dark"] {
   --color-bg: black;
   --color-fg: white;
-  --color-text-muted: #ccc;
+  --color-text-mute: #ccc;
 }
 
 * {
@@ -52,7 +53,7 @@ img {
 p {
   font-size: 1.2rem;
   line-height: 1.6em;
-  color: var(--color-text-muted);
+  color: var(--color-text-mute);
 
   @media (max-width: 768px) {
     font-size: 1rem;
@@ -65,17 +66,29 @@ a {
 }
 
 blockquote {
-  background: rgba(36, 193, 224, 0.08);
-  border-left: 2px solid #24c1e0;
+  background: var(--color-primary-transparent);
+  border-left: 2px solid var(--color-primary);
   padding: 0.4rem 2rem 1.2rem;
   margin: 3.2rem 0;
 
   p {
     font-family: "IBM Plex Serif", serif;
     font-style: italic;
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 1.4em;
     color: var(--color-fg);
+
+    &:before {
+      content: "“";
+    }
+    &:after {
+      content: "”";
+    }
+
+    &:before,
+    &:after {
+      color: var(--color-text-mute);
+    }
   }
 
   ul {
@@ -86,7 +99,7 @@ blockquote {
   li {
     text-align: end;
     display: block;
-    color: #ccc;
+    color: var(--color-text-mute);
     font-size: 1.2rem;
     font-style: normal;
 
@@ -111,7 +124,7 @@ blockquote {
 }
 
 li {
-  color: var(--color-text-muted);
+  color: var(--color-text-mute);
   line-height: 1.8;
 }
 
