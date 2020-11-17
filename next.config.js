@@ -2,12 +2,14 @@
 const withMdxEnhanced = require("next-mdx-enhanced");
 const readingTime = require("reading-time");
 const containers = require("remark-containers");
+const slug = require("remark-slug");
+const headings = require("remark-autolink-headings");
 
 module.exports = withMdxEnhanced({
   layoutPath: "layouts",
   defaultLayout: true,
   fileExtensions: ["mdx"],
-  remarkPlugins: [containers],
+  remarkPlugins: [containers, slug, headings],
   rehypePlugins: [],
   extendFrontMatter: {
     process: (mdxContent, frontMatter) => {
