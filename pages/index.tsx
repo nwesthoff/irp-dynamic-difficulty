@@ -14,6 +14,17 @@ const HeaderContent = styled(MainContent)`
   align-items: center;
   flex-direction: column;
   z-index: 5;
+  @media (prefers-color-scheme: light) {
+    img {
+      filter: invert(1);
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    h1 {
+      filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+    }
+  }
 `;
 
 const Header = styled.div`
@@ -30,6 +41,7 @@ const Header = styled.div`
     bottom: 0;
     right: 0;
     position: absolute;
+
     background: linear-gradient(to top, var(--color-bg), transparent 40%);
   }
 
@@ -44,7 +56,11 @@ const HeaderVideo = styled.video`
   height: 100%;
   object-fit: cover;
   object-position: center;
-  opacity: 0.7;
+  opacity: 0.8;
+
+  @media (prefers-color-scheme: dark) {
+    opacity: 0.7;
+  }
 `;
 
 const NameLink = styled.a`

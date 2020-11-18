@@ -51,12 +51,15 @@ const ChapterIndex = styled.span`
 const ChapterContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  flex-direction: ${(props: { reverse?: boolean }) =>
-    props.reverse ? "row-reverse" : "row"};
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 8rem 2rem;
+
+  @media (min-width: 945px) {
+    flex-direction: ${(props: { reverse?: boolean }) =>
+      props.reverse ? "row-reverse" : "row"};
+  }
 
   @media (max-width: ${theme.breakpoints.phone}px) {
     flex-direction: unset;
