@@ -194,6 +194,27 @@ h6 {
   font-weight: 400;
 }
 
+h2 {
+  position: relative;
+
+  .autolink-heading {
+    border-bottom: 1px dotted transparent;
+    text-decoration: none;
+    color: var(--color-fg);
+
+    &:hover {
+      border-bottom: 1px dotted var(--color-text-mute);
+
+      &:after {
+        position: absolute;
+        margin-left: 0.8rem;
+        content: "🔗";
+        font-size: 0.5em;
+      }
+    }
+  }
+}
+
 /* TABLE STYLES */
 
 table {

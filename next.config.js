@@ -10,7 +10,15 @@ module.exports = withMdxEnhanced({
   layoutPath: "layouts",
   defaultLayout: true,
   fileExtensions: ["mdx"],
-  remarkPlugins: [containers, slug, headings, unwrap],
+  remarkPlugins: [
+    containers,
+    slug,
+    [
+      headings,
+      { behavior: "wrap", linkProperties: { className: "autolink-heading" } },
+    ],
+    unwrap,
+  ],
   rehypePlugins: [],
   extendFrontMatter: {
     process: (mdxContent, frontMatter) => {
