@@ -142,12 +142,7 @@ const ChapterBlock = ({ reverse, children, chapter }: Props) => {
         <Fragment>
           <Spacer />
           <ChapterImageContainer>
-            <Image
-              layout="responsive"
-              height={200}
-              width={300}
-              src={chapter.image}
-            />
+            <Image height={400} width={600} src={chapter.image} />
           </ChapterImageContainer>
         </Fragment>
       ) : null}
