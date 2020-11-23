@@ -62,7 +62,7 @@ export default function Citation({
     <CitationStyled>
       <TooltipWrapper
         href={{
-          pathname: `/chapters/2-conclusion`,
+          pathname: `/chapters/conclusion`,
           hash: currentRef.entryType.toLowerCase(),
           query: { ref: currentRef.citationKey },
         }}

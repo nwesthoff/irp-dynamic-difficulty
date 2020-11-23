@@ -30,7 +30,19 @@ const DefaultLayout = ({ frontMatter, children }: Props) => (
     </MainContent>
 
     {chapters[frontMatter.index + 1] ? (
-      <NextChapter chapter={chapters[frontMatter.index + 1]} />
+      <NextChapter
+        chapter={
+          chapters.sort((chapter, chapterNext) => {
+            if (chapter.index < chapterNext.index) {
+              return -1;
+            }
+            if (chapter.index > chapterNext.index) {
+              return 1;
+            }
+            return 0;
+          })[frontMatter.index + 1]
+        }
+      />
     ) : null}
   </Layout>
 );

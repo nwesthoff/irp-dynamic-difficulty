@@ -19,6 +19,16 @@ const myReferences: AcademicRef[] = [
         "Sugar, R. (2019). The World Is chaos. Escape Rooms Make sense. [online] Vox. Available at: https://www.vox.com/the-goods/2019/8/7/20749177/escape-room-game [Accessed 18 Nov. 2020].",
     },
   },
+  {
+    citationKey: "bates_1997_designing",
+    entryType: "TRADEMAG",
+    entryTags: {
+      author: "Bates",
+      year: "1997",
+      inBib:
+        "Bates, B. (1997). Designing the Puzzle. [online] www.scottkim.com.previewc40.carrierzone.com. Available at: http://www.scottkim.com.previewc40.carrierzone.com/thinkinggames/GDC00/bates.html [Accessed 23 Nov. 2020].",
+    },
+  },
 ];
 
 export interface AcademicRef {

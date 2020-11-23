@@ -126,6 +126,11 @@ blockquote {
 li {
   color: var(--color-text-mute);
   line-height: 1.8;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.5em;
+  }
 }
 
 b,
@@ -179,11 +184,11 @@ h2 {
 }
 
 h3 {
-  color: var(--color-primary);
-  font-size: 1rem;
+  color: var(--color-secondary);
+  font-size: 1.1em;
+  font-weight: 300;
   margin: 2rem 0 -0.8rem;
   line-height: 1.2;
-  text-transform: uppercase;
 }
 
 h4,

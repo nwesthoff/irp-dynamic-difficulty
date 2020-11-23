@@ -114,13 +114,23 @@ export default function Nav({ alert }: Props) {
                   <a>Home</a>
                 </Link>
               </li>
-              {chapters.map((chapter: FrontMatter) => (
-                <li key={chapter.title}>
-                  <Link href={`/${formatPath(chapter.__resourcePath)}`}>
-                    <a>{chapter.title}</a>
-                  </Link>
-                </li>
-              ))}
+              {chapters
+                .sort((chapter, chapterNext) => {
+                  if (chapter.index < chapterNext.index) {
+                    return -1;
+                  }
+                  if (chapter.index > chapterNext.index) {
+                    return 1;
+                  }
+                  return 0;
+                })
+                .map((chapter: FrontMatter) => (
+                  <li key={chapter.title}>
+                    <Link href={`/${formatPath(chapter.__resourcePath)}`}>
+                      <a>{chapter.title}</a>
+                    </Link>
+                  </li>
+                ))}
             </ul>
           </NavCollapse>
         </nav>
