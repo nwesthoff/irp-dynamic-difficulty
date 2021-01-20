@@ -156,7 +156,11 @@ const ChapterBlock = ({ reverse, children, chapter }: Props) => {
         <Fragment>
           <Spacer />
           <ChapterImageContainer>
-            <Image height={400} width={600} src={chapter.image} />
+            <Link href={formatPath(chapter.__resourcePath)}>
+              <a>
+                <Image height={400} width={600} src={chapter.image} />
+              </a>
+            </Link>{" "}
           </ChapterImageContainer>
         </Fragment>
       ) : null}
