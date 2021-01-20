@@ -55,6 +55,11 @@ p {
   line-height: 1.6em;
   color: var(--color-text-mute);
 
+  b,
+  em {
+    color: var(--color-fg);
+  }
+
   @media (max-width: 768px) {
     font-size: 1rem;
     line-height: 1.5em;
@@ -131,11 +136,6 @@ li {
     font-size: 1rem;
     line-height: 1.5em;
   }
-}
-
-b,
-em {
-  color: var(--color-fg);
 }
 
 figure {

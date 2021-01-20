@@ -22,6 +22,7 @@ const DefaultLayout = ({ frontMatter, children }: Props) => (
   <Layout title={`${frontMatter.title} | Dynamic Difficulty`}>
     <MainContent>
       <PageIntroduction className="wide-width">
+        <h2>{frontMatter.subtitle}</h2>
         <h1>{frontMatter.title}</h1>
         <p>{frontMatter.introduction}</p>
       </PageIntroduction>

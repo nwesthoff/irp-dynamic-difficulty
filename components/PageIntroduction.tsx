@@ -9,6 +9,12 @@ const PageIntroduction = styled.div`
   h1 {
     font-size: 6rem;
     line-height: 1em;
+    margin-top: 0;
+  }
+
+  h2 {
+    color: var(--color-text-mute);
+    margin-bottom: 0.4rem;
   }
 
   p {
@@ -21,6 +27,20 @@ const PageIntroduction = styled.div`
   @media (max-width: ${theme.breakpoints.tablet}px) {
     h1 {
       font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: ${theme.breakpoints.phone}px) {
+    h1 {
+      font-size: 2.4rem;
+    }
+
+    h2 {
+      font-size: 1rem;
     }
   }
 `;

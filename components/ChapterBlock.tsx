@@ -7,9 +7,19 @@ import Image from "next/image";
 import { FrontMatter } from "types";
 import formatPath from "@utils/formatPath";
 
+const ChapterSubTitle = styled.h3`
+  position: relative;
+  z-index: 2;
+  color: var(--color-text-mute);
+  font-size: 0.9em;
+  margin: 0;
+`;
+
 const ChapterExcerpt = styled.p`
   min-width: 200px;
   max-width: 540px;
+  position: relative;
+  z-index: 2;
 `;
 
 const ReadChapterButton = styled.a`
@@ -31,11 +41,12 @@ const ReadChapterButton = styled.a`
 const ChapterIndex = styled.span`
   position: absolute;
   top: -2rem;
-  left: -2rem;
+  left: -2.5rem;
   font-size: 8rem;
   line-height: 1em;
   color: transparent;
   color: var(--color-primary);
+  opacity: 0.4;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--color-secondary);
@@ -125,6 +136,9 @@ const ChapterBlock = ({ reverse, children, chapter }: Props) => {
       <ChapterTextContainer>
         <ChapterIndex>{chapter.index}</ChapterIndex>
 
+        {chapter.subtitle ? (
+          <ChapterSubTitle>{chapter.subtitle}</ChapterSubTitle>
+        ) : null}
         <ChapterTitle>
           <Link href={formatPath(chapter.__resourcePath)}>
             <a>{chapter.title}</a>
