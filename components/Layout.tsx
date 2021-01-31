@@ -60,6 +60,14 @@ const Layout: React.FunctionComponent<Props> = ({
           rel="stylesheet"
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <script
+          data-host="https://microanalytics.io"
+          data-dnt="false"
+          src="https://microanalytics.io/js/script.js"
+          id="ZwSg9rf6GA"
+          async
+          defer
+        ></script>
       </Head>
       <Nav alert={alert} />
       {children}
