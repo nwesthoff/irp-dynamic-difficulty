@@ -41,7 +41,7 @@ const myReferences: AcademicRef[] = [
     },
   },
   {
-    citationKey: "f",
+    citationKey: "chen_2007_flow",
     entryType: "ACADEMIC",
     entryTags: {
       author: "Chen",
@@ -51,7 +51,7 @@ const myReferences: AcademicRef[] = [
     },
   },
   {
-    citationKey: "csikszentmihalyi_2008_",
+    citationKey: "csikszentmihalyi_2008_flow",
     entryType: "TRADEMAG",
     entryTags: {
       author: "Csikszentmihalyi",
