@@ -49,7 +49,7 @@ const ReferenceLink = styled.a`
   display: inline-block;
   max-width: 280px;
   vertical-align: baseline;
-  top: 3px;
+  margin-bottom: -8px;
   position: relative;
 
   @media (max-width: ${theme.breakpoints.tablet}px) {
@@ -100,7 +100,10 @@ export default function References() {
                         href={decoratedHref}
                         key={key}
                       >
-                        {decoratedText}
+                        {decoratedText
+                          .replace("https://", "")
+                          .replace("http://", "")
+                          .replace("www.", "")}
                       </ReferenceLink>
                     )}
                   >
@@ -128,7 +131,10 @@ export default function References() {
                         href={decoratedHref}
                         key={key}
                       >
-                        {decoratedText}
+                        {decoratedText
+                          .replace("https://", "")
+                          .replace("http://", "")
+                          .replace("www.", "")}
                       </ReferenceLink>
                     )}
                   >
@@ -156,7 +162,10 @@ export default function References() {
                         href={decoratedHref}
                         key={key}
                       >
-                        {decoratedText}
+                        {decoratedText
+                          .replace("https://", "")
+                          .replace("http://", "")
+                          .replace("www.", "")}
                       </ReferenceLink>
                     )}
                   >

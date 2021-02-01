@@ -26,7 +26,7 @@ const myReferences: AcademicRef[] = [
       author: "Bates",
       year: "1997",
       inBib:
-        "Bates, B. (1997). Designing the Puzzle. [online] www.scottkim.com.previewc40.carrierzone.com. Available at: http://www.scottkim.com.previewc40.carrierzone.com/thinkinggames/GDC00/bates.html [Accessed 23 Nov. 2020].",
+        "Bates, B. (1997). Designing the Puzzle. [online]. Available at: http://www.scottkim.com.previewc40.carrierzone.com/thinkinggames/GDC00/bates.html [Accessed 23 Nov. 2020].",
     },
   },
 
