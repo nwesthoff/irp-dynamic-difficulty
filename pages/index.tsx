@@ -106,9 +106,18 @@ const IndexPage = () => {
       </Header>
       <MainContent>
         <PageIntroduction className="wide-width">
-          <p>
-            This is an Industry Research Project on Dynamic Difficulty in Escape
-            Rooms. <i>Work in progress.</i>
+          <h2 style={{ fontSize: "1.4em" }}>Abstract</h2>
+          <p style={{ maxWidth: "768px" }}>
+            This industry-based research project explores how dynamic difficulty
+            can offer a better experience to a select group of escape room
+            visitors. It discusses the necessity of a correctly moderated
+            difficulty level, and explores several technical implementations.
+            Literature shows that sentiment analysis through physiological
+            measurement (HR, HRV & GSR) as well as facial analysis show
+            insufficient reliability to determine the desired difficulty of an
+            individual. Additionally, it describes a method to determine the
+            desired difficulty for a group as a whole with more potential.{" "}
+            <i>Work in progress.</i>
           </p>
           <p
             style={{
@@ -124,7 +133,8 @@ const IndexPage = () => {
             </NameLink>{" "}
             <br />
             <span style={{ opacity: 0.5, fontSize: "0.75em" }}>
-              FEBRUARY 2021 | WORD COUNT: {wordCount} | READ TIME:{" "}
+              {/* MDX Wordcount + abstract */}
+              FEBRUARY 2021 | WORD COUNT: {wordCount + 82} | READ TIME:{" "}
               {(wordCount / 150).toFixed()} MIN
             </span>
           </p>
