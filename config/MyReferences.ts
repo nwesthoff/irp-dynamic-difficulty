@@ -180,6 +180,16 @@ const myReferences: AcademicRef[] = [
         "Wiemker, M., Elumir, E. and Clare, A. (2015). Escape Room Games: Can you transform an unpleasant situation into a pleasant one? [online] Available at: https://thecodex.ca/wp-content/uploads/2016/08/00511Wiemker-et-al-Paper-Escape-Room-Games.pdf [Accessed 31 Jan. 2021].",
     },
   },
+  {
+    citationKey: "madigan_2010_psychology",
+    entryType: "TRADEMAG",
+    entryTags: {
+      author: "Madigan",
+      year: "2010",
+      inBib:
+        "Madigan, J. (2010). The Psychology of Immersion in Video Games. [online] The Psychology of Video Games. Available at: http://www.psychologyofgames.com/2010/07/the-psychology-of-immersion-in-video-games/.",
+    },
+  },
 ];
 
 export interface AcademicRef {
