@@ -9,7 +9,7 @@ const StyledSideBySide = styled.div`
   gap: 2rem;
 
   & > figure {
-    flex-basis: 33%;
+    flex-basis: 30%;
     min-width: 280px;
     flex-grow: 1;
   }

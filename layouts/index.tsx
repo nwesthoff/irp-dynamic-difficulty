@@ -8,6 +8,7 @@ import { MDXProvider } from "@mdx-js/react";
 
 import { frontMatter as chapters } from "../pages/chapters/*.mdx";
 import MDXImage from "@components/MDXComponents/MDXImage";
+import MDXVideo from "@components/MDXComponents/MDXVideo";
 
 interface Props {
   frontMatter: FrontMatter;
@@ -16,6 +17,7 @@ interface Props {
 
 const components = {
   img: MDXImage,
+  video: MDXVideo,
 };
 
 const DefaultLayout = ({ frontMatter, children }: Props) => (
