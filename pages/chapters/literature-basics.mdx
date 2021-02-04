@@ -1,9 +1,9 @@
 ---
-title: "Basics"
+title: "Theory of Game Design"
 subtitle: "Literature Review"
-introduction: "Designing for escape rooms, means it's important to know what makes them special. This chapter explores why people like playing escape rooms and what makes a good escape room. Before thinking about dynamic difficulty, these are the pre-requisites to a good experience."
-index: 2
-image: "/img/vault-amulet.jpg"
+introduction: "To effectively design for escape rooms, it's important to know what makes them challenging and fun. This chapter aims to uncover why people like playing escape rooms and what makes a good escape room. We'll dip our toes into each of the defined research questions to get a fundamental understanding of the problem at hand."
+index: 1
+image: "/img/library.jpg"
 ---
 
 import Citation from "@components/Bibliography/Citation";
@@ -11,41 +11,53 @@ import SideBySide from "@components/MDXComponents/SideBySide";
 
 ::: section small-width
 
-If you consider an escape room experience as a transaction, players pay not only with money. They pay with their complete focus during a set time as well. In return, they expect a good experience.
+## A Metamorphosis
 
-## Elements of an Escape Room
+Like most young product markets, escape rooms as we know them have changed a lot in these first few years. Over time, the rigid definition of escape rooms has been stretched and bent out of shape. No longer are they simply rooms to break out of. They have completely flipped the idea of what an escape room is on its head. They have stuck with their name, but escaped its original meaning in various ways. The escape room industry has fostered a scene of creatives, making all sorts of immersive live-experiences.
 
-What draws people to escape rooms differs from group to group, and from person to person. Fortunately, there has been extensive — though mostly unscientific — research on that. The _Escape Room Enthusiast Survey_, a yearly reoccurring survey by and for enthusiasts goes in deep. It ranks the importance of several elements within escape rooms. In 2019 <Citation id="elumir_2019a_2019" />, the three factors considered most essential by enthusiasts are:
+### Innovating on gameplay
 
-1. Well designed puzzles and game flow
-2. Novelty & Uniqueness
-3. Immersion
+Sherlocked's 'escape room' _The Vault_ was one of the first to do a _break-in_ experience well.
+
+### Transformed focus
+
+Victor notes they have become an umbrella term for entertainment featuring cinematic adventures, dedicated to originality, narrative and immersion.
+
+> We’re part of a revolution in live entertainment, by showing customers that their lives, for an hour at a time, can be like a movie.
+>
+> - Victor van Doorn
+
+Rachel Sugar writes escape rooms are no longer are a room to escape from, but an experience that offers a temporary escape from normal life <Citation id="sugar_2019_the" />.
+
+As a result of these developments, game designers have to consider an increasing amount of facets of an escape room. Designers have to deliver on most or all of them to create a good experience. If you consider an escape room experience as a transaction, players pay not only with money. They pay with their complete focus during a set time as well. In return, they expect a good experience. That's why my first research question aims to uncover what game designers have to think about when they want to create a good escape room experience.
+
+# What makes or breaks an escape room experience?
 
 ## Puzzles
 
-The anatomy of a (good) puzzle is complex. If puzzles would all follow the same basic formula, they likely wouldn't be a puzzle anymore, since they're predictable. Though there are also factors _every_ puzzle is made up of.
+As discussed before, escape rooms come in many types, focus on different aspects and display various themes. One thing that's consistent however, is that (almost) all escape rooms are, at the core, driven by puzzles. The anatomy of a (good) puzzle is complex. If puzzles would all follow the same basic formula, they likely wouldn't be a puzzle anymore, since that would make them predictable. Puzzles can take various forms and styles, to be decided on by the designer. Though there are also factors _every_ puzzle is made up of. The following theory applies to _'escape room'-style_ puzzles only, and may not be applicable to other types of puzzles (like sudoku's, jigsaw puzzles and crossword puzzles).
 
 Wiemker, Elumir & Clare define the core of every puzzle as threefold:
 
-1. They offer a challenge — a locked box
-2. They have a solution — a combination
-3. There is a reward — the contents of the box
+1. **They offer a challenge** — a locked box
+2. **They have a solution** — a combination
+3. **There is a reward** — the contents of the box
 
 ![/img/puzzle-composition.png](/img/puzzle-composition.png "Wiemker, Elumir & Clare's basic puzzle composition")
+
+Wiemker, Elumir & Clare's basic puzzle composition
 
 This is a repeating pattern, a (potentially infinite) loop of challenges. Each reward holds the key to the next challenge <Citation id="wiemker,-elumir-and-clare_2015_escape" />.
 
 ### Designing Puzzles
 
-In my talks with Victor, I learned about _'Designing the Puzzle'_ <Citation id="bates_1997_designing" />. Written by Bob Bates in 1997, while this essay isn't current by any stretch of the imagination, it has been the underpinning for many of game designers' theories.
-
-According to Bates, puzzles are at the heart of (adventure) games. Good puzzles contribute to _plot_, _character_ and _story development._ They draw the player into the fictional world. Good puzzles are fair and make sense, they exist to be fun, not to prevent players from finishing. Contrarily, bad puzzles are _intrusive_ and _obstructionist_. These puzzles only frustrate players and aim to make the designer look smart.
+According to Bates, puzzles are at the heart of (adventure) games. Good puzzles contribute to _plot_, _character_ and _story development._ While these characteristics say nothing about the interaction on its own, they are crucial to nail the experience as a whole. Because the puzzles that do this well draw the player into the fictional world, make them care about solving the puzzle. Good puzzles are fair and make sense, they exist to be fun, not to prevent players from finishing. Contrarily, bad puzzles are _intrusive_ and _obstructionist_. These puzzles only frustrate players and aim to make the designer look smart.
 
 ### Fair Puzzles
 
 Escape room designers should pay extra attention to create fair and enjoyable puzzles. What makes this especially true for escape rooms is that they are bound by a set time limit. Getting stuck wastes time and hurts in two ways. Primarily, it frustrates players in that moment, on top it also cuts on time that's left for a good experience.
 
-Errol Elumir argues in favour of this as well. As escape room designers we should have the ambition to make puzzles that are to be solved with only the information in that room <Citation id="elumir_2018_13" hideAuthor />. He doesn't see players as adversaries, and as a designer, he's on their side. We should not trick people, we should not mislead them. Designing puzzles is not about putting in roadblocks to ensure a humbling defeat. Ultimately, designers shouldn't set out to prove they are smarter than the player. He writes:
+Errol Elumir argues in favour of this as well. He says, that as escape room designers we should have the ambition to make puzzles that are to be solved with only the information in that room <Citation id="elumir_2018_13" hideAuthor />. He doesn't see players as adversaries, and as a designer, he's on their side. We should not trick people, we should not mislead them. Designing puzzles is not about putting in roadblocks to ensure a humbling defeat. Ultimately, designers shouldn't set out to prove they are smarter than the player. He writes:
 
 > As a designer, I want people to solve my puzzles. I take no delight in people’s failure
 >
@@ -53,22 +65,32 @@ Errol Elumir argues in favour of this as well. As escape room designers we shoul
 
 Elumir explains that this does not mean all puzzles have to be easy to solve. A puzzle can be difficult and enjoyable at the same time. Players will embrace difficulty, and don’t mind failing so long as failure feels fair to them. When playing escape rooms, players expect to rely solely on their wits and each other. When this expectation isn't granted, bad puzzles (and bad escape rooms) are the result. Bates writes a common player response in a situation like that is: “There is no way I could ever have solved that. I don’t even understand it now!”. Even 20 years later, a common error is that players have to guess what the designer thought while creating a puzzle, Elumir notes. Not only that, it's an issue enthusiasts see happening all the time as well, which I will elaborate on in the next chapter.
 
-Bates <Citation id="bates_1997_designing" hideAuthor /> writes puzzle designers should develop player empathy. The ability to put ourselves into the player's shoes. Bates establishes that this is a key skill to determine whether a puzzle is "fair and reasonable". It allows us to consider what situation a player is in, whether they know what they should solve, and what the blocking obstacles are to resolve. While Bates does emphasise the importance of empathy this is also where this article starts to show its age. As a user experience designer, actually testing a proposed design solution is at the core of my work.
+### Puzzle difficulty
 
-## The Compulsion Loop
+It should be obvious that designing extremely hard puzzles shouldn't be the primary goal. However, when we do want to increase or decrease difficulty to cater to different players, there are several (metaphorical) dials to turn. In _Designing the Puzzle_, Bob Bates argues designing difficulty is actually one of the easiest parts of puzzle design <Citation id="bates_1997_designing" />.
 
-As I eluded to before, puzzles aren't self-contained systems, but part of the escape room as a whole. Escape rooms host a repeating pattern of varying interactions, that connect through their input and output. Nick Moran describes in his talk _Tools of Immersion_, how to ensure players know what to do, by successfully implementing the compulsion loop <Citation id="moran_2017_tools" />.
+1. **Breadcrumbs —** Change the amount or directness of information to players
+2. **Alternate solutions —** Adding alternate solutions make a puzzle easier
+3. **Steps to solve —** Increasing the steps to solve a puzzle increases the difficulty
+4. **Proximity —** The closer (physiologically and geographically) the solution, the easier
+5. **Steering the Player —** nudging in the right direction, as a response to player actions
+
+Furthermore, he writes puzzle designers should develop player empathy. The ability to put ourselves into the player's shoes. Bates establishes that this is a key skill to determine whether a puzzle is "fair and reasonable". It allows us to consider what situation a player is in, whether they know what they should solve, and what the blocking obstacles are to resolve. While Bates does emphasise the importance of empathy this is also where this article starts to show its age. As a user experience designer, actually testing a proposed design solution is at the core of my work.
+
+### The Compulsion Loop
+
+As I alluded to before, puzzles aren't self-contained interactions that players have. They are part of the entire escape room 'system'. Escape rooms host a repeating pattern of varying interactions, that connect through their input and output. Nick Moran describes in his talk _Tools of Immersion_, how to ensure players know what to do, by successfully implementing the compulsion loop <Citation id="moran_2017_tools" />.
+
+1. **Desire** — each puzzle starts with a desire. The need to go somewhere, or get something.
+2. **Obstacle** — this desire is blocked by a certain obstacle. The puzzle is removing that obstacle.
+3. **Reward** — upon unblocking the obstacle, players receive a reward. Which should point towards the next desire.
+4. **Repeat** — by repeating this loop, players know what to do next.
 
 ![/img/compulsion-loop.png](/img/compulsion-loop.png)
 
-1. Desire — each puzzle starts with a desire. The need to go somewhere, or get something.
-2. Obstacle — this desire is blocked by a certain obstacle. The puzzle is removing that obstacle.
-3. Reward — upon unblocking the obstacle, players receive a reward. Which should point towards the next desire.
-4. Repeat — by repeating this loop, players know what to do next.
-
 The repetition leads players from one challenge to the next, and each reward shows players what _desire_ to care about next. When this isn't clear, people are lost and they lose interest. Clearly, maintaining the compulsion loop is essential to ensure players enjoy the escape room as a whole.
 
-## Puzzle paths
+### **Puzzle paths**
 
 This is obviously a simplified way of looking at things. The distribution and placement of puzzles plays an important in any escape room. The gameplay loop is rarely entirely linear, and in most cases might even seem chaotic. The approaches most commonly seen incorporate the compulsion loop in some way. Heikkinen & Shumeyko <Citation id="heikkinen-and-shumeyko_2016_designing" hideAuthor /> identify three:
 
@@ -82,23 +104,13 @@ This is obviously a simplified way of looking at things. The distribution and pl
   - Pros: Allows for lots of parallel puzzle solving. Everyone is able to work on something individually.
   - cons: Individual experience. Confuses players (no compulsion loop to motivate next moves). Hard to control progression of difficulty.
 
-![/img/puzzle-path-types.png](/img/puzzle-path-types.png)
-
-In reality, even these three models do not show a complete picture. Escape rooms often combine some or all of these approaches in an experience. In reality, designers might gradually expose more and more rooms within the room. Or they might choose to direct players to work together, so they don't miss the most important story points of the experience.
-
-Sherlocked's upcoming experience illustrates this reality very well. Throughout the experience players have one end-goal, to perform a ritual. The figure below shows a stylised representation of the (preliminary) game flow. Their access to rooms (yellow boxes) is gradually rolled out, but many-a-times players will work on multiple puzzles at the same time.
-
 :::
 
 ::: section wide-width
-![/img/alchemist-puzzle-network.png](/img/alchemist-puzzle-network.png "A stylised representation of the game-flow for Sherlocked's new escape room.")
+![/img/puzzle-path-types.png](/img/puzzle-path-types.png)
 :::
 
 ::: section small-width
-
-Another great example is Dark Park's _The End_, which I played with my colleagues at Sherlocked (and cannot recommend enough). Their game is mostly linear, leading from one room to the next. It hosts a room that is about traversal, getting from one place to another. Another, is more puzzle-y in nature. A few puzzles are available at the same time. This allows teams to divide the work, and all of them have to be finished to 'solve' that room.
-
-Designers combine the previously defined approaches to balance out the pros and cons of each. Sometimes they might chose to the experience of the individual over the team, and vice-versa. In other instances they might choose favour the progression of difficulty over the freedom of the players.
 
 ### Gameplay loop
 
@@ -116,41 +128,27 @@ Essentially, what the compulsion loop and puzzle paths have in common is that th
 5. Input answer
 6. Repeat
 
-### The Overjustification effect
-
-There is an argument to be made that the compulsion loop should be reconsidered. The compulsion loop suggests that players are only to solve an escape room because of a reward, which isn't unequivocally true. For many, the experience of playing escape rooms is motivated by their appeal as a medium, not that they offer the reward of escaping.
-
-Experiences like this are driven by _intrinsic motivation_, which means we are motivated because we find a task enjoyable. On the opposite, extrinsic motivation means we are motivated by an external incentive (like a reward). Mark Brown, from _Game Maker's Toolkit_, motivates why it's so important to know what motivates players to play a game <Citation id="game-maker's-toolkit_2020_the" hideAuthor />.
-
-His main argument is the result of the _overjustification effect_. It describes that the presence of a reward makes intrinsically motivating activities less interesting. We become less interested in the task after receiving the reward.
-
-In 1973, a study asked three groups of children to draw a picture.
-
-1. The first group is promised a reward. This group showed much less interest in drawing afterward receiving the reward, and their drawings were of lower quality too.
-2. The second group did not get a reward. They enjoyed the process of drawing and do not miss the reward. They are intrinsically motivated to finish the activity.
-3. Some were given a surprise reward. They spent more time drawing than the previous two groups
-
-![/img/overjustification-effect.png](/img/overjustification-effect.png)
-
-A few side-effects of the overjustification effect are decreased creativity, decreased problem solving performance, prone to cheating and losing motivation entirely after receiving a reward.
-
-Mark Brown does have a fairly black-and-white perspective on this issue. Contrarily, Jesse Schell discusses several theories that show how the lines between extrinsic and intrinsic motivation blur when applied to the context of gaming <Citation id="game-maker's-toolkit_2020_the" hideAuthor />.
-
-> Savvy designers know that one motivation can grow on another, like a vine growing on a trellis.
->
-> - Jesse Schell <Citation id="schell_2019_the" hideAuthor />
-
-He views the complexity of intrinsic and extrinsic as a continuous gradient, something that is far less binary than Mark Brown sees it. With more nuance, he describes the same study. He reasons that external motivation is something that is sometimes added to intrinsic motivation. In other cases the interplay of motivation causes the previous intrinsic motivation to disappear.
-
-![/img/motivation-table.png](/img/motivation-table.png)
-
-Balancing motivation, and considering how they influence the player is especially difficult for escape rooms. The key difference in this case, is its fixed time limit. On one hand, we don't want players to rush through the game. To constantly trigger them with a reward, and take away any and all exploration by telling them exactly what to do. On the other, we don't want them to feel lost during their play. It's important that players feel like it's a fair experience, one they could have escaped in the set time.
-
 ## Novelty
 
 Isolated from context, novelty doesn't say much about an experience. For that reason I find it interesting to see that this is _such_ an important aspect of escape rooms, at least to enthusiasts. The behaviour of searching for the new has been studied since at least (<Citation id="">1950</Citation>). D. E. Berlyne suggests that everyday activities of people as well as animals demonstrate the importance of novelty, as well as familiarity. With his rat study, he is able to offer some credibility towards that statement.
 
 Several recent studies on personality, behavioural, cognitive and neuropsychology have been conducted within the context of _memorable tourist experiences_ <Citation id="" />. Each of these schools of thought have a different explanation for our search for the new.
+
+### Behavioural psychology
+
+A mismatching between expectations and experience
+
+### Personality psychology
+
+novelty as an individual preference for novelty and associated motivations. Novelty-seeking is a personal trait characterized by search for novel, varied, complex and intense feelings, and a readiness to take physical, social, legal and financial responsibility for the sake of such experiences
+
+### Cognitive psychology
+
+A motivationally salient learning signal that attracts attention, promotes memory encoding and modifies goal-direct behaviour
+
+### Neuropsychology
+
+A fundamental dimension upon which the nervous system operates, significantly impacting an organism’s internal states and altering external behaviour
 
 ## Immersion
 
@@ -190,7 +188,46 @@ In escape games there are three touchpoints with the narrative:
 - **Space** — the environment telling part of the story
 - **Puzzles** — progressing the story by interacting with it
 
-Haley Cooper, originally focused her efforts on immersive theatre designer, for a while she's been designing escape rooms as well. She might be _the_ best person to ask about making immersive escape games. She writes an immersive theatre escape room would be super hard to pull off. Since the primary requirements of immersive theatre (immersion and storytelling) conflict with the mechanics of an escape game.
+### Challenge-based
+
+Fortunately, escape rooms **excel** at one thing; offering challenging puzzles to draw the player in. They make the player an active component in their own experience, unlike watching a movie at the cinema, for example. While a great story adds to a great experience, even escape rooms with poor narrative execution get people drawn in. Escape rooms, good or bad, put the player front-and-center by definition. They have players exploring, observing and actively participate in the scene <Citation id="cooper_2017_hard" />.
+
+### Flow
+
+We can't talk about challenge-based immersion without discussing the psychological theory of _flow_, a well established concept in psychology <Citation id="" />. Flow, introduced by Mihaly Csikszentmihalyi, is defined as an optimal experience; a challenging activity that requires skill. Activities that put us in a state of flow are goal-directed and bounded by rules. When this state is reached, it _completely consumes_ what we're doing and _makes time pass_ without us noticing. Csikszentmihalyi determined flow occurs in an individual when a set of specific conditions are met:
+
+1. Clear goals and immediate feedback
+2. Continuously challenging
+
+Clear goals allow us to more easily stay focused on a task. Immediate feedback on our progress towards the next goal(s) keeps the ball rolling. We're able to more effectively determine the next step, since we don't have to wait to know the effect a previous action caused.
+
+Human beings love a challenge. Continuously engaging in challenges that are appropriate to one's capacities causes flow, so long as it's a challenge we think we can achieve. In the context of escape rooms, well-designed puzzles and game flow are a pre-requisite to high levels of immersion.
+
+Keeping players in a state of flow channel is a delicate balance. Players start a game at different levels of skill, their skill level changes through time and it's hard to know whether they are _currently_ experiencing flow in the first place. Game designers try to achieve this state of being by carefully designing when emotional beats land, high-pressure challenges occur and allow for the player to cool down as well. This creates an almost rhythmic movement of experience <Citation id="schell_2019_the" />.
+
+> The cycle of tense and release, tense and release seems to be inherent to human enjoyment
+>
+> - Jesse Schell <Citation id="schell_2019_the" hideAuthor />
+
+Schell also describes how we can see that players are in flow:
+
+- **Playing solo games** — players are often quiet, possibly muttering to themselves.
+- **During multiplayer games** — players will sometimes communicate with one another enthusiastically, constantly focused on the game.
+
+### Personal Flow Zones
+
+The first hints at our main problem come from Jenova Chen, who defines personal _Flow Zones_. Not every person starts developing a skill (like escaping escape rooms) with the same abilities. And certainly not every person develops those skills at the same rate. Chen describes how designers adapt the flow experience by deliberately building choice into an experience <Citation id="" hideAuthor />.
+
+<SideBySide>
+
+![/img/chen-flow.png](/img/chen-flow.png)
+![/img/chen-flow-choice.png](/img/chen-flow-choice.png)
+
+</SideBySide>
+
+### Conflicts of immersion
+
+Haley Cooper, originally focused her efforts on immersive theatre design. For a while she's been designing escape rooms as well. She might be _the_ best person to ask about making immersive escape games. She writes an immersive theatre escape room would be super hard to pull off. Since the primary requirements of immersive theatre (immersion and storytelling) conflict with the mechanics of an escape game.
 
 She argues that, while escape rooms are certainly physically encompass the players, she needs a little more world building than most escape rooms seem to do.
 
@@ -209,91 +246,52 @@ That's the big difference between real spaces, that people actually live in, and
 
 Clearly, escape rooms offer a limited amount of intractable objects for a reason. If the escape room would be in the workshop, a significant portion of the allotted time would be spent on identifying the puzzles, instead of solving them. While the modern interior certainly has a less interesting story to tell, it would make for a better escape room environment. There is less clutter to be confused about. Of course these are extreme examples, but they illustrate Cooper's point well. The mechanics of an escape game directly contradict those of narratively immersive experiences.
 
-### Challenge-based
-
-Fortunately, escape rooms **excel** at one thing; offering challenging puzzles to draw the player in. They make the player an active component in their own experience, unlike watching a movie at the cinema, for example. While a great story adds to a great experience, even escape rooms with poor narrative execution get people drawn in. Escape rooms, good or bad, put the player front-and-center by definition. They have players exploring, observing and actively participate in the scene <Citation id="cooper_2017_hard" />.
-
-### Flow
-
-We can't talk about challenge-based immersion without discussing the psychological theory of _flow_, a well established concept in psychology <Citation id="" />. Flow, introduced by Mihaly Csikszentmihalyi, is defined as an optimal experience; a challenging activity that requires skill. Activities that put us in a state of flow are goal-directed and bounded by rules. When this state is reached, it completely consumes what we're doing and makes time pass without us noticing. Csikszentmihalyi determined flow occurs in an individual when a set of specific conditions are met:
-
-1. Clear goals and immediate feedback
-2. Continuously challenging
-
-Clear goals allow us to more easily stay focused on a task. Immediate feedback on our progress towards the next goal(s) keeps the ball rolling. We're able to more effectively determine the next step, since we don't have to wait to know the effect a previous action caused.
-
-Human beings love a challenge. Continuously engaging in challenges that are appropriate to one's capacities causes flow, so long as it's a challenge we think we can achieve. In the context of escape rooms, well-designed puzzles and game flow are a pre-requisite to high levels of immersion.
-
-Keeping players in a state of flow channel is a delicate balance. Players start start a game at different levels of skill, their skill level changes through time and it's hard to know whether they are _currently_ experiencing flow in the first place. Game designers try to achieve this state of being by carefully designing when emotional beats land, high-pressure challenges occur and allow for the player to cool down as well. This creates an almost rhythmic movement of experience <Citation id="schell_2019_the" />.
-
-:::
-::: section wide-width
-
-<SideBySide>
-
-<video
-  src="/video/ori-blind-forest.mp4"
-  playsInline
-  autoPlay
-  loop
-  muted
-  title="Ori and the Blind Forest: an early game emotional low point"
-/>
-
-<video
-  src="/video/sekiro-ogre.mp4"
-  playsInline
-  autoPlay
-  loop
-  muted
-  title="Sekiro: an frustrating high-action fight"
-/>
-
-<video
-  src="/video/black-mesa-xen.mp4"
-  playsInline
-  autoPlay
-  loop
-  muted
-  title="Black Mesa: an intense moment of release"
-/>
-
-</SideBySide>
-
-:::
-
-::: section small-width
-
-These three examples show the variety (video) game designers have played with previously. Carefully moderating challenge is essential to a good gameplay experience. Too much tension, and we wear out. Too much relaxation, and we grow bored. When the conditions previously described are met, experience seamlessly unfolds from moment to moment.
-
-> The cycle of tense and release, tense and release seems to be inherent to human enjoyment
->
-> - Jesse Schell <Citation id="schell_2019_the" hideAuthor />
-
-If the escape room enthusiast survey is anything to go by, proper challenge is extremely important to escape rooms. As a metric in itself, but as a dependency for immersion as well. Offering a cognitively demanding, though achievable, experience seems to be a major key to success in games and escape rooms alike.
-
-### Conflicts of Immersion
-
-Escape rooms as a medium do well in some areas, but has much to improve in other areas. Some of these conflicts of interest have been resolved partially resolved though.
-
-Victor has an interesting approach to draw even the most puzzle-savvy players into the narrative.
-
-> The trick is to make it clear from the start that you can’t achieve the one without the other. That in order to complete the game, you need to understand the story.
->
-> - Victor van Doorn
+Purely from a theoretical point of view, immersion and escape rooms don't get along. Simultaneously however, it is clear that narrative immersion is as important as important to escape rooms as the challenge they present. The main benefit of merging those two worlds would be to allow them both to occur at the same time. For that reason it is important to investigate how escape games can offer clear (proximal) goals, while delivering a compelling story.
 
 ### Spatial Situation Model
 
-On a super scientific level, we find more interesting bits of the puzzle. Wirth et al. define that the spatial situation model (SSM), a precondition to the occurrence of spatial presence. They explain the formation of spatial presence (aka total immersion) as a two-step mental process. Simply put:
+On a super scientific level, we find an explanation as to why escape rooms excel at sensory immersion. From the perspective of video games, Wirth et al. explain the formation of spatial presence (aka total immersion) as a two-step mental process <Citation id="wirth_2007_a" hideAuthor />. Simply put:
 
-1. The mind establishes whether a stimulus is from a place or room, and what kind of place it is.
-2. It establishes whether it (the mind itself) is located within said place.
+1. The mind starts to establish a mental representation of the space or world that is portrayed, and what kind of place it is.
+2. Slowly it starts to prefer the new space as its point of reference. It establishes whether it, the mind itself, is located within said place. The _primary ego reference frame_ changes.
 
-<Citation id="wirth_2007_a" />
+They define that the spatial situation model (SSM) is a precondition to the occurrence of spatial presence.
 
 Immersion is a complex quality to discuss, as it is highly interconnected with the factors discussed previously, and others as well. It's impossible to discuss in a vacuum, and the best way to look at it is as an umbrella term for everything an escape room has to do well. If you look at it like that, it’s _the most_ important quality of escape rooms, the raison d’être.
 
-## Motivation
+# How does the experience of enthusiasts differ from other players?
+
+## Motivation for play
+
+Experiences escape rooms are driven by _intrinsic motivation_, which means we are motivated because we find a task enjoyable.
+
+On the opposite, extrinsic motivation means we are motivated by an external incentive (like a reward). Mark Brown, from _Game Maker's Toolkit_, motivates why it's so important to know what motivates players to play a game <Citation id="game-maker's-toolkit_2020_the" hideAuthor />.
+
+### The Overjustification effect
+
+His main argument is the result of the _overjustification effect_. It describes that the presence of a reward makes intrinsically motivating activities less interesting. We become less interested in the task after receiving the reward.
+
+In 1973, a study asked three groups of children to draw a picture.
+
+1. The first group is promised a reward. This group showed much less interest in drawing afterward receiving the reward, and their drawings were of lower quality too.
+2. The second group did not get a reward. They enjoyed the process of drawing and do not miss the reward. They are intrinsically motivated to finish the activity.
+3. Some were given a surprise reward. They spent more time drawing than the previous two groups
+
+![/img/overjustification-effect.png](/img/overjustification-effect.png)
+
+A few side-effects of the overjustification effect are decreased creativity, decreased problem solving performance, prone to cheating and losing motivation entirely after receiving a reward.
+
+Mark Brown does have a fairly black-and-white perspective on this issue. Contrarily, Jesse Schell discusses several theories that show how the lines between extrinsic and intrinsic motivation blur when applied to the context of gaming <Citation id="schell_2019_the" hideAuthor />.
+
+> Savvy designers know that one motivation can grow on another, like a vine growing on a trellis
+>
+> - Jesse Schell <Citation id="schell_2019_the" hideAuthor />
+
+He views the complexity of intrinsic and extrinsic as a continuous gradient, something that is far less binary than Mark Brown sees it. With more nuance, he describes the same study. He reasons that external motivation is something that is sometimes added to intrinsic motivation. In other cases the interplay of motivation causes the previous intrinsic motivation to disappear.
+
+![/img/motivation-table.png](/img/motivation-table.png)
+
+Balancing motivation, and considering how they influence the player is especially difficult for escape rooms. The key difference in this case, is its fixed time limit. On one hand, we don't want players to rush through the game. To constantly trigger them with a reward, and take away any and all exploration by telling them exactly what to do. On the other, we don't want them to feel lost during their play. It's important that players feel like it's a fair experience, one they could have escaped in the set time.
 
 Why even play escape rooms in the first place? In _The Art of Game Design_ <Citation id="schell_2019_the"/>_,_ the chapter _'The Player's Mind is Driven by the Player's Motivation'_ outlines how human motivation applies to game design. Maslow's _'A Theory of Human Motivation'_ provides an interesting lens to analyse the different activities that games offer. Schell notes that the popularity of games with online communities makes a lot of sense according to Maslow's theories.
 
@@ -308,5 +306,32 @@ Beyond physical, humans have mental needs as well. According to Ryan and Deci th
 3. **Relatedness** — I need to connect with other people
 
 Schell states it's hard to overlook how well games tend to fulfil all three of these needs.
+
+He views the complexity of intrinsic and extrinsic as a continuous gradient, something that is far less binary than Mark Brown sees it. With more nuance, he describes the same study. He reasons that external motivation is something that is sometimes added to intrinsic motivation. In other cases the interplay of motivation causes the previous intrinsic motivation to disappear.
+
+# How might we alter escape games based on players?
+
+### Four Keys to Fun
+
+Lazarro <Citation id="" hideAuthor /> has studied players' emotions before, during and after play. Through facial gestures, body language and verbal comments they identified four keys to create emotion without story cutscenes.
+
+1. **Hard Fun** — The enjoyment of challenge and progress
+2. **Easy Fun** — The enjoyment of being immersed in a game
+3. **Altered States** — The enjoyment of changes in internal state
+4. **People Factor** — The enjoyment of playing with others
+
+![/img/4k2f.png](/img/4k2f.png "Four Keys to Fun")
+
+> Players in groups emote more frequently and with more intensity than those who play on their own
+>
+> - Nicole Lazarro <Citation id="" hideAuthor />
+
+Interestingly, the 2004 study doesn't describe any reactive system. I expect this is due to its age, and Lazarro seems to have aimed her sights on it more recently.
+
+In her talk _Four Keys to Fun: Using Emotions to Create Engaging Design_ at AIGA Design <Citation id="" hideAuthor />, she describes how game design and human centered design relate. She explains how we as designers can react to people's emotions.
+
+> These systems identify... they might be able to read your emotions that you're feeling and make adjustments according to that. Or you might as the user choose an emotion. I need to feel more creative, so these are the emotions I feel.
+>
+> - Nicole Lazarro <Citation id="" hideAuthor />
 
 :::

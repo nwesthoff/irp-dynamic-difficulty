@@ -9,6 +9,11 @@ import Image from "next/image";
 import { Fragment } from "react";
 import { theme } from "@config/theme";
 
+const PageTitle = styled.h1`
+  font-size: 6rem;
+  line-height: 1em;
+`;
+
 const HeaderContent = styled(MainContent)`
   justify-content: flex-end;
   align-items: center;
@@ -100,7 +105,7 @@ const IndexPage = () => {
               width={125}
               height={138}
             />
-            <h1>Dynamic Difficulty in Escape Rooms</h1>
+            <PageTitle>Dynamic Difficulty in Escape Rooms</PageTitle>
           </div>
         </HeaderContent>
       </Header>
