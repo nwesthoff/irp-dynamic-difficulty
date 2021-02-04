@@ -6,7 +6,7 @@
   --color-primary: #6251a2;
   --color-secondary: #b07902;
   --color-tertiary: #24c1e0;
-  --color-bg-dark: #222;
+  --color-bg-dark: #eee;
   --color-primary-dark: #2e264b;
   --color-primary-transparent: #6251a233;
 
@@ -23,6 +23,7 @@
 [data-theme="dark"] {
   --color-bg: black;
   --color-fg: white;
+  --color-bg-dark: #111;
   --color-text-mute: #ccc;
 }
 

@@ -27,6 +27,7 @@ const NavCollapse = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
+  color: white;
   background: rgba(0, 0, 0, 0.8);
   padding: 2rem;
   font-size: 3rem;

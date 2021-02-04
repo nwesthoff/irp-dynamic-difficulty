@@ -10,7 +10,7 @@ const ReferenceWrapper = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: #111;
+  background-color: var(--color-bg-dark);
   margin: 4rem 0;
 `;
 
@@ -30,7 +30,7 @@ const ReferenceList = styled.ul`
 
 const ReferenceListItem = styled.li`
   font-size: 0.9rem;
-  color: #ddd;
+  color: var(--color-text-mute);
   margin-bottom: 0.8rem;
   /* for Chrome and Edge */
   break-inside: avoid-column;
