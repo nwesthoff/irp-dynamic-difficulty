@@ -4,7 +4,8 @@ import styled from "styled-components";
 const StyledSideBySide = styled.div`
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: ${(props: { align: string }) =>
+    props.align ? props.align : "flex-start"};
   flex-flow: row wrap;
   gap: 2rem;
 
@@ -17,8 +18,9 @@ const StyledSideBySide = styled.div`
 
 interface Props {
   children: ReactNode;
+  align: "flex-start" | "flex-end" | "center";
 }
 
-export default function SideBySide({ children }: Props): ReactElement {
-  return <StyledSideBySide>{children}</StyledSideBySide>;
+export default function SideBySide({ children, align }: Props): ReactElement {
+  return <StyledSideBySide align={align}>{children}</StyledSideBySide>;
 }

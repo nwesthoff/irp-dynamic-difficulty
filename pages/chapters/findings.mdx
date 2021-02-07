@@ -8,20 +8,13 @@ image: "/img/vault-amulet.jpg"
 
 import Citation from "@components/Bibliography/Citation";
 import SideBySide from "@components/MDXComponents/SideBySide";
+import AlternatingImageBlock from "@components/MDXComponents/AlternatingImageBlock";
 
 ::: section small-width
 
 # The State of Escape Rooms
 
-## Elements of an Escape Room
-
-What draws people to escape rooms differs from group to group, and from person to person. Fortunately, there has been extensive — though mostly unscientific — research on that. The _Escape Room Enthusiast Survey_, a yearly reoccurring survey by and for enthusiasts goes in deep. It ranks the importance of several elements within escape rooms. In 2019 <Citation id="elumir_2019a_2019" />, the three factors considered most essential by enthusiasts are:
-
-1. Well designed puzzles and game flow
-2. Novelty & Uniqueness
-3. Immersion
-
-This isn't a comprehensive list of _everything_ an escape room has to do well. It does however provide us with a handhold to discuss the most important topics. We'll dig deep into each of these factors in this chapter.
+Previously, we established a theoretical understanding of the inner workings of escape rooms. In practice a lot of nuancing needs to be done to fully understand the situation.
 
 ### Puzzle flow
 
@@ -43,7 +36,58 @@ Designers combine the previously defined approaches to balance out the pros and 
 
 ## Puzzle Difficulty
 
-According to Victor _Designing the Puzzle_ is _the_ piece to read on <Citation id="bates_1997_designing" />.
+According to Victor _Designing the Puzzle_ is _the_ piece to read on puzzle design. <Citation id="bates_1997_designing" />.
+
+### Teaching mechanics
+
+Mark Brown <Citation id="brown_2016_how" hideAuthor /> explains How Jonathan Blow designs puzzles. An especially interesting approach, since it has several results on the final interaction.
+
+<div>
+
+<AlternatingImageBlock
+  src="/img/blow-puzzle-1.png"
+  title="Mechanic"
+  desc="Jonathan Blow starts with a game mechanic. In The Witness everything is built
+      around mazes."
+/>
+
+<AlternatingImageBlock
+  src="/img/blow-puzzle-2.png"
+  title="Rules"
+  desc="He then actually build the puzzle. By playing with these basic puzzles, rules
+      emerge. In The Witness, you have to separate colours."
+/>
+
+<AlternatingImageBlock
+  src="/img/blow-puzzle-3.png"
+  title="Consequences"
+  desc="By building these rules, new consequences arise. In The Witness that might be
+      blocking the most obvious exit."
+/>
+
+<AlternatingImageBlock
+  src="/img/blow-puzzle-4.png"
+  title="Mechanic"
+  desc="Every puzzle illustrates a consequence you have to internalise. In The Witness
+      you have to realise you're blocking that primary exit by offering an alternative
+      exit."
+/>
+</div>
+
+This is an interesting design philosophy, because puzzles build on each other as a result of the process they were designed with. They were designed by playing with them, like a player would.
+
+> There's an extent to which this game designed itself.
+>
+> - Jonathan Blow <Citation id="brown_2016_how" hideAuthor />
+
+By adding constraints, the puzzles have a natural progression to them. The result is that players can start to understand the _'language'_ of these puzzles. They will learn how the designer created these puzzles, because they follow a designers' footsteps.
+
+### Puzzle testing
+
+- Escape rooms run routinely, and game hosts watch in on every game played.
+- In that sense, escape rooms test almost like a restaurant improves its menu, constantly receiving passive and active feedback
+
+### Doing difficulty wrong
 
 It's important to be aware of some traps. Elumir thinks many escape rooms make the same errors when they try to increase difficulty <Citation id="elumir_2019b_how" hideAuthor />. He describes five things to look out for when designing for difficulty:
 
@@ -53,11 +97,10 @@ It's important to be aware of some traps. Elumir thinks many escape rooms make t
 4. Don't add tedium to slow players down, ex. unscrewing lots of screws instead of few
 5. Don't make it difficult to enter a combination
 
-### Moderating difficulty
+### Moderating game flow
 
 Theory has shown the importance of game flow, as discussed previously. Linear, story driven (video) games actively control how the player should feel during certain scenes.
 
-elaborate how theory and practice relate
 :::
 
 ::: section wide-width
@@ -75,7 +118,7 @@ elaborate how theory and practice relate
 
 <video
   src="/video/sekiro-ogre.mp4"
-  title="Sekiro: an frustrating high-action fight"
+  title="Sekiro: a frustrating, high-action fight"
   playsInline
   autoPlay
   loop
@@ -99,13 +142,19 @@ elaborate how theory and practice relate
 
 These three examples show the variety (video) game designers have played with previously. Carefully moderating challenge is essential to a good gameplay experience. Too much tension, and we wear out. Too much relaxation, and we grow bored. When the conditions previously described are met, experience seamlessly unfolds from moment to moment.
 
-If the escape room enthusiast survey is anything to go by, proper challenge is extremely important to escape rooms. As a metric in itself, but as a dependency for immersion as well. Offering a cognitively demanding, though achievable, experience seems to be a major key to success in games and escape rooms alike.
+Escape room designers use different approaches to solve the same issue. Tommy Honton mentions escape rooms often surprise players to have them disconnect from their previous challenge. They pace out moments to make players realise what an action just did to the world they interact with.
+
+> Each room that opens up, you have a moment of disconnecting what opened up, and taking in that new data.
+>
+> - Tommy Honton <Citation id="constructed_2020_interview" hideAuthor />
+
+If the escape room enthusiast survey is anything to go by, proper challenge is extremely important to escape rooms. As a metric in itself, but it's important as a prerequisite for immersion as well. Offering a cognitively demanding, though achievable, experience seems to be a major key to success in games and escape rooms alike.
 
 ## Conflicts of immersion
 
-Escape rooms as a medium do well in some parts of immersion, but have much to improve in other areas. Some of these conflicts of interest have been resolved partially resolved though.
+Escape rooms as a medium do well in some parts of immersion, but have much to improve in other areas. As Haley Cooper notes, the nature of escape rooms hinders the narrative immersion some other mediums do offer because spaces don't feel real. Furthermore, agency takes away control of pacing.
 
-There have certainly been attempts to bring them closer together. At Sherlocked they use several techniques to blur the lines between reality and fiction. From working with them I've noticed their narrative design is heavily inspired by real historical characters.
+Some of these conflicts of interest have been resolved partially resolved though. There have certainly been attempts to bring them closer together. At Sherlocked they use several techniques to blur the lines between reality and fiction. From working with them I've noticed their narrative design is heavily inspired by real historical characters.
 
 I have noticed a few approaches:
 
@@ -125,20 +174,38 @@ Victor has an interesting approach to draw even the most puzzle-savvy players in
 >
 > - Victor van Doorn
 
-For Sherlocked, one of their primary goals designing new experiences is to have you guessing whether what just happened is real. At least for some people they seem to have succeeded. Victor told me he has hosted a group of players from Saudi Arabia that didn't want to continue, because they thought they were doing a real heist.
+For Sherlocked, one of their primary goals designing new experiences is to have you guessing whether what just happened is real. At least for some people they seem to have succeeded. Victor told me he has hosted a group of players from Saudi Arabia that didn't want to continue, because they thought they were participating in a real heist.
 
 # What Enthusiasts look for
+
+Fortunately, there has been extensive — though mostly unscientific — market research on player preferences. We can quickly retrieve some insights from escape room players by relying on the numerous surveys being done throughout the industry. The annual _Escape Room Enthusiast Survey_ is specifically interesting, as it aggregates data from 3000 (self-proclaimed) enthusiasts <Citation id="elumir_2019a_2019" />.
+
+## Elements of an Escape Room
+
+What draws people to escape rooms differs from group to group, and from person to person. The survey ranks the importance of several elements within escape rooms. In 2019, the factors enthusiasts considered most important are:
+
+1. Well designed puzzles and game flow
+2. Novelty & Uniqueness
+3. Immersion
+4. Scenery, props & decor
+5. Game Master quality
+
+This isn't a comprehensive list of _everything_ an escape room has to do well. It does however provide us with a handhold to discuss the most important topics. We'll dig deep into each of these factors, and explain them through previously mentioned game theory.
 
 ## Designing extreme difficulty
 
 Jesse Schell notes there is much debate about the difficulty of games. Whether it is a bad thing or a good thing to allow players to reach a level where they spend so much time in the frustration zone that they give up on the game. Some video games...
 
-## Speaking with enthusiasts
+## Personal flow zones
 
-- Enthusiast 1: Tends to shy away from an export mode. It often feels like 'difficulty through omission', guessing what the designer had in mind.
+Most escape room enthusiasts that have played lots of games before they start their next experience have more skill than the typical novice player. Simultaneously, some novice players may be able to pick up the required skills to escape a room than others. Chen <Citation id="chen_2007_flow" hideAuthor /> describes this is typically solved by offering the player some kind of choice.
+
+### Speaking with enthusiasts
+
+- Enthusiast 1: Tends to shy away from an expert mode. It often feels like 'difficulty through omission', guessing what the designer had in mind.
 - Enthusiast 2: Don't mind hints, I would much rather escape with help than without. However, this player didn't like systems that automatically give clues.
 
-  > Automated hint systems, those make my [redacted] go limp.
+  > Automated hint systems, those make my [REDACTED] go limp.
 
 - Enthusiast 3: Was very interested in the tech behind it. Often enjoys a behind-the-scenes that goes deep. Would like a way to reflect on his performance.
 
@@ -162,7 +229,21 @@ Now, dynamic difficulty isn't exactly a new idea. There are several examples of 
 
 ### Portable 'escape rooms'
 
-- David Middleton (Bewilder Box)
+- David Middleton (Bewilder Boffs/Bewilder Box)
+
+> "get everyone in that James Bond phase of the game"
+
+Early on in my process, I spoke with David Middleton. Co-founder of the UK based _Bewilder Boffs Studios_, who offer services from concept to execution aimed at escape room startups. Bewilder Boffs has created their own series of escape rooms under the _Bewilder Box_ brand as well.
+
+They created an online escape room, general escape room, it was taking some people 2 and a half hours to finish. Aimed at general public, but they were getting tired, it was less enjoyable for them. Then they made it easier, but enthusiasts were less happy with the experience.
+
+At the time of speaking, David was working on a mobile escape game. It all fits inside a box to go, and it had a specific set of constraints:
+
+- 30 minute time limit
+- Maximise the time people could play
+- Scalable
+
+Their solution involves a self-resetting box, that offers clues on a set rhythm. The host-less experience lasts 30 minutes, and is broken up in 5 puzzle sections of 5 minutes (and some additional set-up/wind-down). Each puzzle drip-feeds clues through icons, and practically spells out the solution after 5 minutes have passed. That way, players who would normally get stuck, can move on to the next at the same pace as experienced players. He does mention there is a skip button available when players still get stuck once all clues have arrived. Which he says is integrated into the theme, but not something he would implement in another experience.
 
 ### Escape Rooms
 
@@ -176,7 +257,11 @@ Now, dynamic difficulty isn't exactly a new idea. There are several examples of 
 
 # Conclusions / Key Insights
 
+Escape room designers have to choose what they aim to do. Some have wanted to maximize time played. While others might want to give everyone the rush of "almost not escaping". In both those cases we are dynamically controlling time and experience.
+
 - We determine puzzle difficulty by duration, might this be the wrong metric?
+
+Others might want to aim for focus. To maximize how long we can keep players attention and carefully planning moments of release. And finally we might want to aim for difficulty. Where we offer the right amount of cognitive challenge.
 
 Now, these points might seem obvious, especially to avid escape room designers. But it took a while before they really sank in for me. Escape rooms are special in three ways:
 
