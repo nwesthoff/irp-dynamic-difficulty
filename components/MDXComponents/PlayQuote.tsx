@@ -29,10 +29,10 @@ const StyledButton = styled.button`
 `;
 
 interface Props {
-  url: string;
+  src: string;
 }
 
-const PlayQuote = ({ url }: Props): ReactElement => {
+const PlayQuote = ({ src }: Props): ReactElement => {
   const [audio, setAudio] = useState<HTMLAudioElement | undefined>();
   const [playing, setPlaying] = useState(false);
 
@@ -42,7 +42,7 @@ const PlayQuote = ({ url }: Props): ReactElement => {
   };
 
   useEffect(() => {
-    const audioState = new Audio(url);
+    const audioState = new Audio(src);
     setAudio(audioState);
 
     audioState?.addEventListener("ended", () => setPlaying(false));
