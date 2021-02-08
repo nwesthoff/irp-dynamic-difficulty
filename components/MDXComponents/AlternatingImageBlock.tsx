@@ -1,13 +1,23 @@
 import styled from "styled-components";
 import { theme } from "../../config/theme";
-import { Fragment } from "react";
 import Image from "next/image";
 
 const ChapterExcerpt = styled.p`
-  min-width: 200px;
+  min-width: 220px;
   max-width: 540px;
   position: relative;
   z-index: 2;
+`;
+
+const ChapterTextContainer = styled.div`
+  position: relative;
+  color: #0f0f0f;
+  flex-basis: 50%;
+  flex-grow: 1;
+
+  @media (max-width: ${theme.breakpoints.phone}px) {
+    margin-bottom: 1.2rem;
+  }
 `;
 
 const ChapterContainer = styled.div`
@@ -17,49 +27,48 @@ const ChapterContainer = styled.div`
   align-items: center;
   width: 100%;
   padding: 3.2rem 0;
-
-  @media (min-width: ${theme.breakpoints.phone}px) {
-    flex-direction: row;
-
-    & :nth-child(odd) {
-      flex-direction: row-reverse;
-    }
-  }
+  flex-direction: row wrap;
 
   @media (max-width: ${theme.breakpoints.phone}px) {
     flex-direction: unset;
     padding: 2rem 0;
   }
-`;
 
-const Spacer = styled.div`
-  width: 5rem;
+  &:nth-child(even) {
+    ${ChapterTextContainer} {
+      margin-right: 3.2rem;
 
-  @media (max-width: ${theme.breakpoints.tablet}px) {
-    width: 2.4rem;
+      @media (max-width: ${theme.breakpoints.tablet}px) {
+        margin-right: 2rem;
+      }
+
+      @media (max-width: ${theme.breakpoints.phone}px) {
+        margin-right: 0;
+      }
+    }
   }
 
-  @media (max-width: ${theme.breakpoints.phone}px) {
-    display: none;
-  }
-`;
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
 
-const ChapterTextContainer = styled.div`
-  position: relative;
-  color: #0f0f0f;
-  flex-basis: 50%;
-  flex-grow: 1;
-  margin-bottom: 2rem;
+    ${ChapterTextContainer} {
+      margin-left: 3.2rem;
 
-  @media (max-width: ${theme.breakpoints.phone}px) {
-    margin-bottom: 1.2rem;
+      @media (max-width: ${theme.breakpoints.tablet}px) {
+        margin-left: 2rem;
+      }
+
+      @media (max-width: ${theme.breakpoints.phone}px) {
+        margin-left: 0;
+      }
+    }
   }
 `;
 
 const ChapterImageContainer = styled.div`
-  flex-basis: 40%;
+  flex-basis: 35%;
   flex-grow: 1;
-  min-width: 300px;
+  min-width: 260px;
   max-width: 540px;
 `;
 
@@ -83,17 +92,13 @@ const AlternatingImageBlock = ({ src, title, desc }: Props) => {
     <ChapterContainer>
       <ChapterTextContainer>
         <ChapterTitle>{title}</ChapterTitle>
-
         <ChapterExcerpt>{desc}</ChapterExcerpt>
       </ChapterTextContainer>
 
       {src ? (
-        <Fragment>
-          <Spacer />
-          <ChapterImageContainer>
-            <Image layout="responsive" height={300} width={300} src={src} />
-          </ChapterImageContainer>
-        </Fragment>
+        <ChapterImageContainer>
+          <Image layout="responsive" height={300} width={300} src={src} />
+        </ChapterImageContainer>
       ) : null}
     </ChapterContainer>
   );
