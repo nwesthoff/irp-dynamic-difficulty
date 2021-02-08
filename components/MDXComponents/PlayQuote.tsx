@@ -32,15 +32,14 @@ interface Props {
   url: string;
 }
 
-const useAudio = (url: string) => {
-  const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+const PlayQuote = ({ url }: Props): ReactElement => {
+  const [audio, setAudio] = useState<HTMLAudioElement | undefined>();
   const [playing, setPlaying] = useState(false);
 
-  const toggle = () => setPlaying(!playing);
-
-  useEffect(() => {
-    playing ? audio?.play() : audio?.pause();
-  }, [playing]);
+  const toggle = () => {
+    !playing ? audio?.play() : audio?.pause();
+    setPlaying(!playing);
+  };
 
   useEffect(() => {
     const audioState = new Audio(url);
@@ -51,12 +50,6 @@ const useAudio = (url: string) => {
       audioState?.removeEventListener("ended", () => setPlaying(false));
     };
   }, []);
-
-  return [playing, toggle];
-};
-
-const PlayQuote = ({ url }: Props): ReactElement => {
-  const [playing, toggle] = useAudio(url) as [boolean, () => void];
 
   return (
     <QuoteWrap>
