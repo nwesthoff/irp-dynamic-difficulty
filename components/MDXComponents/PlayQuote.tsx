@@ -56,7 +56,7 @@ const useAudio = (url: string) => {
 };
 
 const PlayQuote = ({ url }: Props): ReactElement => {
-  const [playing, toggle] = useAudio(url);
+  const [playing, toggle] = useAudio(url) as [boolean, () => void];
 
   return (
     <QuoteWrap>
