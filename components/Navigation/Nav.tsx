@@ -28,7 +28,6 @@ const NavCollapse = styled.div`
   right: 0;
   background: rgba(0, 0, 0, 0.9);
   padding: 2rem;
-  font-size: 3rem;
   font-weight: 600;
   display: flex;
   justify-content: center;
@@ -37,6 +36,21 @@ const NavCollapse = styled.div`
     list-style: none;
     line-height: 1.5em;
     padding-left: 0;
+    padding-top: 60px;
+
+    li {
+      font-size: 3rem;
+
+      @media (max-width: ${theme.breakpoints.tablet}px) {
+        font-size: 2rem;
+        line-height: 1.6;
+      }
+
+      @media (max-width: ${theme.breakpoints.phone}px) {
+        font-size: 1.2rem;
+        line-height: 1.6;
+      }
+    }
   }
 
   a {
@@ -46,10 +60,6 @@ const NavCollapse = styled.div`
     &:hover {
       color: var(--color-secondary);
     }
-  }
-
-  @media (max-width: ${theme.breakpoints.phone}px) {
-    font-size: 2.4rem;
   }
 `;
 
