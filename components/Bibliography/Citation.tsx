@@ -1,4 +1,10 @@
-import React, { ReactElement, useContext, ReactNode } from "react";
+import React, {
+  ReactElement,
+  useContext,
+  ReactNode,
+  useEffect,
+  useState,
+} from "react";
 import { ReferenceContext } from "./ReferenceProvider";
 import styled from "styled-components";
 import { theme } from "@config/theme";
@@ -43,11 +49,17 @@ export default function Citation({
     return ref.citationKey === id;
   });
 
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return currentRef ? (
     <CitationStyled>
       <TooltipWrapper
         href={{
-          pathname: `/chapters/conclusion`,
+          pathname: `/`,
           hash: currentRef.entryType.toLowerCase(),
           query: { ref: currentRef.citationKey },
         }}

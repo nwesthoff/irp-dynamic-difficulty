@@ -3,9 +3,15 @@ import Head from "next/head";
 import { PageWrapper } from "./PageWrapper";
 import Nav from "./Navigation/Nav";
 import styled from "styled-components";
+import ReactTooltip from "react-tooltip";
 
 const StyledFooter = styled.footer`
   margin: 2rem 0;
+`;
+
+const StyledReactTooltip = styled(ReactTooltip)`
+  max-width: 650px;
+  line-height: 1.6em;
 `;
 
 type Props = {
@@ -73,6 +79,11 @@ const Layout: React.FunctionComponent<Props> = ({
         ) : null}
       </Head>
       <Nav alert={alert} />
+      <StyledReactTooltip
+        wrapper="span"
+        data-multiline="true"
+        backgroundColor="#161616"
+      />
       {children}
       <PageWrapper>
         <StyledFooter>

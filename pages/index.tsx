@@ -8,6 +8,7 @@ import { FrontMatter } from "types";
 import Image from "next/image";
 import { Fragment } from "react";
 import { theme } from "@config/theme";
+import References from "@components/Bibliography/References";
 
 const PageTitle = styled.h1`
   font-size: 6rem;
@@ -166,6 +167,8 @@ const IndexPage = () => {
               </ChapterBlock>
             ))}
         </section>
+
+        <References />
       </MainContent>
     </Layout>
   );

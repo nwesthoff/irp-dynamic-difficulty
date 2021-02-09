@@ -61,7 +61,6 @@ export default function References() {
               <h4>Academic</h4>
             </a>
             <ReferenceList>
-              {console.log(academicReferences)}
               {academicReferences.map((ref) => (
                 <ReferenceListItem key={ref.citationKey} reference={ref} />
               ))}
