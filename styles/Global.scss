@@ -225,13 +225,14 @@ h6 {
   text-decoration: none;
 }
 
-h2 {
+h1,
+h2,
+h3 {
   position: relative;
 
   .autolink-heading {
     border-bottom: 1px dotted transparent;
     text-decoration: none;
-    color: var(--color-fg);
 
     &:hover {
       border-bottom: 1px dotted var(--color-text-mute);

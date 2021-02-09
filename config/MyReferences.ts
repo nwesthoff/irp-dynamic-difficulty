@@ -87,7 +87,7 @@ const myReferences: AcademicRef[] = [
       author: "Elumir",
       year: "2018",
       inBib:
-        "Elumir, E. (2018). 13 Rules for Escape Room Puzzle Design. [online] The Codex. Available at: https://thecodex.ca/13-rules-for-escape-room-puzzle-design/#Rule_1_Puzzles_Should_Be_Fair_You_are_on_the_Players_Side [Accessed 31 Jan. 2021].",
+        "Elumir, E. (2018). 13 Rules for Escape Room Puzzle Design. [online] The Codex. Available at: https://thecodex.ca/13-rules-for-escape-room-puzzle-design [Accessed 31 Jan. 2021].",
     },
   },
   {
@@ -237,7 +237,7 @@ const myReferences: AcademicRef[] = [
       author: "Escapetalk",
       year: "n.d.",
       inBib:
-        "Escapetalk (n.d.). Vind De Beste Escape Rooms Bij Jou in De Buurt - escapetalk.nl. [online] EscapeTalk. Available at: https://escapetalk.nl/escaperooms/#eyJmaWx0ZXJzIjp7ImxhbmQiOiIwIn0sImxvY2F0aW9uIjpmYWxzZX0 [Accessed 2 Feb. 2021].",
+        "Escapetalk (n.d.). Vind De Beste Escape Rooms Bij Jou in De Buurt - escapetalk.nl. [online] EscapeTalk. Available at: https://escapetalk.nl/escaperooms [Accessed 2 Feb. 2021].",
     },
   },
   {

@@ -1,21 +1,9 @@
-import React, {
-  ReactElement,
-  useContext,
-  ReactNode,
-  useEffect,
-  useState,
-} from "react";
+import React, { ReactElement, useContext, ReactNode } from "react";
 import { ReferenceContext } from "./ReferenceProvider";
 import styled from "styled-components";
 import { theme } from "@config/theme";
 import { transparentize } from "polished";
-import ReactTooltip from "react-tooltip";
 import Link from "next/link";
-
-const StyledReactTooltip = styled(ReactTooltip)`
-  max-width: 500px;
-  line-height: 1.6em;
-`;
 
 const TooltipWrapper = styled(Link)`
   color: ${transparentize(0.5, theme.colors.secondary)};
@@ -50,9 +38,6 @@ export default function Citation({
   hideAuthor,
 }: Props): ReactElement {
   const references = useContext(ReferenceContext);
-  const [isComponentMounted, setIsComponentMounted] = useState(false);
-
-  useEffect(() => setIsComponentMounted(true), []);
 
   const currentRef = references?.find((ref) => {
     return ref.citationKey === id;
@@ -68,13 +53,6 @@ export default function Citation({
         }}
       >
         <a data-tip={currentRef.entryTags.inBib}>
-          {isComponentMounted ? (
-            <StyledReactTooltip
-              wrapper="span"
-              data-multiline="true"
-              backgroundColor="#161616"
-            />
-          ) : null}
           {children ||
             `(${hideAuthor !== true ? currentRef.entryTags.author + ", " : ""}${
               currentRef.entryTags.year
