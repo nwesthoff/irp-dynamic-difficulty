@@ -34,6 +34,7 @@ const ReadChapterButton = styled.a`
   letter-spacing: 1px;
 
   &:hover {
+    color: white;
     background: ${darken(0.05, theme.colors.primary)};
   }
 `;
