@@ -1,10 +1,4 @@
-import React, {
-  ReactElement,
-  useContext,
-  ReactNode,
-  useEffect,
-  useState,
-} from "react";
+import React, { ReactElement, useContext, ReactNode } from "react";
 import { ReferenceContext } from "./ReferenceProvider";
 import styled from "styled-components";
 import { theme } from "@config/theme";
@@ -48,12 +42,6 @@ export default function Citation({
   const currentRef = references?.find((ref) => {
     return ref.citationKey === id;
   });
-
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   return currentRef ? (
     <CitationStyled>
