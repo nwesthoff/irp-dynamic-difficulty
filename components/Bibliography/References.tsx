@@ -2,9 +2,9 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import ContentContainer from "../ContentContainer";
 import { ReferenceContext } from "./ReferenceProvider";
-import ReactLinkify from "react-linkify";
 import { theme } from "../../config/theme";
 import { useRouter } from "next/dist/client/router";
+import ReferenceListItem from "./ReferenceListItem";
 
 const ReferenceWrapper = styled.div`
   display: flex;
@@ -28,38 +28,8 @@ const ReferenceList = styled.ul`
   }
 `;
 
-const ReferenceListItem = styled.li`
-  font-size: 0.9rem;
-  color: var(--color-text-mute);
-  margin-bottom: 0.8rem;
-  /* for Chrome and Edge */
-  break-inside: avoid-column;
-  -webkit-column-break-inside: avoid;
-  /* for Firefox */
-  page-break-inside: avoid;
-
-  border: ${(props: { highlight?: boolean }) =>
-    props.highlight ? "2px solid var(--color-primary)" : "none"};
-`;
-
-const ReferenceLink = styled.a`
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  display: inline-block;
-  max-width: 280px;
-  vertical-align: baseline;
-  margin-bottom: -8px;
-  position: relative;
-
-  @media (max-width: ${theme.breakpoints.tablet}px) {
-    max-width: 200px;
-  }
-`;
-
 export default function References() {
   const references = useContext(ReferenceContext);
-  const router = useRouter();
 
   const sortedReferences = references?.sort((a, b) => {
     return a.entryTags.inBib > b.entryTags.inBib
@@ -78,6 +48,9 @@ export default function References() {
   const trustedReferences = sortedReferences?.filter(
     (ref) => ref.entryType === "TRUSTED"
   );
+  const personalReferences = sortedReferences?.filter(
+    (ref) => ref.entryType === "PERSONAL"
+  );
 
   return (
     <ReferenceWrapper>
@@ -85,31 +58,13 @@ export default function References() {
         <h2>References</h2>
         {academicReferences && academicReferences?.length > 0 ? (
           <div>
-            <h4>Academic</h4>
+            <a id="academic">
+              <h4>Academic</h4>
+            </a>
             <ReferenceList>
+              {console.log(academicReferences)}
               {academicReferences.map((ref) => (
-                <ReferenceListItem
-                  id={`ref-${ref.citationKey}`}
-                  key={ref.citationKey}
-                  highlight={router.query.ref === ref.citationKey}
-                >
-                  <ReactLinkify
-                    componentDecorator={(decoratedHref, decoratedText, key) => (
-                      <ReferenceLink
-                        target="blank"
-                        href={decoratedHref}
-                        key={key}
-                      >
-                        {decoratedText
-                          .replace("https://", "")
-                          .replace("http://", "")
-                          .replace("www.", "")}
-                      </ReferenceLink>
-                    )}
-                  >
-                    {ref.entryTags.inBib}
-                  </ReactLinkify>
-                </ReferenceListItem>
+                <ReferenceListItem key={ref.citationKey} reference={ref} />
               ))}
             </ReferenceList>
           </div>
@@ -117,30 +72,12 @@ export default function References() {
 
         {tradeReferences && tradeReferences?.length > 0 ? (
           <div>
-            <h4>Trade magazines</h4>
+            <a id="trademag">
+              <h4>Trade magazines</h4>
+            </a>
             <ReferenceList>
               {tradeReferences.map((ref) => (
-                <ReferenceListItem
-                  id={`ref-${ref.citationKey}`}
-                  key={ref.citationKey}
-                >
-                  <ReactLinkify
-                    componentDecorator={(decoratedHref, decoratedText, key) => (
-                      <ReferenceLink
-                        target="blank"
-                        href={decoratedHref}
-                        key={key}
-                      >
-                        {decoratedText
-                          .replace("https://", "")
-                          .replace("http://", "")
-                          .replace("www.", "")}
-                      </ReferenceLink>
-                    )}
-                  >
-                    {ref.entryTags.inBib}
-                  </ReactLinkify>
-                </ReferenceListItem>
+                <ReferenceListItem key={ref.citationKey} reference={ref} />
               ))}
             </ReferenceList>
           </div>
@@ -148,30 +85,25 @@ export default function References() {
 
         {trustedReferences && trustedReferences?.length > 0 ? (
           <div>
-            <h4>Trusted Source</h4>
+            <a id="trusted">
+              <h4>Trusted Source</h4>
+            </a>
             <ReferenceList>
               {trustedReferences.map((ref) => (
-                <ReferenceListItem
-                  id={`ref-${ref.citationKey}`}
-                  key={ref.citationKey}
-                >
-                  <ReactLinkify
-                    componentDecorator={(decoratedHref, decoratedText, key) => (
-                      <ReferenceLink
-                        target="blank"
-                        href={decoratedHref}
-                        key={key}
-                      >
-                        {decoratedText
-                          .replace("https://", "")
-                          .replace("http://", "")
-                          .replace("www.", "")}
-                      </ReferenceLink>
-                    )}
-                  >
-                    {ref.entryTags.inBib}
-                  </ReactLinkify>
-                </ReferenceListItem>
+                <ReferenceListItem key={ref.citationKey} reference={ref} />
+              ))}
+            </ReferenceList>
+          </div>
+        ) : null}
+
+        {personalReferences && personalReferences?.length > 0 ? (
+          <div>
+            <a id="personal">
+              <h4>Personal Communication</h4>
+            </a>
+            <ReferenceList>
+              {personalReferences.map((ref) => (
+                <ReferenceListItem key={ref.citationKey} reference={ref} />
               ))}
             </ReferenceList>
           </div>
