@@ -11,7 +11,8 @@ const StyledSideBySide = styled.div`
   flex-flow: row wrap;
   gap: 2rem;
 
-  & > figure {
+  & > figure,
+  & > div {
     flex-basis: 30%;
     min-width: 280px;
     flex-grow: 1;
