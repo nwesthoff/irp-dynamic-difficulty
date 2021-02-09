@@ -3,7 +3,6 @@ import styled from "styled-components";
 import ContentContainer from "../ContentContainer";
 import { ReferenceContext } from "./ReferenceProvider";
 import { theme } from "../../config/theme";
-import { useRouter } from "next/dist/client/router";
 import ReferenceListItem from "./ReferenceListItem";
 
 const ReferenceWrapper = styled.div`
