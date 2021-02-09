@@ -8,6 +8,7 @@
   --color-tertiary: #24c1e0;
   --color-bg-dark: #eee;
   --color-primary-dark: #2e264b;
+  --color-secondary-dark: #805800;
   --color-primary-transparent: #6251a233;
 
   // Breakpoints
@@ -69,6 +70,10 @@ p {
 
 a {
   color: var(--color-secondary);
+
+  &:hover {
+    color: var(--color-secondary-dark);
+  }
 }
 
 blockquote {

@@ -10,7 +10,6 @@ import AlertBar from "@components/AlertBar";
 import formatPath from "@utils/formatPath";
 
 const SmallNav = styled.div`
-  position: absolute;
   top: 0;
   right: 0;
   z-index: 99;
@@ -27,8 +26,7 @@ const NavCollapse = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  color: white;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   padding: 2rem;
   font-size: 3rem;
   font-weight: 600;
@@ -43,7 +41,7 @@ const NavCollapse = styled.div`
 
   a {
     text-decoration: none;
-    color: var(--color-fg);
+    color: white;
 
     &:hover {
       color: var(--color-secondary);
@@ -96,7 +94,7 @@ export default function Nav({ alert }: Props) {
 
   return (
     <NavBar>
-      <SmallNav>
+      <SmallNav style={{ position: menuOpen ? "fixed" : "absolute" }}>
         {alert ? <AlertBar alertText={alert} /> : null}
         <NavToggle
           onClick={() => {
