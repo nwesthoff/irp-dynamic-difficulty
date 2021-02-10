@@ -32,7 +32,7 @@ const DefaultLayout = ({ frontMatter, children }: Props) => (
       <MDXProvider components={components}>{children}</MDXProvider>
     </MainContent>
 
-    {chapters[frontMatter.index] ? (
+    {chapters[frontMatter.index + 1] ? (
       <NextChapter
         chapter={
           chapters.sort((chapter, chapterNext) => {
@@ -43,7 +43,7 @@ const DefaultLayout = ({ frontMatter, children }: Props) => (
               return 1;
             }
             return 0;
-          })[frontMatter.index]
+          })[frontMatter.index + 1]
         }
       />
     ) : null}

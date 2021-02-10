@@ -79,10 +79,12 @@ a {
 blockquote {
   background: var(--color-primary-transparent);
   border-left: 2px solid var(--color-primary);
-  padding: 0.4rem 2rem 1.2rem;
+  padding: 2rem 2rem 1.2rem;
   margin: 3.2rem 0;
 
   p {
+    padding: 0;
+    margin: 0;
     font-family: "IBM Plex Serif", serif;
     font-style: italic;
     font-size: 1.8rem;
@@ -119,17 +121,25 @@ blockquote {
     }
   }
 
-  @media (max-width: var(--breakpoint-phone)px) {
-    margin: 2rem 0;
-    padding: 0.4rem 1.2rem 0.8rem;
+  @media (max-width: 768px) {
+    padding: 1.2rem 1.2rem 0.8rem;
 
     p {
-      font-size: 1.2rem;
-      line-height: 1.2em;
+      font-size: 1.6rem;
     }
 
     li {
       font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    margin: 1.2rem 0;
+    padding: 1.2rem 1.2rem 0.8rem;
+
+    p {
+      font-size: 1.4rem;
+      line-height: 1.3em;
     }
   }
 }
@@ -188,7 +198,7 @@ h1 {
   line-height: 1.2em;
 
   @media (max-width: 768px) {
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 1.1em;
   }
 }
@@ -199,17 +209,21 @@ h2 {
   margin: 5rem 0 1.2rem;
 
   @media (max-width: 768px) {
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 1.2em;
   }
 }
 
 h3 {
   color: var(--color-secondary);
-  font-size: 1.1em;
+  font-size: 1.4rem;
   font-weight: 300;
   margin: 2rem 0 -0.8rem;
   line-height: 1.2;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
 }
 
 h4,
@@ -241,8 +255,16 @@ h3 {
         position: absolute;
         margin-left: 0.8rem;
         content: "🔗";
-        font-size: 0.5em;
       }
+    }
+  }
+}
+
+h1,
+h2 {
+  .autolink-heading {
+    &:after {
+      font-size: 0.5em;
     }
   }
 }

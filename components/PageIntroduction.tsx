@@ -26,7 +26,7 @@ const PageIntroduction = styled.div`
 
   @media (max-width: ${theme.breakpoints.tablet}px) {
     h1 {
-      font-size: 3rem;
+      font-size: 2.4rem;
     }
 
     h2 {
@@ -36,7 +36,7 @@ const PageIntroduction = styled.div`
 
   @media (max-width: ${theme.breakpoints.phone}px) {
     h1 {
-      font-size: 2.4rem;
+      font-size: 1.6rem;
     }
 
     h2 {

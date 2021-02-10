@@ -104,7 +104,7 @@ const IndexPage = () => {
   );
 
   return (
-    <Layout alert={alertNode}>
+    <Layout>
       <Header>
         <HeaderVideo src={`/video/sherlocked-bg.mp4`} autoPlay muted loop />
         <HeaderContent>
@@ -131,8 +131,7 @@ const IndexPage = () => {
             measurement (HR, HRV & GSR) as well as facial analysis show
             insufficient reliability to determine the desired difficulty of an
             individual. Additionally, it describes a method to determine the
-            desired difficulty for a group as a whole with more potential.{" "}
-            <i>Work in progress.</i>
+            desired difficulty for a group as a whole with more potential.
           </p>
           <p
             style={{
