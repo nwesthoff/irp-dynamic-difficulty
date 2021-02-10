@@ -141,14 +141,14 @@ const ChapterBlock = ({ reverse, children, chapter }: Props) => {
           <ChapterSubTitle>{chapter.subtitle}</ChapterSubTitle>
         ) : null}
         <ChapterTitle>
-          <Link href={formatPath(chapter.__resourcePath)}>
+          <Link href={"/" + formatPath(chapter.__resourcePath)}>
             <a>{chapter.title}</a>
           </Link>
         </ChapterTitle>
 
         <ChapterExcerpt>{children}</ChapterExcerpt>
 
-        <ReadChapterButton href={formatPath(chapter.__resourcePath)}>
+        <ReadChapterButton href={"/" + formatPath(chapter.__resourcePath)}>
           Read Chapter
         </ReadChapterButton>
       </ChapterTextContainer>
@@ -157,7 +157,7 @@ const ChapterBlock = ({ reverse, children, chapter }: Props) => {
         <Fragment>
           <Spacer />
           <ChapterImageContainer>
-            <Link href={formatPath(chapter.__resourcePath)}>
+            <Link href={"/" + formatPath(chapter.__resourcePath)}>
               <a>
                 <Image height={400} width={600} src={chapter.image} />
               </a>

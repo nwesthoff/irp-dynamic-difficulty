@@ -3,7 +3,8 @@ import Head from "next/head";
 import { PageWrapper } from "./PageWrapper";
 import Nav from "./Navigation/Nav";
 import styled from "styled-components";
-import ReactTooltip from "react-tooltip";
+import dynamic from "next/dynamic";
+const ReactTooltip = dynamic(() => import("react-tooltip"), { ssr: false });
 
 const StyledFooter = styled.footer`
   margin: 2rem 0;
@@ -79,12 +80,12 @@ const Layout: React.FunctionComponent<Props> = ({
         ) : null}
       </Head>
       <Nav alert={alert} />
+      {children}
       <StyledReactTooltip
         wrapper="span"
         data-multiline="true"
         backgroundColor="#161616"
       />
-      {children}
       <PageWrapper>
         <StyledFooter>
           Made by{" "}
