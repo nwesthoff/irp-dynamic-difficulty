@@ -14,7 +14,6 @@ const QuoteWrap = styled.div`
 const StyledButton = styled.button`
   height: 50px;
   width: 50px;
-  font-size: 24px;
   margin-right: 1.2rem;
   background: var(--color-primary);
   border: none;
@@ -54,7 +53,7 @@ const PlayQuote = ({ src }: Props): ReactElement => {
   return (
     <QuoteWrap>
       <StyledButton onClick={toggle}>
-        {playing ? <MdPause /> : <MdPlayArrow />}
+        {playing ? <MdPause size={24} /> : <MdPlayArrow size={24} />}
       </StyledButton>
       <p>Listen</p>
     </QuoteWrap>
