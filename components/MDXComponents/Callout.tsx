@@ -13,6 +13,7 @@ const CalloutEmoji = styled.div`
 
 const StyledCallout = styled.div`
   padding: 0.8rem 2rem;
+  margin: 1.2rem 0;
   background-color: var(--color-bg-dark);
   border-radius: var(--border-radius);
   display: flex;
