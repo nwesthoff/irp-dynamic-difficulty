@@ -6,7 +6,6 @@ import MainContent from "@components/MainContent";
 import { frontMatter as chapters } from "./chapters/*.mdx";
 import { FrontMatter } from "types";
 import Image from "next/image";
-import { Fragment } from "react";
 import { theme } from "@config/theme";
 import References from "@components/Bibliography/References";
 
@@ -92,16 +91,6 @@ const IndexPage = () => {
     .reduce((words: number, totalWords: number) => {
       return words + totalWords;
     });
-
-  const alertNode = (
-    <Fragment>
-      Hi! This is a work in progress, I love{" "}
-      <a href="mailto:nils@nilswesthoff.com" style={{ color: "white" }}>
-        feedback
-      </a>{" "}
-      🚧
-    </Fragment>
-  );
 
   return (
     <Layout>
