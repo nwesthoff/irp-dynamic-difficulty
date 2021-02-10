@@ -12,7 +12,16 @@ import References from "@components/Bibliography/References";
 
 const PageTitle = styled.h1`
   font-size: 6rem;
-  line-height: 1em;
+  line-height: 1.2em;
+
+  @media (max-width: ${theme.breakpoints.tablet}px) {
+    font-size: 4.8rem;
+    line-height: 1.1em;
+  }
+
+  @media (max-width: ${theme.breakpoints.phone}px) {
+    font-size: 3rem;
+  }
 `;
 
 const HeaderContent = styled(MainContent)`
