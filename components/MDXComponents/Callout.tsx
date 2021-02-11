@@ -4,7 +4,7 @@ import styled from "styled-components";
 const CalloutTitle = styled.h4`
   font-size: 1em;
   font-weight: bold;
-  margin-bottom: 0;
+  margin: 1.2rem 0 0;
 `;
 
 const CalloutEmoji = styled.div`
@@ -12,7 +12,7 @@ const CalloutEmoji = styled.div`
 `;
 
 const StyledCallout = styled.div`
-  padding: 0.8rem 2rem;
+  padding: 0.4rem 2rem;
   margin: 1.2rem 0;
   background-color: var(--color-bg-dark);
   border-radius: var(--border-radius);
@@ -23,10 +23,18 @@ const StyledCallout = styled.div`
   gap: 2rem;
 
   p {
-    margin-top: 0.4rem;
+    margin: 0.4rem 0;
     font-size: 0.9em;
     max-width: 580px;
     min-width: 240px;
+  }
+
+  ul {
+    margin-top: 0;
+  }
+
+  li {
+    font-size: 0.9em;
   }
 `;
 
