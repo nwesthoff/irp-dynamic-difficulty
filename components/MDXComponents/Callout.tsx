@@ -1,3 +1,4 @@
+import { theme } from "@config/theme";
 import React, { ReactElement, ReactNode } from "react";
 import styled from "styled-components";
 
@@ -5,6 +6,9 @@ const CalloutTitle = styled.h4`
   font-size: 1em;
   font-weight: bold;
   margin: 1.2rem 0 0;
+  @media (max-width: ${theme.breakpoints.tablet}px) {
+    margin: 0.4rem 0 0;
+  }
 `;
 
 const CalloutEmoji = styled.div`
@@ -12,7 +16,7 @@ const CalloutEmoji = styled.div`
 `;
 
 const StyledCallout = styled.div`
-  padding: 0.4rem 2rem;
+  padding: 0.4rem 2rem 0.8rem;
   margin: 1.2rem 0;
   background-color: var(--color-bg-dark);
   border-radius: var(--border-radius);
@@ -30,11 +34,16 @@ const StyledCallout = styled.div`
   }
 
   ul {
-    margin-top: 0;
+    margin: 0 0 0.4rem;
   }
 
   li {
     font-size: 0.9em;
+  }
+
+  @media (max-width: ${theme.breakpoints.phone}px) {
+    padding: 1.2rem;
+    gap: 0.8rem;
   }
 `;
 
