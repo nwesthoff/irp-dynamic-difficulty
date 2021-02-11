@@ -414,6 +414,16 @@ const myReferences: AcademicRef[] = [
         "Sawyer, R.K. (2008). Group genius : the creative power of collaboration. New York: Basic Books.",
     },
   },
+  {
+    citationKey: "wolf_2017_video",
+    entryType: "ACADEMIC",
+    entryTags: {
+      author: "Wolf",
+      year: "2017",
+      inBib:
+        "Wolf, M.J.P. (2017). Video Games as American Popular Culture. Quaderns De Cine, (12).",
+    },
+  },
 ];
 
 export interface AcademicRef {
