@@ -1,7 +1,7 @@
 ---
 title: "Designing for Enthusiasts"
 subtitle: "Conclusion"
-introduction: "Unfortunately there is no cookie-cutter way to implement dynamic difficulty (yet). The result of this research project are several recommendations that can be considered when developing a dynamic difficulty system for escape rooms."
+introduction: "With this thesis I have explored how to implement dynamic difficulty in escape rooms. Unfortunately there is no cookie-cutter solution to implement dynamic difficulty (yet). The result of this research project are several recommendations, or levers, that can be considered when developing a dynamic difficulty system for escape rooms."
 index: 5
 image: "/img/vault-gate.jpg"
 ---
@@ -13,7 +13,7 @@ import Callout from "@components/MDXComponents/Callout";
 
 ::: section small-width
 
-With this thesis I have explored how to implement dynamic difficulty in escape rooms. Finally I will summarise findings, and answer my primary research question.
+To conclude, I will summarise my findings and answer my primary research question.
 
 <Callout title="Research Question" emoji="🤔">
 
@@ -23,11 +23,9 @@ How might we offer an escape room that challenges enthusiasts without alienating
 
 Some of the recommendations I make in this conclusion apply to the inputs (metrics) and outputs (resulting adaptation), while I will also provide some that apply on a meta level (goal of the system).
 
-### Input
+## Input
 
 Most escape rooms, and especially the ones doing dynamic difficulty, determine puzzle difficulty by duration. While you might say time is a reliable indicator for performance, this does not directly mean players have an enjoyable experience. Time moderation can do an excellent job at selectively picking which puzzles are skipped when a team is slower instead of cutting off the end. And it is able to This also means that players get to experience the entire story.
-
-#### Perceived difficulty
 
 Time doesn't say anything about the perceived difficulty of a puzzle or escape room. It could very well be that a team finishes a game within 36 minutes. However, if those were the best 36 minutes of their life, that could very well be worth it. The idea that they could have had 60 minutes of that same high-quality experience with a perfectly matched difficulty might start compelling now. I propose escape room designers look at three different metrics than time to gauge a perfect challenge. These can be combined with time as a metric to (theoretically) create a perfect difficulty game, while simultaneously giving everyone an equal amount of play time.
 
@@ -38,7 +36,7 @@ Time doesn't say anything about the perceived difficulty of a puzzle or escape r
 
 <div>
 
-#### Engagement & Frustration
+### Engagement & Frustration
 
 Recognise when players are bored or don't know what to do. When they become disengaged, they will sit around, start breaking things and they are usually physically distanced from the puzzle to solve. Frustration is generally recognised by groups making lots of mistakes. Is the group guessing or are they still interested in learning _how_ to solve the puzzle.
 
@@ -46,15 +44,15 @@ Recognise when players are bored or don't know what to do. When they become dise
 
 <div>
 
-#### Momentum
+### Momentum
 
-Consider whether a group is picking up speed. Are they learning from their experience, are they moving faster than they started.
+Consider whether a group is picking up speed. Rather than looking at time, look at the accelleration of their performance. Measure whether they are solving puzzles faster than earlier on in the game.
 
 </div>
 
 <div>
 
-#### Team Communication
+### Team Communication
 
 Instead of looking at individuals through physiological data, we might do some analysis on the performance of a team. Sawyer and Marlow have shown teams that know each other well communicate less often, but to more effect. They know _who_ to ask for which type of puzzle.
 
@@ -66,31 +64,31 @@ Instead of looking at individuals through physiological data, we might do some a
 
 ::: section small-width
 
-### Output
+## Output
 
 - Unfair puzzles can't be fixed simply by dialling down difficulty. They require specific interventions. For example, when information is missing you can add whatever clues you can think off, but if you never tell them something you as a designer know that they don't, the puzzle won't be fair.
 - Outputs should be subtle, you could call these hints but framed as dynamic difficulty: changing lights to signal important items and directing music to a specific part of the room. When puzzles are added they should be invisible when they're not added. etc.
 - It's impossible to adjust the experience to fit every individual in the room. Especially when there is a large spread of skill levels within the team. Regardless of whether we're able to sense how each individual feels, it's a complicated endeavour to .
 - Difficulty of the unfamiliar as Moran calls it, is very hard to moderate. It's purely a function of the players' prior experience. When we break the mold, that won't be more difficult for a novice (since everything is new), but it will be relatively difficult for enthusiasts (since they haven't seen it before either). Obviously that's easier said than done. Really, the increasing amount of escape rooms means it's harder and harder to come up with interactions that are as hard for enthusiasts as they are for novices, because enthusiasts have seen almost anything at this point.
-- Not only should we adjust for difficulty in a general sense, but also based on specific skills. Better teams communicate better, increasing the necessity for communication in the 'more difficult' track might be a good build? Other teams might be very familiar with escape games individually, but have never played an experience together (they're unfamiliar as a team). They are less able to depend on each other, but are skillful individually and have seen lots of escape game puzzles before. Ex. we split them up a little more than usual to work on puzzles individually, and bring them together as the game progresses?
+- Not only should we adjust for difficulty in a general sense, but also based on specific skills. Better teams communicate better, increasing the necessity for communication in the 'more difficult' track might be a good build? Other teams might be very familiar with escape games individually, but have never played an experience together (they're unfamiliar as a team). They are less able to depend on each other, but are skilful individually and have seen lots of escape game puzzles before. Ex. we split them up a little more than usual to work on puzzles individually, and bring them together as the game progresses?
 
 ![/img/dials-of-difficulty.jpg](/img/dials-of-difficulty.jpg)
 
-### Meta-level
+## Meta-level
 
-Challenge-based immersion is a hard one to get right. It requires that players get the _exact_ difficulty they require, which is influenced a lot by the experience players have an how well they know each other. However, I've also learnt that designers can get away with _a lot_, like the skip button in _Push the Button_. So long as they fit it in the narrative, and players never get the idea that it's unfair, these (otherwise potentially game-breaking) decisions may offer a better experience.
+Challenge-based immersion is a hard one to get right. It requires that players get the _exact_ difficulty that matches their abilities. Their abilities vary and whether a group performs well depends on how well they know each other too. However, I've also learnt that designers can get away with _a lot._ Like the skip button in _Push the Button_. So long as they fit it in the narrative, and players never get the idea that the puzzle or escape room is unfair. These decisions may offer a better experience than not implementing them, even if they would be potentially game-breaking when they don't fit the theme and narrative.
 
-If you can't be subtle about dynamic difficulty, make it part of the narrative, and explain _why_ the difficulty is not the same for every group.
+One might also argue that escape rooms already are somewhat dynamic. Games become fair through a robust clueing network, but difficulty can be lowered by correctly timed (and subtle) hints. If you can't be subtle about dynamic difficulty, you could try to make it part of the narrative. Explain _why_ the difficulty is not the same for every group.
 
-- Essentially, escape rooms already are somewhat dynamic. Games become fair through a robust clueing network. Difficulty is lowered by correctly timed hints (often when the player asks for them).
-- Many game designers see dynamic difficulty as an issue with the game. When too many teams need a hint, most game designers see that as an error in game design. Dynamic difficulty would take those those ideas to the extreme, which (at least currently) isn't welcomed in the industry. This might be a case of 'I have to see it to believe it' though.
 - Highly rated games becoming more linear, doesn't mean there is no room for games that offer a challenge. I think many games can thrive without difficulty, and games do get rated poorly when they are too hard and especially when they're unfair. In that regard it might seem risky to make escape rooms hard, because it's difficult to distinguish difficulty from fairness without rigorous play testing.
 - Game designers want to create consistent experiences, so players of any level can talk about their experience without major disconnects. They want to be as consistent as movies, but they could be as flexible as video games. I think moving forward, escape room designers have to embrace the medium as its own thing. To be as flexible as video games while being more immersive (on all types) than video games and movies will ever be.
 - When players disengage early on in a game, it's hard to get them back. A drawback of _The Witness'_ puzzle language is that they _require_ players to learn how they work. When a puzzle is brute forced, players don't learn its language, and won't be able to solve later puzzles.
 
 All these levers are small wins, but all of those together can potentially influence the experience with a fine-grained control not previously seen.
 
-## Dynamically Adjusting Game Flow
+## Dynamic Difficulty Framework
+
+### Scenarios
 
 These are some hypothetical scenarios of groups reaping the benefits of a dynamically controlled escape room.
 
@@ -124,7 +122,7 @@ These are some hypothetical scenarios of groups reaping the benefits of a dynami
 
 <div>
 
-#### Enthusiasts looking for a challenge
+### Enthusiasts looking for a challenge
 
 The main complaint from enthusiasts at The Vault is a lack of challenge. Puzzles are (sometimes) a-logical, and merely an action to do. The experience of the room makes up for it, but Sherlocked wants to offer a bigger challenge to their (most loyal) customers.
 
@@ -132,7 +130,7 @@ The main complaint from enthusiasts at The Vault is a lack of challenge. Puzzles
 
 <div>
 
-#### Enthusiasts having a bad day
+### Enthusiasts having a bad day
 
 What if a second group of enthusiasts play the new experience. They start of well but quickly realise they've taken on too much. They might get knocked down from the highest difficulty, all the way down to an easy level. This way even they get to see the finish line, though that does not ensure they escape.
 
@@ -140,7 +138,7 @@ What if a second group of enthusiasts play the new experience. They start of wel
 
 <div>
 
-#### Team of colleagues, novice escape room players
+### Team of colleagues, novice escape room players
 
 On the other hand we might see a group of colleagues that know each other well, but have never played an escape room together. They might start of quite anxious, but also are deeply curious and driven to do well. They soon realize they're on a roll and might even think the puzzles start to become boring. The DDA kicks things up a notch and grows with them, they play their final puzzle(s) at the highest level.
 
@@ -152,13 +150,17 @@ On the other hand we might see a group of colleagues that know each other well, 
 
 ::: section small-width
 
+Many game designers see dynamic difficulty as an issue with the game. The game designers I've spoken with see it as an error in game design when too many teams need a hint. Instead I see that differently, dynamic difficulty could take the ideas of hints to the extreme. Like in _The Gallery_ where some groups would actually like to figure out the mastermind, other groups will only do the physical action of doing what the puzzle says. This isn't welcomed in the industry, at least currently. But I believe this might change when it has been done well enough. As such, my final conclusion of this report is as follows:
+
 <Callout title="Conclusion">
 
-The goal of dynamic difficulty is to control the experience based on play speed as well as perceived difficulty. To keep teams in a flow state while also taking into account the time they have left to escape. To put them in the James Bond moment with a difficulty level that matches their optimal experience, during which they _perform at the highest of their abilities_.
+The goal of dynamic difficulty is to control the experience based on play speed as well as perceived difficulty. To keep teams in a flow state while being aware this influences the time it takes groups to escape. The goal is to intellectually and physically challenge the group throughout the experience. _And_ to make teams escape with minutes to spare, during which they **perform at the highest of their abilities regardless of their skill level**. This positively affects overall **increased immersion**, as a result of challenge-based immersion.
 
 </Callout>
 
 ## The Podcast
+
+As part of this research I hosted a panel, which was recorded in its entirety. I personally thought it was an eye-opening conversation, and would recommend listening to it if my report was interesting. Especially if you enjoyed the audio quotes in the previous chapter.
 
 <iframe
   src="https://anchor.fm/nils-westhoff/embed/episodes/Dynamic-Difficulty-Panel-eq6cat"
@@ -170,22 +172,25 @@ The goal of dynamic difficulty is to control the experience based on play speed 
 
 ## Further research
 
-- Practical ways of measuring team performance
-- Statistical research into the need for escaping, is that important. Do enthusiasts care about records (impossible when you're not playing the same game) or would they rather play something that matches their abilities?
-- standardised 'difficulty levels'/kijkwijzer for the industry
-- An analysis what the characteristics are of a team that does well
+As recommendations for further research I'd suggest an in-depth look at practical tools for real-time measurement of team performance and group flow.
+
+Another area of interest could be statistical analysis into the psychological need of escaping (as opposed to failing escape). Whether players review games they escape from more favourably than games they do not. Are the games they don't escape from perceived as so difficult they perceived as unfair? Does it matter how much of the game they did play. Concretely, does it matter if around 20% of the experience is left or 60% is left?
+
+Furthermore, I've realised some enthusiasts care about setting records, though many I spoke with do not. Since dynamic difficulty would create an unfair record when players do not play the same game, I suggest statistical analysis on the desire for setting time records. Also consider whether they find that _more_ important than playing an escape room that matches their abilities?
+
+My final and (I think) most promising and concrete recommendation is to do an analysis of team dynamics applied to escape games. What are the characteristics are of a team that is fast? What do teams look like that rate the experience highest? Team characteristics could regard personality types, group relation (colleagues, family etc.) or communication styles.
 
 ## Reflective Statement
 
-- every time I read something I got really excited to write stuff down, make connections between sections
-- the middle part was a deep rut. Stuck in the 'this doesn't work', but couldn't unstuck myself from that. realisation that escape rooms are special in three key ways (time-constraint, team-based and that they happen in a physical space), got me un-stuck.
-- Actually writing I was too focused on making connections, had a hard time actually working on a section and kept jumping around in my files.
+## Reflective Statement
 
-  - Had trouble finishing each section and wasn't able to elaborate on a section, because I kept seeing links between all the interconnected parts. As a result everything is still at surface-level, even though I knew much deeper stuff.
-  - I started to tell Francine what I'd be writing that day (social check). I copied that small section into a different text editor (dedicate task), and set a Pomodoro timer (dedicate time).
-  - Copied that section back after I finished it, was also much easier for proofreading. I could tell Francine exactly which parts I had changed.
+During this project I became most excited after I had read something or talked to someone. Gaining new knowledge allowed me to make new connections between what I had just learnt, and what knowledge I had recorded before, which was very exciting. During the middle part I got very stuck. There was a phase of 'this doesn't work', and I had a lot of trouble getting out of that feeling. At some point, something clicked, and I realised _why_ escape rooms are special. That helped me get out of it, but I think I was mostly feeling better because external factors were less of an issue.
 
-- Hosting a panel with escape room legends has been one of the best experiences I've had during my education. That says a lot, because Hyper Island has linked us with some incredible companies and speakers as well.
-- Even though I've enjoyed my work with Sherlocked **a lot**, and appreciate the fantastic environment they have given me to take a stab at this problem. I have decided to get a job elsewhere. I think much of what I've learnt during this project is applicable throughout the field of experience design. And I have a positive outlook that I'll be able to translate what I've learnt in a different domain, like Nicole Lazarro has done. Transposing her work to the field of user experience design as a whole, as she's demonstrated with her talk at AIGA Conference.
-- I'm excited as much as I'm relieved to finally put this work out into the world.
-  :::
+While writing in the final weeks I had trouble focusing on finishing a section of text. I kept kept jumping around in my files, and left many sentences unfinished because I had just thought of something that just _had_ to go somewhere else. Because of that I fully fleshing out pieces of knowledge. To allow myself to elaborate on a piece of knowledge, because I kept reminding myself of interconnected parts.
+
+My solution was to tell Francine what I'd be writing that day, which acted as a social check. I copied that small section into a different text editor, in order to dedicate myself to that task, and that task only. Finally, I set a Pomodoro timer, so I knew not to check my phone and dedicate that time to one task only. This worked very well for me and helped me elaborate on previously surface-level paragraphs of knowledge.
+
+One of the best experiences I've had during my education was hosting the panels with escape room legends. And that says a lot, because Hyper Island has had some incredible industry leaders and guest-speakers as well.
+
+Even though I've enjoyed my work with Sherlocked _a lot_, and appreciate the fantastic environment they have offered me to take a stab at this problem. I have decided to get a job elsewhere. I think much of what I've learnt during this project is applicable throughout the field of experience design. And I have a positive outlook that I'll be able to translate what I've learnt in a different domain, like Nicole Lazarro has done. Transposing her work to the field of user experience design as a whole, as she's demonstrated with her talk at AIGA Conference. I'm excited as much as I'm relieved to finally put this work out into the world.
+:::
