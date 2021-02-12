@@ -424,6 +424,16 @@ const myReferences: AcademicRef[] = [
         "Wolf, M.J.P. (2017). Video Games as American Popular Culture. Quaderns De Cine, (12).",
     },
   },
+  {
+    citationKey: "cerminaro_2019_what",
+    entryType: "TRUSTED",
+    entryTags: {
+      author: "Cerminaro",
+      year: "2019",
+      inBib:
+        "Cerminaro, D. (2019). What the %*$# is Systems Design? [online] Medium. Available at: https://modus.medium.com/what-the-is-systems-design-e005c1e9fef8 [Accessed 15 Jan. 2021].",
+    },
+  },
 ];
 
 export interface AcademicRef {
