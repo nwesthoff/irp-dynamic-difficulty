@@ -1,13 +1,13 @@
-import Layout from "../components/Layout";
-import ChapterBlock from "../components/ChapterBlock";
-import PageIntroduction from "../components/PageIntroduction";
-import styled from "styled-components";
-import MainContent from "@components/MainContent";
-import { frontMatter as chapters } from "./chapters/*.mdx";
-import { FrontMatter } from "types";
-import Image from "next/image";
-import { theme } from "@config/theme";
 import References from "@components/Bibliography/References";
+import MainContent from "@components/MainContent";
+import { theme } from "@config/theme";
+import Image from "next/image";
+import styled from "styled-components";
+import { FrontMatter } from "types";
+import ChapterBlock from "../components/ChapterBlock";
+import Layout from "../components/Layout";
+import PageIntroduction from "../components/PageIntroduction";
+import { frontMatter as chapters } from "./chapters/*.mdx";
 
 const PageTitle = styled.h1`
   font-size: 6rem;
@@ -138,7 +138,7 @@ const IndexPage = () => {
             <span style={{ opacity: 0.5, fontSize: "0.75em" }}>
               {/* MDX Wordcount + abstract */}
               FEBRUARY 2021 | WORD COUNT: {wordCount + 82} | READ TIME:{" "}
-              {(wordCount / 150).toFixed()} MIN
+              {(wordCount / 120).toFixed()} MIN
             </span>
           </p>
         </PageIntroduction>
