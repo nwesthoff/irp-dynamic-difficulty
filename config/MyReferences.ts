@@ -434,6 +434,28 @@ const myReferences: AcademicRef[] = [
         "Cerminaro, D. (2019). What the %*$# is Systems Design? [online] Medium. Available at: https://modus.medium.com/what-the-is-systems-design-e005c1e9fef8 [Accessed 15 Jan. 2021].",
     },
   },
+
+  {
+    citationKey: "vaatividya_2020_dark",
+    entryType: "TRUSTED",
+    entryTags: {
+      author: "VaatiVidya",
+      year: "2020",
+      inBib:
+        "VaatiVidya (2020). Dark Souls Lore Explained. YouTube. Available at: https://www.youtube.com/watch?v=McXJj7sjcZ0 [Accessed 13 Feb. 2021].",
+    },
+  },
+
+  {
+    citationKey: "the-act-man_2018_why",
+    entryType: "TRUSTED",
+    entryTags: {
+      author: "The Act Man",
+      year: "2018",
+      inBib:
+        "The Act Man (2018). Why Is Dark Souls 1 a Masterpiece?! YouTube. Available at: https://www.youtube.com/watch?v=LqhtBsxAZNo [Accessed 10 Apr. 2019].",
+    },
+  },
 ];
 
 export interface AcademicRef {
