@@ -137,7 +137,7 @@ const IndexPage = () => {
             <br />
             <span style={{ opacity: 0.5, fontSize: "0.75em" }}>
               {/* MDX Wordcount + abstract */}
-              FEBRUARY 2021 | WORD COUNT: {wordCount + 82} | READ TIME:{" "}
+              FEBRUARY 2021 | WORD COUNT: {wordCount} | READ TIME:{" "}
               {(wordCount / 120).toFixed()} MIN
             </span>
           </p>

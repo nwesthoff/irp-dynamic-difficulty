@@ -25,7 +25,8 @@ module.exports = withMdxEnhanced({
       // Pretty bad implementation to strip HTML but good enough for this report
       cleanText = mdxContent.replace(/<\/?[^>]+(>|$)/g, "");
       const time = readingTime(cleanText);
-      time.words = time.words - 44;
+      time.words = frontMatter.title !== "Appendices" ? time.words - 44 : 0;
+
       console.log({ title: frontMatter.title, ...time });
       return { time };
     },
