@@ -456,6 +456,16 @@ const myReferences: AcademicRef[] = [
         "The Act Man (2018). Why Is Dark Souls 1 a Masterpiece?! YouTube. Available at: https://www.youtube.com/watch?v=LqhtBsxAZNo [Accessed 10 Apr. 2019].",
     },
   },
+  {
+    citationKey: "marlow_2018_does",
+    entryType: "ACADEMIC",
+    entryTags: {
+      author: "Marlow et al.",
+      year: "2018",
+      inBib:
+        "Marlow, S.L., Lacerenza, C.N., Paoletti, J., Burke, C.S. and Salas, E. (2018). Does Team Communication Represent a one-size-fits-all approach?: a meta-analysis of Team Communication and Performance. Organizational Behavior and Human Decision Processes, 144, pp.145–170.",
+    },
+  },
 ];
 
 export interface AcademicRef {
