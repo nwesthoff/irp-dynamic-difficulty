@@ -451,11 +451,11 @@ Ariel Rubin said she thought I was on the right track, but that engagement and f
 
 <PlayQuote src="/audio/ariel-rubin-engagement.mp3" />
 
-> Engagement is really the thing. Cause I think consistently what you will see is as people get frustrated, they start fussing with things or they just sit down for awhile. It's it's how engaged are they in continuing to solve? And how many mistakes they make.
+> Engagement is really the thing. Because I think consistently what you'll see is, as people get frustrated, they start fussing with things or they just sit down for awhile. It's it's how engaged are they in continuing to solve? And how many mistakes they make.
 >
 > - Ariel Rubin <Citation id="patel_2021_panel" hideAuthor />
 
-Ariel also mentioned groups make mistakes more often when they are disengaged. When players disengage they usually start brute forcing puzzles, and lose interest in learning _how_ they should solve the puzzle. Which is troublesome when escape games want to implement Jonathan Blow's puzzle language philosophy. Being aware when that happens is important to consider for later interactions. A drawback of _The Witness'_ puzzle language is that they _require_ players to learn how they work. When a puzzle is brute forced, players don't learn its language, and won't be able to solve subsequent puzzles. Brute forcing also suggests that groups like these are no longer intrinsically motivated to play the game. At that point they solely play to progress the story, or to escape. Players who get frustrated are affected by the overjustification effect, it seems.
+Ariel also mentioned groups make mistakes more often when they are disengaged. When players disengage they usually start brute forcing puzzles, and lose interest in learning _how_ they should solve the puzzle. Brute forcing also suggests that groups like these are no longer intrinsically motivated to play the game. At that point they solely play to progress the story, or to escape. Players who get frustrated are affected by the overjustification effect, it seems.
 
 Eyal had a different answer to the same question. Like Tommy said about clear goals, it's important that teams keep moving forward. He generally suggests escape rooms use _momentum_ as an indicator for enjoyment. By which he means they pick up pace as they play, increasingly solving more and more puzzles in the same time. It doesn't matter whether a group is faster or slower than the one before, but the overall momentum of the group should go up right near the end. Essentially, they play against their own previous performance.
 
@@ -479,27 +479,13 @@ Beyond some specific input types I've also spoken with a few designers of dynami
 
 ### Full systems in the wild
 
-#### Lab13
-
-Jesse van der Lely, from [Live Escape](https://liveescape.nl/lab13/), designed and hosts a room in Rotterdam called Lab13. Their system is completely opaque, and players never notice it, Jesse says. Their approach is that they start with a _base game._ They never remove any puzzles from the base game, but they do give faster teams (one or) a few extra puzzles, as determined by a big flow-diagram of yes and no statements. He mentions their base game has an escape rate of only 34%, an issue, since they're unable to make it easier than that. Another caveat that adds to this problem is that their current implementation doesn't allow for puzzles to become easier.
-
-> When you show a clue to someone, you can't go back.
->
-> - Jesse van der Lely (translated from Dutch) <Citation id="lely_2020_dynamic" hideAuthor />
-
-Furthermore, Jesse mentions their room has multiple tracks. They use this to their advantage, by determining which puzzles are being solved first and fastest. If a team solves a logic puzzle really well they get more of those, if they do much better at a maths puzzle, that's what they get instead. Though the extra puzzles never build on story in a big way, to ensure a consistent experience across players. What Jesse is doing with Lab13 sounds like the first rudimentary approach to incorporate what Nicole Lazarro has with gaming. To offer different experiences to different types of players.
-
 #### Push the Button
 
-Early on in my process, I spoke with David Middleton. Co-founder of the UK based _Bewilder Boffs Studios_, who offer services from concept to execution aimed at escape room startups. Bewilder Boffs has created their own series of escape rooms under the _Bewilder Box_ brand as well.
+I also spoke with David Middleton, Co-founder of the UK based _Bewilder Boffs Studios_, who offer design services for escape room startups. They have created their own series of escape rooms under the _Bewilder Box_ brand as well.
 
-At the time of speaking, David was working on a mobile escape game. It all fits inside a box, and it had a specific set of constraints:
+At the time of speaking, David was working on a mobile escape game, which fits inside a box. It features a specific set of constraints, to maximise the time played within a 30 minute time limit.
 
-- 30 minute time limit
-- Maximise the time people could play
-- Scalable deployment
-
-Their solution involves a self-resetting box, that offers clues on a set rhythm. The host-less experience lasts 30 minutes, and is broken up in 5 puzzle sections of 5 minutes (and some additional set-up/wind-down). Each puzzle drip-feeds clues through icons, and practically spells out the solution after 5 minutes have passed. That way, players who would normally get stuck, can move on to the next at the same pace as experienced players. that everyone gets the rush of almost (not) finishing.
+Their solution involves a self-resetting box, that offers clues on a set rhythm. The host-less experience is broken up in 5 puzzle sections. Each puzzle drip-feeds clues through icons, and practically spells out the solution after 5 minutes have passed. Because of that players of any experience get the rush of almost (not) finishing the game.
 
 > The idea is to get everyone in that James Bond phase of the game
 >
@@ -517,23 +503,34 @@ One of the first people I spoke to for this project is Niels Jonker <Citation id
   - The second puzzle either tells you exactly what to do, or is like a game of mastermind (with two difficulty levels).
   - The final puzzle moderates through physical difficulty. Imagine playing a game of _Operation_, but the holes are larger or smaller.
 
+#### Lab13
+
+Jesse van der Lely, from [Live Escape](https://liveescape.nl/lab13/), designed and hosts a room in Rotterdam called Lab13. Their system is completely opaque, and players never notice it, Jesse says. Their approach is that they start with a _base game._ They never remove any puzzles from the base game, but they do give faster teams (one or) a few extra puzzles, as determined by a big flow-diagram of switches. He mentions their base game has an issue, it's too hard for most players. Their _shortes_ version is too ambitious for most teams to finish, let alone the game including all extra puzzles. Another caveat that adds to this problem is that their current implementation doesn't allow for puzzles to become easier.
+
+> When you show a clue to a difficult puzzle, you can't go back when they get stuck.
+>
+> - Jesse van der Lely (translated from Dutch) <Citation id="lely_2020_dynamic" hideAuthor />
+
+Furthermore, Jesse mentions their room has parallel puzzle tracks. They use this to their advantage by determining which puzzles are being solved first and fastest. If a team solves a logic puzzle really well they get more of those, if they do much better at a maths puzzle, that's what they get instead. Though the extra puzzles never build on story in a big way, to ensure a consistent experience across players. What Jesse is doing with Lab13 sounds like a rudimentary approach to incorporate Nicole Lazarro's theory of catering to preferences. To offer not only different levels of difficulty, but also cater to different preferences regarding puzzle types.
+
 # Conclusions / Key Insights
 
 Escape room designers have to choose what they aim to do with dynamic difficulty. Some only desire to maximise the time each team gets to play their experience. While others might want to give everyone the rush of "almost not escaping". In both those cases we are dynamically controlling time and experience.
 
 <Callout>
 
-We determine puzzle difficulty by duration, might this be the wrong metric?
+Difficulty is currently determined by duration, this may be the wrong metric.
 
 </Callout>
 
-Ariel spoke about engagement. It's immediately clear when someone checks out.
+To me, escape rooms are special in three ways compared to other forms of entertainment:
+:::
 
-Others might want to aim for focus. To maximise how long we can keep players attention and carefully planning moments of release. And finally we might want to aim for difficulty. Where we offer the right amount of cognitive challenge.
+::: section wide-width
 
-Now, these points might seem obvious, especially to avid escape room designers. But it took a while before they really sunk in for me. To me, escape rooms are special in three ways compared to other forms of entertainment:
+<SideBySide>
 
-<Callout title="They occur in a physical space">
+<Callout title="They occur in a physical space" hideEmoji>
 
 Sensory immersion comes easy as a result of:
 
@@ -542,16 +539,25 @@ Sensory immersion comes easy as a result of:
 
 </Callout>
 
-<Callout title="They are a group experience">
+<Callout title="They are a group experience" hideEmoji>
 
 The experience has to work for **multiple people**, at the _same time_.
 The experience has to work for **varying group sizes**.
 
 </Callout>
 
-<Callout title="There is a time constraint">
+<Callout title="There is a time constraint" hideEmoji>
 
 Escape rooms promise an experience of x minutes. We better deliver.
 
 </Callout>
+
+</SideBySide>
+
+:::
+
+::: section small-width
+
+Now, these points might seem obvious, especially to avid escape room designers. But it took a while before they really sunk in for me. In the next chapter I will propose recommendations to consider when developing a dynamic difficulty system.
+
 :::

@@ -51,16 +51,19 @@ interface Props {
   children: ReactNode;
   emoji?: string;
   title?: string;
+  hideEmoji?: boolean;
 }
 
 export default function Callout({
   children,
   emoji = "💡",
   title = "Insight",
+  hideEmoji,
 }: Props): ReactElement {
   return (
     <StyledCallout>
-      <CalloutEmoji>{emoji}</CalloutEmoji>
+      {hideEmoji ? null : <CalloutEmoji>{emoji}</CalloutEmoji>}
+
       <div>
         <CalloutTitle>{title}</CalloutTitle>
         {children}

@@ -117,10 +117,10 @@ const IndexPage = () => {
             visitors. It discusses the necessity of a correctly moderated
             difficulty level, and explores several technical implementations.
             Literature shows that sentiment analysis through physiological
-            measurement (HR, HRV & GSR) as well as facial analysis show
-            insufficient reliability to determine the desired difficulty of an
-            individual. Additionally, it describes a method to determine the
-            desired difficulty for a group as a whole with more potential.
+            measurement as well as facial analysis show insufficient reliability
+            to determine the desired difficulty of an individual. Additionally,
+            it describes a method to determine the desired difficulty for a
+            group as a whole with more potential.
           </p>
           <p
             style={{
