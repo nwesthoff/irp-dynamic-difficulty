@@ -476,6 +476,16 @@ const myReferences: AcademicRef[] = [
         "Lang, P.J. (1995). The Emotion probe: Studies of Motivation and attention. American Psychologist, 50(5), pp.372–385.",
     },
   },
+  {
+    citationKey: "gamemakerstoolkit_2015_what",
+    entryType: "TRUSTED",
+    entryTags: {
+      author: "Game Maker's Toolkit",
+      year: "2015",
+      inBib:
+        "Game Maker's Toolkit (2015). What Capcom Didn’t Tell You about Resident Evil 4 | Game Maker’s Toolkit. YouTube. Available at: https://www.youtube.com/watch?v=zFv6KAdQ5SE.",
+    },
+  },
 ];
 
 export interface AcademicRef {
