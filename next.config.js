@@ -26,6 +26,7 @@ module.exports = withMdxEnhanced({
       cleanText = mdxContent.replace(/<\/?[^>]+(>|$)/g, "");
       const time = readingTime(cleanText);
       time.words = time.words - 44;
+      console.log({ title: frontMatter.title, ...time });
       return { time };
     },
     phase: "both",

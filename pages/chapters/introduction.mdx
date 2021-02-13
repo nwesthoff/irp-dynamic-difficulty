@@ -1,19 +1,20 @@
 ---
 title: "Introduction"
-introduction: "The beginning..."
+introduction: "One of the fastest growing markets of entertainment and real life gaming in the world over the past few years has been escape rooms."
 index: 1
 image: "/img/vault-stone.jpg"
 ---
 
 import Citation from "@components/Bibliography/Citation";
+import Callout from "@components/MDXComponents/Callout";
 
 ::: section small-width
 
 ## Rise of the escape room
 
-One of the fastest growing markets of entertainment and real life gaming in the world over the past few years has been escape rooms. It's hard to say for sure how escape rooms really came into existence, because it's up for debate _what counts_ as the first escape room as we currently know them. Rachel Sugar explains how the history of escape rooms is a little bit dicey. The general consensus within the industry seems to be that modern escape rooms debuted in one of two places. Takao Kato was certainly the first to design something that resembles a modern escape room in 2007. Which was based in Kyoto, Japan. However, escape rooms didn't hit major commercial success until 2012. One might argue ParaPark, opened in 2011 in Budapest by Attila Gyurkovics, is what has caused the escape room market to explode <Citation id="sugar_2019_the" />. Whatever the reason was, it's clear that the market for escape rooms has seen meteoric growth from that moment forward. Currently, there are 523 escape rooms in the Netherlands alone <Citation id="escapetalk_vind" />, with a world wide estimate totalling over 50.000 in 2019 <Citation id="thelogicescapesme_2019_international" />.
+It's hard to say for sure how escape rooms really came into existence, because it's up for debate _what counts_ as the first escape room as we currently know them. Rachel Sugar explains how the history of escape rooms is a little bit dicey. The general consensus within the industry seems to be that modern escape rooms debuted in one of two places. SCRAP, a Japanese publishing company, was certainly the first to design something that resembles a modern escape room in 2007. Which was based in Kyoto, Japan. However, escape rooms didn't hit major commercial success until 2012. One might argue ParaPark, opened in 2011 in Budapest by Attila Gyurkovics, is what has caused the escape room market to explode <Citation id="sugar_2019_the" />. Whatever the reason was, it's clear that the market for escape rooms has seen meteoric growth from that moment forward. Currently, there are 523 escape rooms in the Netherlands alone <Citation id="escapetalk_vind" />, with a world wide estimate totalling over 50.000 in 2019 <Citation id="thelogicescapesme_2019_international" />.
 
-### What _is_ an escape room?
+### What is an escape room?
 
 Escape rooms are an immersive live-experience in which a group of people are locked up together. Their goal is to break free within a set time-frame by solving puzzles, Victor van Doorn explains.
 
@@ -27,17 +28,27 @@ For the past few years, the demand for entertainment seems to have been able to 
 
 ### Player experience
 
-The rapid growth of the escape room industry has had an unfortunate side-effect. The sprawl of escape rooms has drawn not only passionate game designers, but commercial interest as well. Subsequently, the consistency escape room quality has gone down. And when first-timers play a bad game, they will think escape rooms aren't for them, rather than them attempting another. The industry might lose them forever as a customer, because they have had one bad experience. Enthusiasts, or even players with moderat experience will be much more forgiving of a bad example.
+The rapid growth of the escape room industry has had an unfortunate side-effect. The sprawl of escape rooms has drawn not only passionate game designers, but commercial interest as well. Sadly, this has caused the consistency of escape room quality to go down. Scott Nicholson writes:
+
+> While the concept of an escape room is an exciting one. [...] The reality can be disappointing, especially when a room has been put together by someone who is just trying to get a piece of the lucrative escape room market but has no passion for designing games.
+>
+> - Scott Nicholson <Citation id="nicholson_2016_ask" hideAuthor />
+
+When first-timers play a bad game, they will think escape rooms aren't for them, rather than them attempting another. The industry might lose them forever as a customer, because they have had one bad experience. Enthusiasts, or even players with moderate experience will be much more forgiving of a bad example.
 
 We'll discuss what exactly makes a (good) escape room so attractive in the [next chapter](https://irp.nilswesthoff.com/chapters/literature-basics). As you can imagine, some people enjoy escape rooms a little and some enjoy them _a lot_. As a result, escape room designers and game masters have to consider a huge range of experience levels. The gap between casual players and enthusiasts is big. So there are varying reasons people play escape rooms in the first place. Not only that, even of the group of people that have played more than 100 games, not everyone has the same appetite for challenge. Instead, they come for the story or set alone.
 
-For those reasons, it's extremely relevant to research why players have such varying experiences and desires. We start by understanding which qualities game designers can tweak, in order to improve the experience. By doing this well, we can raise the bar for the entire industry, and draw even more people into the medium. One such thing, I have learned, is dynamically adjusting difficulty according to players.
+For those reasons, it's extremely relevant to research why players have such varying experiences and desires. We start by understanding which qualities (escape) game designers can tweak, in order to improve the experience. By doing this well, we can raise the bar for the entire industry, and draw even more people into the medium. One thing I have learned that could help is dynamically adjusting difficulty according to players. A system able to moderate difficulty based on a players' skill and engagement in a particular puzzle, creates an optimum experience. It takes away frustration with novices and provides enthusiasts with a challenge that matches their experience. Essentially, a system that is able to do this is able to cater to a wider spectrum of people than currently possible.
 
 ### Dynamic Difficulty
 
-This industry research project explores how we should approach that problem. The purpose is to answer the question:
+This industry research project explores how we should approach that problem. To do so I will be leveraging the knowledge available within [Sherlocked](https://sherlocked.nl), who I've closely collaborated with throughout this project. I've also spoken with industry experts and escape room enthusiasts to broaden my knowledge from several angles. As a bonus, I've played several escape rooms with Sherlocked's design team. Which we analysed on structure and narrative. I've done all these things to answer this main question:
 
-**How might we offer an escape room that challenges enthusiasts without alienating novices?**
+<Callout title="Research Question" emoji="🤔">
+
+How might we offer an escape room that challenges enthusiasts without alienating novices?
+
+</Callout>
 
 It discusses several approaches we might use to _dynamically_ and _automatically_ moderate difficulty. There are several sub-questions I have focused on:
 
@@ -45,10 +56,12 @@ It discusses several approaches we might use to _dynamically_ and _automatically
 2. How does the experience of enthusiasts differ from other players?
 3. How might we alter escape games based on players?
 
-For this industry research project, I have collaborated closely with [Sherlocked](https://sherlocked.nl), a highly praised escape room business from the Netherlands. Based in Amsterdam, they have designed, owned and maintained two escape rooms; _The Architect_ & _The Vault_. Adventure, Mystery & Magic are the guiding principles of everything they do. Their mission statement:
+In essence, we'll be looking at the literature on (escape) game design, use existing data, and conduct primary research to break down what great escape rooms do well. We'll determine what makes enthusiasts different, what they care about and why they keep coming back to escape rooms. Finally we'll discuss how to measure the players' experience, and how to respond to that. I've done all this while embedded at Sherlocked, a highly praised escape room business from the Netherlands.
 
-> To make the world a bit more magical
+Based in Amsterdam, Sherlocked has designed, owns and maintains two escape rooms; _The Architect_ & _The Vault_. In every experience they incorporate their guiding principles; Adventure, Mystery & Magic. Their mission statement is to:
 
-Sherlocked is renowned for creating highly engaging experiences, and has generally done well pleasing both novices and enthusiasts. They draw their players in by blurring the lines between what is fiction and reality. However, a select group of enthusiasts feels Sherlocked's experiences lack the level of difficulty they have come to expect.
+> Make the world a bit more magical
+
+Sherlocked is renowned for creating highly engaging experiences, and has generally done well pleasing both novices and enthusiasts. They draw their players in by blurring the lines between what is fiction and reality. However, a select group of enthusiasts feels Sherlocked's experiences lack the level of difficulty they have come to expect. This industry based research project explores how dynamic difficulty solves this, and what to consider when implementing a system like that.
 
 :::
