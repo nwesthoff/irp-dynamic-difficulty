@@ -144,6 +144,19 @@ blockquote {
   }
 }
 
+ul,
+ol {
+  padding-left: 3.2rem;
+
+  @media (max-width: 768px) {
+    padding-left: 2.4rem;
+  }
+
+  @media (max-width: 480px) {
+    padding-left: 1.6rem;
+  }
+}
+
 li {
   color: var(--color-text-mute);
   line-height: 1.8;
@@ -172,6 +185,11 @@ figcaption {
   text-align: center;
   font-size: 0.9em;
   font-style: italic;
+
+  @media (max-width: 768px) {
+    font-size: 0.75em;
+    line-height: 1.5em;
+  }
 }
 
 strong {
@@ -204,13 +222,14 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 1.3em;
   margin: 5rem 0 1.2rem;
 
   @media (max-width: 768px) {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 1.2em;
+    margin: 2.4rem 0 1.2rem;
   }
 }
 
@@ -223,6 +242,7 @@ h3 {
 
   @media (max-width: 768px) {
     font-size: 1.2rem;
+    margin: 1.2rem 0 -0.8rem;
   }
 }
 

@@ -1,14 +1,13 @@
-import React, { ReactNode } from "react";
-import { FrontMatter } from "types/index";
 import Layout from "@components/Layout";
-import PageIntroduction from "@components/PageIntroduction";
 import MainContent from "@components/MainContent";
-import NextChapter from "@components/Navigation/NextChapter";
-import { MDXProvider } from "@mdx-js/react";
-
-import { frontMatter as chapters } from "../pages/chapters/*.mdx";
 import MDXImage from "@components/MDXComponents/MDXImage";
 import MDXVideo from "@components/MDXComponents/MDXVideo";
+import NextChapter from "@components/Navigation/NextChapter";
+import PageIntroduction from "@components/PageIntroduction";
+import { MDXProvider } from "@mdx-js/react";
+import React, { ReactNode } from "react";
+import { FrontMatter } from "types/index";
+import { frontMatter as chapters } from "../pages/chapters/*.mdx";
 
 interface Props {
   frontMatter: FrontMatter;
