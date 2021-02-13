@@ -466,6 +466,16 @@ const myReferences: AcademicRef[] = [
         "Marlow, S.L., Lacerenza, C.N., Paoletti, J., Burke, C.S. and Salas, E. (2018). Does Team Communication Represent a one-size-fits-all approach?: a meta-analysis of Team Communication and Performance. Organizational Behavior and Human Decision Processes, 144, pp.145–170.",
     },
   },
+  {
+    citationKey: "lang_1995_the",
+    entryType: "ACADEMIC",
+    entryTags: {
+      author: "Lang",
+      year: "1995",
+      inBib:
+        "Lang, P.J. (1995). The Emotion probe: Studies of Motivation and attention. American Psychologist, 50(5), pp.372–385.",
+    },
+  },
 ];
 
 export interface AcademicRef {

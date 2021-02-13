@@ -275,44 +275,64 @@ He views the complexity of intrinsic and extrinsic as a continuous gradient, som
 
 Balancing motivation, and considering how they influence the player is especially difficult for escape rooms. The key difference in this case, is its fixed time limit. On one hand, we don't want players to rush through the game. To constantly trigger them with a reward, and take away any and all exploration by telling them exactly what to do. On the other, we don't want them to feel lost during their play. It's important that players feel like it's a fair experience, one they could have escaped in the set time.
 
-Why even play escape rooms in the first place? In _The Art of Game Design_ <Citation id="schell_2019_the"/>_,_ the chapter _'The Player's Mind is Driven by the Player's Motivation'_ outlines how human motivation applies to game design. Maslow's _'A Theory of Human Motivation'_ provides an interesting lens to analyse the different activities that games offer. Schell notes that the popularity of games with online communities makes a lot of sense according to Maslow's theories.
+Why even play escape rooms in the first place? In The Art of Game Design, Schell <Citation id="schell_2019_the"/> outlines how human motivation applies to game design. Maslow's 'A Theory of Human Motivation' provides an interesting lens to analyse the different activities that games offer. Schell notes that the popularity of games with online communities makes a lot of sense according to Maslow's theories. Maslow's pyramid assumes lower need levels are required before people fulfil the higher ones.
 
 ![/img/maslow.png](/img/maslow.png 'Maslow's Theory of Human Motivation')
 
+When people's physiological needs are satisfied, and they feel safe and secure, they start to care about the higher levels. Which relate to self-determination theory as well.
+
 ### Self-determination theory
 
-Beyond physical, humans have mental needs as well. Self-determination theory views people as active contributors of their behaviour. They are the "authors" of their own story. Self-determination explains the need for a sense of personal empowerment, involving both _knowing_ and _having_ what it takes to achieve goals. According to Deci and Ryan <Citation id="deci_2010_selfdetermination" hideAuthor /> self-determination maintains that all people have three basic psychological needs:
+Beyond physical needs, humans have mental needs as well. Self-determination theory views people as active contributors of their behaviour. They are the "authors" of their own story. Self-determination explains the need for a sense of personal empowerment, involving both _knowing_ and _having_ what it takes to achieve goals. According to Deci and Ryan <Citation id="deci_2010_selfdetermination" hideAuthor /> self-determination maintains that all people have three basic psychological needs:
 
-1. **Competence** — I need to feel good at something
-2. **Autonomy** — I need freedom to do things my own way
-3. **Relatedness** — I need to connect with other people
+1. **Relatedness** — I need to connect with other people.
+2. **Competence** — I need to feel good at something.
+3. **Autonomy** — I need freedom to do things my own way.
 
-Schell <Citation id="schell_2019_the" hideAuthor /> states it's hard to overlook how well games tend to fulfil all three of these needs.
+Schell <Citation id="schell_2019_the" hideAuthor /> states it's hard to overlook how well games tend to fulfil all three of these needs. Escape rooms (like multiplayer games) provide a sense of connection, through a shared interest and participating in the same activity. Players feel competent by achieving escape, or at the very least they will solve some of the puzzles in an escape room. Finally they can feel autonomous, they can approach problems as a team, and solve them at their own speed. Good escape rooms have to fulfil these needs. Though enthusiasts likely require different challenges to do so. When the challenge proposed doesn't meet their abilities, they won't feel a sense of overcoming. The next section explores how we might alter escape games for these players.
 
 # How might we alter escape games based on players?
 
-Previously, we examined the parts every escape room has to do well. And we have established a theoretical understanding of the way players think. To understand what experience players desire, and how we should tailor the experience to them, we have to understand how they feel during play.
+Previously, we examined the parts every escape room has to do well. And we have established a theoretical understanding of the way players think. A big hurdle to overcome is that we have to understand how players feel during their escape. This should tell us what experience players desire, and how we should tailor the experience to them.
 
 ## Measuring the Player's Gameplay Experience
 
-There have been several attempts at online measurement of a players' gameplay experience. That is, measuring it _while_ they play, in real-time.
+There have been several attempts at online measurement of a players' gameplay experience. Online measurement, in this case, means we measure _while_ they play in real-time.
 
 ### Physiological measurement
 
-One of such attempts to measure immersion and flow is done by Nacke & Lindley <Citation id="nacke_2008_flow" hideAuthor />. They measure the emotional state of their test subjects, while playing modified levels of Half-Life 2 (a first-person shooter). They grade the experience on two axes.
+One of such attempts to measure immersion and flow is done by Nacke & Lindley <Citation id="nacke_2008_flow" hideAuthor />. They measure the emotional state of their test subjects, while playing modified levels of Half-Life 2 (a first-person shooter). They grade the experience on two motivational axes.
 
-- Electromyography (EMG) to determine valence, a strong indicator of the _good_-ness of an experience.
-- Galvanic Skin Response (GVR) commonly used as an indicator for arousal (how passionate we are about an experience)
+- **Electromyography (EMG)** — to determine _hedonic valence_, a strong indicator of the pleasantness of an experience.
+- **Galvanic Skin Response (GVR)** — commonly used as an indicator for _arousal_, how intense an experience is.
 
-Their study suggests that game levels scoring high on flow, show increased values for valence as well as arousal.
+<SideBySide align="center">
+
+<div>
+
+Their study suggests that game levels scoring high on flow, show increased values for valence as well as arousal. Using Lang's <Citation id="lang_1995_the" hideAuthor /> _dimensional theory of emotion_ they provide an indication of their emotional state.
+
+If we could reliably use these two measurements to determine emotion, we could control difficulty and direct emotion with incredible precision. Unfortunately it doesn't seem to be so easy.
+
+</div>
+
+![](/img/lang-dimensional-theory.jpg "Lang's dimensional theory of emotion")
+
+</SideBySide>
 
 ### What is Emotion?
 
-To understand how people feel it's key to know how emotion works. Unfortunately, the scientific community has not seen eye-to-eye in this regard. Generally speaking there are three major lines of thinking; Basic Emotional Theory, Appraisal Theory and the Theory of Constructed Emotion. The last one of those, a fairly recent development, flips our common line of thinking about emotion on its head.
+To understand how people feel emotions, it's key to understand what emotion is. Unfortunately, the scientific community has not seen eye-to-eye in this regard. Generally speaking there are three major lines of thinking; _Basic Emotional Theory_, _Appraisal Theory_ and the _Theory of Constructed Emotion_. The last one of those is a fairly recent development and redefines how the world currently thinks about emotion.
+
+- **Basic Emotion Theory** — a minimal amount of emotions are identified.
+- **Appraisal Theory** — defines that emotions are the result of evaluating an event, instead of the occurrence of the event itself (Lang's _dimensional theory of emotion_ builds on this theory).
+- **Theory of Constructed Emotion** — views emotion as an interpretation of physiological changes as opposed to a change in the external environment.
+
+Constructed emotion directly opposes the other two theories, and paints the most conservative picture of determining emotion from physiological data.
 
 ### Variability
 
-If Lisa Feldman Barrett shows through her research that both _physiological changes_ in our bodies and _facial expressions_ aren't a reliable way to estimate how people feel. Dr. Lisa Feldman Barrett explains how emotions are not caused by physiological changes in our body. Emotions are in fact a result of the physiological changes in our body, and how our brains makes them _feel_ important to us <Citation id="feldman-barrett_2020_how" />.
+Lisa Feldman Barrett, who has spearheaded the research of constructed emotion, shows that both _physiological changes_ in our bodies and _facial expressions_ aren't a reliable way to estimate how people feel. Barrett explains how emotions do not _cause_ physiological changes in our body. Emotions are in fact the _result_ of the physiological changes in our body. Emotion is how our brains makes these changes _feel_ important to us <Citation id="feldman-barrett_2020_how" />.
 
 > Your emotions are not your reactions to the world. They are your constructions or more precisely, what your bodily sensations mean in a specific context or situation that you are in.
 >
@@ -324,7 +344,7 @@ It turns out that the western idea of universal expressions of emotion are not s
 >
 > - Lisa Feldman Barrett <Citation id="feldman-barrett_2020_how" hideAuthor />
 
-Assuming we display emotion using universal facial expressions suffers from the same problems as assuming everyone entering an escape room has the same level of experience. This way of thinking only takes into account a small portion of people.
+Assuming we display emotion using universal facial expressions suffers from the same problems as assuming everyone entering an escape room has the same level of experience. This mode of thinking only takes into account a small portion of people.
 
 :::
 ::: section wide-width
@@ -333,7 +353,7 @@ Assuming we display emotion using universal facial expressions suffers from the 
 :::
 ::: section small-width
 
-To make matters worse, physiological measurements suffer from a similar problem. When an increased heart rate feels like anxiety, that is because your brains categorizes it as such. They make a concept that fits with the physiological changes in your body. As a result, it's incredibly hard to 'measure emotion'. Emotions are dependent of context, and part of that context is the body we take into the room.
+To make matters worse, physiological measurements suffer from a similar problem. When an increased heart rate feels like anxiety, that is because your brains categorizes it as such. The brain fabricates a concept that fits with the physiological changes in your body. As a result, it's incredibly hard to 'measure emotion'. Emotions are dependent of context, and part of that context is the body we take into the room. The formation of emotion changes from person to person, even if we experience the same changes in our body.
 
 Since escape rooms are (generally) multi-user experiences, it makes sense to divert our efforts to examine the escape team as a whole. How do they communicate? What do they talk about, and what _don't_ they talk about?
 
